@@ -1,8 +1,8 @@
 // Returns true if this is the first time the player has visited this room
-public bool IsFirstVisit()
+``public bool IsFirstVisit()
 
 // Return true if the boolean flag for the key has been set to true
-public bool GetFlag(string key)
+``public bool GetFlag(string key)
 
 // Returns the count value for the key
 // Returns zero if no value has been set.
