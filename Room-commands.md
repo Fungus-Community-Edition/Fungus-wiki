@@ -1,8 +1,6 @@
-# Room commands
-
 This is a list of all the public commands currently supported by the Room class.
 
-## Immediate methods
+# Immediate methods
 
 These methods execute and return immediately, rather than being queued for later execution.
 
@@ -21,7 +19,7 @@ Returns the inventory count value for the key. Returns zero if no inventory coun
 `public bool HasInventory(string key)`  
 Returns true if the inventory count for the key is greater than zero
 
-## Command methods
+# Command methods
 These methods queue commands for later execution. Fungus will automatically execute added commands in serial order.
 
 `public void Wait(float duration)`  
