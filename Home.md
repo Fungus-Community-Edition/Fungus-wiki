@@ -75,8 +75,8 @@ Plays the named animation on a object with a SpriteController component
 `public void PanToView(View targetView, float duration)`  
 Pans the camera to the target view of a period of time
 
-`public void SnapToView(View targetView)`
+`public void SnapToView(View targetView)`  
 Snaps the camera to the target view immediately
 
-`public void FadeToView(View targetView, float duration)`
+`public void FadeToView(View targetView, float duration)`  
 Fades out the current camera view, and fades in again using the target view.
