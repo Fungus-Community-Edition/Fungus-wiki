@@ -1,7 +1,5 @@
-`
-// Returns true if this is the first time the player has visited this room
-public bool IsFirstVisit()
-`
+// Returns true if this is the first time the player has visited this room  
+`public bool IsFirstVisit()`
 
 // Return true if the boolean flag for the key has been set to true
 `public bool GetFlag(string key)`
