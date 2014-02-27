@@ -1,1 +1,1 @@
-See http://www.snozbot.com/fungus for documentation
+See http://www.snozbot.com/fungus for Fungus documentation
