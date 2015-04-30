@@ -1,17 +1,17 @@
 - [[Home]]
 
 # Command Reference
-- [[animation_commands]]
-- [[audio_commands]]
-- [[camera_commands]]
-- [[flow_commands]]
-- [[itween_commands]]
-- [[narrative_commands]]
-- [[scripting_commands]]
-- [[sprite_commands]]
-- [[variable_commands]]
+- [Animation](animation_commands)
+- [Audio](audio_commands)
+- [Camera](camera_commands)
+- [Flow](flow_commands)
+- [iTween](itween_commands)
+- [Narrative](narrative_commands)
+- [Scripting](scripting_commands)
+- [Sprite)(sprite_commands)
+- [Variable](variable_commands)
 
 # Event Handler Reference
-- [[core_events]]
-- [[input_events]]
-- [[sprite_events]]
+- [Core](core_events)
+- [Input](input_events)
+- [Sprite](sprite_events)
