@@ -1,5 +1,5 @@
 # Command Reference
-- [Animation](commands/Animation.md)
+- [Animation](Animation)
 - [Audio](commands/Audio.md)
 - [Camera](commands/Camera.md)
 - [Flow](commands/Flow.md)
