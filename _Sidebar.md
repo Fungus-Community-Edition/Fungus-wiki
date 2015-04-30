@@ -8,7 +8,7 @@
 - [iTween](itween_commands)
 - [Narrative](narrative_commands)
 - [Scripting](scripting_commands)
-- [Sprite)(sprite_commands)
+- [Sprite](sprite_commands)
 - [Variable](variable_commands)
 
 # Event Handler Reference
