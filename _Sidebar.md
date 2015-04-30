@@ -1,3 +1,5 @@
+- [[Home]]
+
 # Command Reference
 - [[Animation]]
 - [[Audio]]
