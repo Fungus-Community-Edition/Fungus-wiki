@@ -35,7 +35,6 @@ If you have questions about using Fungus, you should search [our forum](http://f
 Contributing
 ============
 
-Many thanks to everyone who has contributed code to the project.
-https://github.com/fungusgames/fungus/graphs/contributors
+Many thanks to everyone who has [contributed code](https://github.com/fungusgames/fungus/graphs/contributors) to the Fungus project.
 
 If you would like to contribute a bug fix or new feature, please submit a pull request on github. If you are interested in contributing in some other way (art, audio, documentation, pizza) just email me at chris@fungusgames.com.
