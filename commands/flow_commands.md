@@ -39,8 +39,18 @@ Compare Operator | Fungus.CompareOperator | The type of comparison to be perform
 
 ## Jump
 Move execution to a specific Label command
+
+Property | Type | Description
+ --- | --- | ---
+Target Label | Fungus.Label | Label to jump to
+
 ## Label
 Marks a position in the command list for execution to jump to.
+
+Property | Type | Description
+ --- | --- | ---
+Key | System.String | Display name for the label
+
 ## Load Scene
 Loads a new Unity scene and displays an optional loading image. This is useful for splitting a large game across multiple scene files to reduce peak memory usage. Previously loaded assets will be released before loading the scene to free up memory.The scene to be loaded must be added to the scene list in Build Settings.
 
@@ -50,7 +60,13 @@ Scene Name | System.String | Name of the scene to load. The scene must also be a
 Loading Image | UnityEngine.Texture2D | Image to display while loading the scene
 
 ## Send Message
-Sends a message to either the owner Flowchart or all Flowcharts in the scene. Blocks can listen for this message to start execution.
+Sends a message to either the owner Flowchart or all Flowcharts in the scene. Blocks can listen for this message using a Message Received event handler.
+
+Property | Type | Description
+ --- | --- | ---
+Message Target | Fungus.SendMessage+MessageTarget | Target flowchart(s) to send the message to
+Message | System.String | Name of the message to send
+
 ## Stop
 Stop executing the current Flowchart.
 ## Wait

@@ -11,14 +11,24 @@ Fade Duration | System.Single | Fade Duration
 Wait Until Finished | System.Boolean | Wait until the tween has finished before executing the next command
 
 ## Menu
-Displays a multiple choice menu
+Displays a button in a multiple choice menu
 
 Property | Type | Description
  --- | --- | ---
+Text | System.String | Text to display on the menu button
 Description | System.String | Notes about the option text for other authors, localization, etc.
+Target Block | Fungus.Block | Block to execute when this option is selected
+Hide If Visited | System.Boolean | Hide this option if the target block has been executed previously
+Set Menu Dialog | Fungus.MenuDialog | A custom Menu Dialog to use to display this menu. All subsequent Menu commands will use this dialog.
 
 ## Menu Timer
 Displays a timer bar and executes a target block if the player fails to select a menu option in time.
+
+Property | Type | Description
+ --- | --- | ---
+Duration | System.Single | Length of time to display the timer for
+Target Block | Fungus.Block | Block to execute when the timer expires
+
 ## Portrait
 Controls a character portrait. 
 
@@ -60,7 +70,22 @@ Set Say Dialog | Fungus.SayDialog | Sets the active Say dialog with a reference 
 
 ## Set Language
 Set the active language for the scene. A Localization object with a localization file must be present in the scene.
+
+Property | Type | Description
+ --- | --- | ---
+Language Code | System.String | Code of the language to set. e.g. ES, DE, JA
+
 ## Set Menu Dialog
 Sets a custom menu dialog to use when displaying multiple choice menus
+
+Property | Type | Description
+ --- | --- | ---
+Menu Dialog | Fungus.MenuDialog | The Menu Dialog to use for displaying menu buttons
+
 ## Set Say Dialog
 Sets a custom say dialog to use when displaying story text
+
+Property | Type | Description
+ --- | --- | ---
+Say Dialog | Fungus.SayDialog | The Say Dialog to use for displaying Say story text
+
