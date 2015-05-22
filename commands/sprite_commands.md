@@ -16,6 +16,15 @@ Property | Type | Description
 Target Clickable2 D | Fungus.Clickable2D | Reference to Clickable2D component on a gameobject
 Active State | Fungus.BooleanData | Set to true to enable the component
 
+## Set Collider
+Sets all collider (2d or 3d) components on the target objects to be active / inactive
+
+Property | Type | Description
+ --- | --- | ---
+Target Objects | System.Collections.Generic.List`1[UnityEngine.GameObject] | A list of gameobjects containing collider components to be set active / inactive
+Target Tag | System.String | All objects with this tag will have their collider set active / inactive
+Active State | Fungus.BooleanData | Set to true to enable the collider components
+
 ## Show Sprite
 Makes a sprite visible / invisible by setting the color alpha.
 

@@ -1,7 +1,7 @@
 ## Break
 Force a loop to terminate immediately.
 ## Call
-Execute another block in the same Flowchart.
+Execute another block in the same Flowchart as the command, or in a different Flowchart.
 
 Property | Type | Description
  --- | --- | ---
