@@ -1,1 +1,3 @@
 - [[Home]]
+- [[EventHandlers|eventhandler_reference]]
+- [[Commands|command_reference]]
