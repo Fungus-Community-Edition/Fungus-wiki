@@ -1,6 +1,6 @@
 # Command Reference
 
-This is the reference documentation for all % Fungus commands.
+This is the reference documentation for all Fungus commands.
 
 * [Animation](animation_commands)
 * [Audio](audio_commands)
@@ -12,7 +12,7 @@ This is the reference documentation for all % Fungus commands.
 * [LeanTween](leantween_commands)
 * [Math](math_commands)
 * [Narrative](narrative_commands)
-* [Priority Signals](priority signals_commands)
+* [PrioritySignals](prioritysignals_commands)
 * [Rigidbody2D](rigidbody2d_commands)
 * [Scene](scene_commands)
 * [Scripting](scripting_commands)
