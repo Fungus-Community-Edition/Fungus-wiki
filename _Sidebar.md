@@ -1,3 +1,4 @@
 - [[Home]]
 - [[EventHandlers|eventhandler_reference]]
 - [[Commands|command_reference]]
+- [[Fungus Lua|fungus_lua]]
