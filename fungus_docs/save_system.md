@@ -4,9 +4,9 @@
 
 **N.B. The Save System is currently in Beta to get feedback from the community. There will probably be breaking changes in future updates as we improve the design.**
 
-The %Fungus Save System provides an easy way to save and load the execution state of Flowcharts in your game. 
+The Fungus Save System provides an easy way to save and load the execution state of Flowcharts in your game. 
 
-This [tutorial video](https://www.youtube.com/watch?v=Bd4RDcCc0lE&list=PLiMlyObJfJmUohJ_M2pJhtrNKuNECo2Uk&index=20) shows how you can quickly add saving functionality to a %Fungus game.
+This [tutorial video](https://www.youtube.com/watch?v=Bd4RDcCc0lE&list=PLiMlyObJfJmUohJ_M2pJhtrNKuNECo2Uk&index=20) shows how you can quickly add saving functionality to a Fungus game.
 
 The save system works by storing a series of Save Points as the player progresses through the game, to build up a Save History. A basic Save Menu UI is provided to allow the player to Save, Load, Restart, Rewind and Fast Forward through the Save History.
 
@@ -32,19 +32,19 @@ The following are the key elements that are used to implement saving in this exa
 
 The Save Menu object can be seen In the root of the hierarchy window. This object controls the UI menu that the player uses to interact with the save system. The Save Menu is a singleton object that persists across scene loads, so you only need to add it once in the first scene of your game.
 
-To add a Save Menu to your game, select *Tools > %Fungus > Create > Save Menu*.
+To add a Save Menu to your game, select *Tools > Fungus > Create > Save Menu*.
 
 ## Creating Save Points ## {#save_creating_save_points}
 
 Save Points are created by executing Save Point commands in a Flowchart.
 
-To see this in the example scene, ensure the Flowchart window is displayed (via *Tools > %Fungus > Flowchart Window*), then select the Flowchart object in the hierarchy window and select each of the Blocks in the Flowchart. The first command in each Block is a Save Point command (added via *Flow > Save Point*).
+To see this in the example scene, ensure the Flowchart window is displayed (via *Tools > Fungus > Flowchart Window*), then select the Flowchart object in the hierarchy window and select each of the Blocks in the Flowchart. The first command in each Block is a Save Point command (added via *Flow > Save Point*).
 
 When each Save Point command executes, it adds a new Save Point to the Save History. When you load a previously saved game, execution resumes from immediately after the Save Point command that created that Save Point.
 
 In the example scene, select the ‘Start’ Block in the Flowchart window, and select the Save Point command at the top of the command list. Notice that the Is Start Point property is enabled and that this is the only Save Point command in the Flowchart which has this option enabled. There should only ever be one Start Point in a scene.
 
-When you start a new game, %Fungus looks for a Save Point command with the Is Start Point property enabled and executes it. When loading a previously saved game, %Fungus starts execution at the relevant Save Point command and ignores the start point. 
+When you start a new game, Fungus looks for a Save Point command with the Is Start Point property enabled and executes it. When loading a previously saved game, Fungus starts execution at the relevant Save Point command and ignores the start point. 
 
 This means that if your game supports saving then you should always have exactly one Save Point command with the Is Start Point property enabled in every scene.
 
@@ -64,13 +64,13 @@ Each Save Point can store the state of Flowchart variables at that point in time
 
 In the example scene, the Save Data object can be seen in the root of the hierarchy window. The Flowcharts property contains a list of the Flowchart objects to be saved in this scene. 
 
-To add a Save Data object to your scene, select *Tools > %Fungus > Create > Save Data*. You can add as many Flowcharts as you like to the list, but make sure that each one has a unique name (e.g. Flowchart1, Flowchart2, etc.) or loading won’t work correctly.
+To add a Save Data object to your scene, select *Tools > Fungus > Create > Save Data*. You can add as many Flowcharts as you like to the list, but make sure that each one has a unique name (e.g. Flowchart1, Flowchart2, etc.) or loading won’t work correctly.
 
 If you are interested in extending the save system to support saving other types of data (besides Flowchart variables), you can either modify or subclass the SaveData component to achieve this.
 
 # The Save Menu
 
-The Save Menu is a simple UI which allows players to interact with the %Fungus save system. This section explains what each button does and how to configure the Save Menu properties.
+The Save Menu is a simple UI which allows players to interact with the Fungus save system. This section explains what each button does and how to configure the Save Menu properties.
 
 ## Save Menu properties ## {#save_menu_properties}
 
@@ -134,5 +134,5 @@ The Save History contains a list of previously recorded Save Points, stored in c
 
 To visualize the Save History at runtime, expand the Save Menu object in the hierarchy, select Save Menu > Panel > Debug View and enable the gameobject. A summary of the Save Points in the Save History will be displayed in a text window.
 
-[img save_menu]: ./save_system/save_menu.png
-[img save_history]: ./save_system/save_history.png
+[img save_menu]: https://github.com/snozbot/fungus/raw/master/Docs/resources/save_system/save_menu.png
+[img save_history]: https://github.com/snozbot/fungus/raw/master/Docs/resources/save_system/save_history.png

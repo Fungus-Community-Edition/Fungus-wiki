@@ -1,4 +1,4 @@
-Changelog {#changelog}
+Changelog
 =========
 
 v3.11.4 {#v3.11.4}

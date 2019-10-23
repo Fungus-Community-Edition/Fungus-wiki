@@ -1,12 +1,12 @@
 # Coding Standard
 
-\brief The %Fungus coding standard is designed to make the source code simple to understand for users and easy to maintain for contributors.
+The Fungus coding standard is designed to make the source code simple to understand for users and easy to maintain for contributors.
 
-This document is focussed on decisions that we've made for the %Fungus project. For general Unity coding tips, try [50 Tips and Best Practices for Unity](http://www.gamasutra.com/blogs/HermanTulleken/20160812/279100/50_Tips_and_Best_Practices_for_Unity_2016_Edition.php).
+This document is focussed on decisions that we've made for the Fungus project. For general Unity coding tips, try [50 Tips and Best Practices for Unity](http://www.gamasutra.com/blogs/HermanTulleken/20160812/279100/50_Tips_and_Best_Practices_for_Unity_2016_Edition.php).
 
 # Code layout
 
-This is the typical layout of a class in %Fungus:
+This is the typical layout of a class in Fungus:
 
 ```
 using UnityEngine;
@@ -50,7 +50,6 @@ namespace Fungus
 
 Things to note:
 
-- using declarations all go together at the top of the file. 
 - Remove any unused using declarations (can spot these easily with static code analysis - see below).
 - Runtime code goes in the Fungus namespace. 
 - Editor code goes in the Fungus.EditorUtils namespace.
@@ -65,7 +64,7 @@ Things to note:
 
 # Coding best practices
 
-These are some general best practices when writing code for %Fungus. Where these go against the usual recommended coding practice (e.g. Assert) it's because of an issue in Unity with doing it 'the right way'.
+These are some general best practices when writing code for Fungus. Where these go against the usual recommended coding practice (e.g. Assert) it's because of an issue in Unity with doing it 'the right way'.
 
 - Use the static code analyser in MonoDevelop. http://tinyurl.com/h7xqpwg
 - Use the c# xml comment style. https://msdn.microsoft.com/en-us/library/b2s063f7.aspx
@@ -83,16 +82,16 @@ These are some general best practices when writing code for %Fungus. Where these
 
 We aim to maintain backwards compatibility with each new release (to a reasonable extent).
 
-- Projects should work correctly after upgrading to a newer %Fungus version. Minor behavior changes are acceptable.
-- Custom code which uses the %Fungus API should compile without error after upgrading. Minor compile errors that are trivial to fix are sometimes acceptable.
-- There are loads of %Fungus tutorial videos and articles on the Internet, so avoid changing the UI too dramatically. Small UI tweaks and adding new controls is acceptable.
+- Projects should work correctly after upgrading to a newer Fungus version. Minor behavior changes are acceptable.
+- Custom code which uses the Fungus API should compile without error after upgrading. Minor compile errors that are trivial to fix are sometimes acceptable.
+- There are loads of Fungus tutorial videos and articles on the Internet, so avoid changing the UI too dramatically. Small UI tweaks and adding new controls is acceptable.
 - We support Unity 5.0+ so beware of API differences in newer versions. If in doubt, install Unity 5.0 and test your changes.
 
 # Contributing
 
 We welcome pull requests from everyone. By contributing to this project, you agree to abide by the @ref code_of_conduct. You also agree that by submitting a pull request for this project, your contribution will be licensed under the [Open Source license] for this project.
 
-- Fork and clone the %Fungus repo.
+- Fork and clone the Fungus repo.
 - Make sure the tests pass locally (see the project readme for instructions).
 - Make your change. Add tests for your change. Make the tests pass locally.
 - Push to your fork and submit a pull request.

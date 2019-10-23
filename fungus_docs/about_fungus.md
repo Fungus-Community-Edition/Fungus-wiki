@@ -1,33 +1,27 @@
-# About %Fungus
-
 # What is Fungus?
 
-%Fungus is a tool which makes it easy to add colourful characters and craft gripping storylines in your game, even if you have never used <a href="http://unity3d.com" target="_blank">Unity</a> before. Our intuitive interface lets everyone create beautiful story games easily - <b>for free and with no coding</b>!
+Fungus is a tool which makes it easy to add colourful characters and craft gripping storylines in your game, even if you have never used <a href="http://unity3d.com" target="_blank">Unity</a> before. Our intuitive interface lets everyone create beautiful story games easily - <b>for free and with no coding</b>!
 
 ![img fungus_town]
 
 # Who's it for?
-%Fungus is popular with writers, illustrators, animators and game designers, especially visual novel & interactive fiction authors. Many people using %Fungus are creating games in Unity for the very first time. It is a popular choice for game jams and game design courses.
+Fungus is for writers, illustrators, animators and game designers, especially visual novel & interactive fiction authors. Many people using Fungus are creating games in Unity for the very first time. It is a popular choice for game jams and game design courses.
 
 # Free & Open Source
 
-We believe that interactive storytelling should be accessible to everyone, so %Fungus is <b>100% free & open source</b>. It works great with both the free and pro versions of Unity 3D. %Fungus is inspired by other great open source storytelling tools like [Twine], [Ren'Py] and [Scratch].
+We believe that interactive storytelling should be accessible to everyone, so Fungus is <b>100% free & open source</b>. It works great with both the free and pro versions of Unity 3D. Fungus is inspired by other great open source storytelling tools like [Twine], [Ren'Py] and [Scratch].
 
 # Community
 
-The %Fungus community is very welcoming and helpful to newcomers. Many people using %Fungus have never used Unity or even made a game before, so feel free to ask questions on our [community forum]. Helping other people with their questions is a fantastic and very welcome way to contribute back to the community.
+The Fungus community is very welcoming and helpful to newcomers. Many people using Fungus have never used Unity or even made a game before, so feel free to ask questions on our [community forum]. Helping other people with their questions is a fantastic and very welcome way to contribute back to the community.
 
 ![img community]
 
 # Features
 
-@htmlonly
-<div align="center" style="float:right;">
-<iframe width="400" height="225" src="https://youtube.com/embed/kP767dFQaCU?t=5m20s" frameborder="0" allowfullscreen></iframe>
-</div>
-@endhtmlonly
+[Video](https://youtube.com/embed/kP767dFQaCU?t=5m20s)
 
-%Fungus allows you to easily add storytelling features to your Unity games with no coding, via an intuitive visual scripting system.
+Fungus allows you to easily add storytelling features to your Unity games with no coding, via an intuitive visual scripting system.
 
 - Suitable for making visual novels, RPGs, hidden object, puzzle and interactive fiction games.
 - Flowchart-based character dialogue
@@ -40,28 +34,28 @@ The %Fungus community is very welcoming and helpful to newcomers. Many people us
 
 # Contribute
 
-We welcome all sorts of contributions to %Fungus. You can report bugs, suggest new features, contribute source code, write an article, help answer questions on the forums or even just tell your friends about the project!
+We welcome all sorts of contributions to Fungus. You can report bugs, suggest new features, contribute source code, write an article, help answer questions on the forums or even just tell your friends about the project!
 
 - Issue Tracker: [GitHub issue tracker]
 - Source Code: [GitHub code repository]
 
 # Credits
 
-[Chris Gregan] is the main author and maintainer of %Fungus. He's co-founder of [Snozbot], along with [John O' Kane] and [Ronan Pearce].
+[Chris Gregan] is the main author and maintainer of Fungus. He's co-founder of [Snozbot], along with [John O' Kane] and [Ronan Pearce].
 
-[Dr. Matt Smith] has kindly contributed the written documentation for the %Fungus project. If you're new to Unity development then a great source of information, ideas and sample projects is his [Unity 5.x Cookbook], by Matt and [Chico Queiroz].
+[Dr. Matt Smith] has kindly contributed the written documentation for the Fungus project. If you're new to Unity development then a great source of information, ideas and sample projects is his [Unity 5.x Cookbook], by Matt and [Chico Queiroz].
 
 ![img cookbook]
 
-[Paul Mc Grath] is Animator / Designer / Film-maker at Whackala. He contributed the @ref tutorial_videos for this site as well as creating the @ref training_course. Special thanks also to [Vicky Lee] and [Coding Grace] who have helped us to organise loads of %Fungus workshops,
+[Paul Mc Grath] is Animator / Designer / Film-maker at Whackala. He contributed the @ref tutorial_videos for this site as well as creating the @ref training_course. Special thanks also to [Vicky Lee] and [Coding Grace] who have helped us to organise loads of Fungus workshops,
 
-%Fungus wouldn't be possible without all the awesome people in our community who have contributed to the project and supported us in myriad ways. Thank you all!
+Fungus wouldn't be possible without all the awesome people in our community who have contributed to the project and supported us in myriad ways. Thank you all!
 
 # License
 
-The %Fungus software is licensed under the [Open Source MIT License].
+The Fungus software is licensed under the [Open Source MIT License].
 
-The %Fungus documentation is licensed under the [Creative Commons Attribution-NonCommercial License].
+The Fungus documentation is licensed under the [Creative Commons Attribution-NonCommercial License].
 
 [Snozbot]: http://snozbot.com
 [Chris Gregan]: http://twitter.com/gofungus
@@ -83,8 +77,8 @@ The %Fungus documentation is licensed under the [Creative Commons Attribution-No
 [Unity 5.x Cookbook]: https://www.packtpub.com/game-development/unity-5x-cookbook
 [Chico Queiroz]: https://www.linkedin.com/in/chicoqueiroz
 
-[img community]: ./about/community.jpeg
-[img fungus_town]: ./about/fungus_town.png
-[img cookbook]: ./about/B03899_MockupCover_Cookbook.jpg
+[img community]: https://github.com/snozbot/fungus/raw/master/Docs/resources/about/community.jpeg
+[img fungus_town]: https://github.com/snozbot/fungus/raw/master/Docs/resources/about/fungus_town.png
+[img cookbook]: https://github.com/snozbot/fungus/raw/master/Docs/resources/about/B03899_MockupCover_Cookbook.jpg
 
 

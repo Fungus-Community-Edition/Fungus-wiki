@@ -1,11 +1,11 @@
 # Variables
 
-%Fungus Variables live on flowcharts. Acting like a blackboard, they allow Commands, Blocks and Flowcharts to set and share data.
+Fungus Variables live on flowcharts. Acting like a blackboard, they allow Commands, Blocks and Flowcharts to set and share data.
 
 <!-- **************************************************** -->
 # What is a Variable?
 
-If you have scripted or programmed before you are most likely familiar with the concept. At it's most simple, a variable is a named place or location to keep data. Since variables in %fungus live on Flowcharts they exist for the life of the flowchart. 
+If you have scripted or programmed before you are most likely familiar with the concept. At it's most simple, a variable is a named place or location to keep data. Since variables in Fungus live on Flowcharts they exist for the life of the flowchart. 
 They are commonly used to keep track of progress or choices made by the player. They are also commonly used to pass data from one command to another.
 
 Variables do not automatically save and restore themselves between runs of the application. The saving mechanisms can, however, be used to load and save variables to disk.
@@ -32,7 +32,7 @@ Each variable needs a name, this is how it is shown to you in command drop downs
 <!-- **************************************************** -->
 # What is a Variable Type?
 
-Mimicing c#, %Fungus Variables declare the type of data they are going to contain. 
+Mimicing c#, Fungus Variables declare the type of data they are going to contain. 
 ![variable data type]
 
 Simple applications will most commonly use Booleans, variables that hold either true or false, and Strings, Unicode characters, such as words, sentences and paragraphs.
@@ -56,18 +56,18 @@ During variable substitution, the flowchart looks for name matches on itself. Th
 <!-- **************************************************** -->
 # What is a Fungus Variable Data?
 
-Commands within blocks may use either a Variable reference directly or a Variable Data. Variable Data is a mechanism for %Fungus to use either a Fungus Variable or a manually entered value of the same type. This allows for more generic commands.
+Commands within blocks may use either a Variable reference directly or a Variable Data. Variable Data is a mechanism for Fungus to use either a Fungus Variable or a manually entered value of the same type. This allows for more generic commands.
 ![variable data]
 
 
 
-[variable window]: ./variables/variable_window.png "Variable section of the flowchart window"
-[variable inspector]: ./variables/variable_inspector.png "Variable section of the flowchart inspector"
-[variable add button]: ./variables/variable_add_button.png "Plus button shows selection of variable types to add."
-[variable highlight]: ./variables/variable_highlight.png "The variable(s) being referenced by the current command are highlighted in the list."
-[variable data type]: ./variables/variable_data_type.png "Fungus supports a number of types of variables"
-[variable scope]: ./variables/variable_scope.png "Scope determines where and how the variable is accessable."
-[variable data]: ./variables/variable_data.png "Data with a manual value entered. The drop down shows the compatible variable types on this flowchart that could be used instead of the manually entered value."
+[variable window]: https://github.com/snozbot/fungus/raw/master/Docs/resources/variables/variable_window.png "Variable section of the flowchart window"
+[variable inspector]: https://github.com/snozbot/fungus/raw/master/Docs/resources/variables/variable_inspector.png "Variable section of the flowchart inspector"
+[variable add button]: https://github.com/snozbot/fungus/raw/master/Docs/resources/variables/variable_add_button.png "Plus button shows selection of variable types to add."
+[variable highlight]: https://github.com/snozbot/fungus/raw/master/Docs/resources/variables/variable_highlight.png "The variable(s) being referenced by the current command are highlighted in the list."
+[variable data type]: https://github.com/snozbot/fungus/raw/master/Docs/resources/variables/variable_data_type.png "Fungus supports a number of types of variables"
+[variable scope]: https://github.com/snozbot/fungus/raw/master/Docs/resources/variables/variable_scope.png "Scope determines where and how the variable is accessable."
+[variable data]: https://github.com/snozbot/fungus/raw/master/Docs/resources/variables/variable_data.png "Data with a manual value entered. The drop down shows the compatible variable types on this flowchart that could be used instead of the manually entered value."
 
 
 <!--

@@ -45,7 +45,7 @@ The format for conversation text is:
 - position: The name of a position object in the Stage (e.g. Left, Middle, Right, Offscreen Left, Offscreen Right)
 - hide: Hides the character
 - <<<: Portrait face left
-- >>>: Portrait face right
+- \>\>\>: Portrait face right
 - clear | noclear: override the ClearPreviousLine default with true on clear or with false with noclear
 - wait | nowait: override the WaitForInput default with true on wait or with false with nowait
 - fade | nofade: override the FadeDone default with true on fade or with false with nofade. This is rarely required as it only really makes a difference on the last say of the conversation anyway.
@@ -64,7 +64,7 @@ john: Hi there {$PlayerName}.
 
 You can use the string substitution feature above with a @ref lua_string_table "Lua string table" to localize the conversation for multiple languages.
 
-The Conversation system does not work with the Localization component in %Fungus because the syntax makes it difficult to localize that way. 
+The Conversation system does not work with the Localization component in Fungus because the syntax makes it difficult to localize that way. 
 
 # Lua
 

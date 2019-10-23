@@ -1,6 +1,6 @@
 # Coding Tips
 
-This is a collection of quick tips for scripting %Fungus from code.
+This is a collection of quick tips for scripting Fungus from code.
 
 # Executing Blocks
 
