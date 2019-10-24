@@ -94,7 +94,7 @@ Pressing the Load button causes the previously stored JSON data to be deserializ
 - Restore Flowchart variables to the saved values
 - Call Save Point Loaded event handlers and start Flowchart execution after the appropriate Save Point command.
 
-## Rewind and Fast Forward buttons ## {#save_rewind_button}
+## Rewind and Fast Forward buttons
 
 The Rewind and Fast Forward buttons allow you to move backwards and forwards between Save Points in the Save History. 
 
