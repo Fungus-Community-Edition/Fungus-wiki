@@ -18,5 +18,5 @@ The 'Remote Debugger' option activates the built-in MoonSharp remote debugger to
  
 # LuaUtils
 
-When you create a LuaEnvironment object via (Tools > Fungus > Create > LuaEnvironment), the created gameobject has another component called LuaUtils which adds many useful features to the basic LuaEnvironment setup. See the @ref lua_utils "Lua Utils" section for more info.
+When you create a LuaEnvironment object via (Tools > Fungus > Create > LuaEnvironment), the created gameobject has another component called LuaUtils which adds many useful features to the basic LuaEnvironment setup. See the [[Lua Utils|lua_utils]] section for more info.
 
