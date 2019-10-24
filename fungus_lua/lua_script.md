@@ -68,7 +68,7 @@ To resolve this type of error, carefully check that the variable you want to acc
 
 For runtime errors, a useful technique is to add print() calls in your code just before where the error occurs, and run it again. This way you can print out information to the console to help track down the cause of the error.
 
-MoonSharp includes a remote debugger tool which you can use to step through Lua code and inspect variables. See the @ref lua_environment for more information.
+MoonSharp includes a remote debugger tool which you can use to step through Lua code and inspect variables. See the [[LuaEnvironment|lua_environment]] for more information.
 
 # Setting the LuaEnvironment
 
