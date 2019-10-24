@@ -89,7 +89,7 @@ We aim to maintain backwards compatibility with each new release (to a reasonabl
 
 # Contributing
 
-We welcome pull requests from everyone. By contributing to this project, you agree to abide by the @ref code_of_conduct. You also agree that by submitting a pull request for this project, your contribution will be licensed under the [Open Source license] for this project.
+We welcome pull requests from everyone. By contributing to this project, you agree to abide by the [Code of Conduct](code_of_conduct). You also agree that by submitting a pull request for this project, your contribution will be licensed under the [Open Source license] for this project.
 
 - Fork and clone the Fungus repo.
 - Make sure the tests pass locally (see the project readme for instructions).
