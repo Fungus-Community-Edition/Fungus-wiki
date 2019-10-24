@@ -18,11 +18,7 @@ FungusLua should work on most platforms supported by Unity. We list any known pl
 
 This video shows how to use many of the features available in FungusLua. It's more of a demonstration than a step-by-step tutorial, but hopefully between this video, the docs and the forums you'll have enough to figure it all out :)
 
-@htmlonly
-<div align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/M_Oo9FpVTos" frameborder="0" allowfullscreen></iframe>
-</div>
-@endhtmlonly
+[YouTube Video](https://www.youtube.com/embed/M_Oo9FpVTos)
 
 # FungusLua without Fungus
 
