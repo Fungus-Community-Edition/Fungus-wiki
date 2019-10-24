@@ -4,11 +4,7 @@ This page explains how to download and install Unity and Fungus.
 
 # Video Tutorial
 
-@htmlonly
-<div align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BQRdRz9Q5VY" frameborder="0" allowfullscreen></iframe>
-</div>
-@endhtmlonly
+[YouTube Video](https://www.youtube.com/watch?v=BQRdRz9Q5VY)
 
 # How do I install Fungus?
 
