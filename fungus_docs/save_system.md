@@ -26,7 +26,7 @@ The Save Menu also supports an auto-saving mode where the game is saved to disk 
 
 The following are the key elements that are used to implement saving in this example scene.
 
-## The Save Menu UI ## {#save_menu_ui}
+## The Save Menu UI
 
 ![img save_menu]
 
@@ -34,7 +34,7 @@ The Save Menu object can be seen In the root of the hierarchy window. This objec
 
 To add a Save Menu to your game, select *Tools > Fungus > Create > Save Menu*.
 
-## Creating Save Points ## {#save_creating_save_points}
+## Creating Save Points
 
 Save Points are created by executing Save Point commands in a Flowchart.
 
@@ -50,7 +50,7 @@ This means that if your game supports saving then you should always have exactly
 
 N.B. The Game Started event handler will fire for both new games and loaded games which is generally not what you want, so avoid using it in games that support saving.
 
-## Handling Save Point Loaded events ## {#save_point_loaded_events}
+## Handling Save Point Loaded events
 
 You often need to do some additional work when a saved game loads up to ensure the scene is in the correct state. E.g. The camera might need to be moved to the appropriate location or a certain music track played at this point in the game. An easy way to do this is via the Save Point Loaded event handler.
 
@@ -58,7 +58,7 @@ In the example scene, select the ‘Play Music 1’ Block in the Flowchart, and 
 
 The Save Point Loaded event handler will also fire when a matching Save Point command executes (if the Fire Event property is enabled). This allows you to place all the scene setup commands into a single shared Block which will be called when a Save Point command is first reached or when loading a previously saved game at that Save Point.
 
-## Saving Flowchart variables ## {#save_flowchart_variables}
+## Saving Flowchart variables
 
 Each Save Point can store the state of Flowchart variables at that point in time. You use a Save Data object to let the save system know which Flowcharts are to be included in this. Note that only Boolean, Integer, Float and String variables are saved at present.
 
@@ -72,7 +72,7 @@ If you are interested in extending the save system to support saving other types
 
 The Save Menu is a simple UI which allows players to interact with the Fungus save system. This section explains what each button does and how to configure the Save Menu properties.
 
-## Save Menu properties ## {#save_menu_properties}
+## Save Menu properties
 
 There are 4 main properties that you might want to configure in the Save Menu.
 
@@ -83,11 +83,11 @@ There are 4 main properties that you might want to configure in the Save Menu.
 
 N.B. If your game uses multiple scenes (e.g. via the Load Scene command), make sure to add all the scene to the Scenes in Build list in the [Build Settings](https://docs.unity3d.com/Manual/BuildSettings.html). 
 
-## Save button ## {#save_save_button}
+## Save button
 
 Pressing the Save button causes the current Save History to be serialized to JSON text and written to persistent storage via the PlayerPrefs class.
 
-## Load button ## {#save_load_button}
+## Load button
 
 Pressing the Load button causes the previously stored JSON data to be deserialized and used to populate the Save History.  The most recent Save Point is then used to restore the game state in the following order. 
 - Load the scene stored in the Save Point (even if it’s the currently loaded scene).
@@ -100,7 +100,7 @@ The Rewind and Fast Forward buttons allow you to move backwards and forwards bet
 
 Each move simply loads the Save Point stored at a particular point in the Save History. This by itself doesn’t change the Save History or write anything to persistent storage. However, if you rewind to an earlier Save Point and start playing again, the next time a Save Point command is executed it will cause all Save Points that are further ahead in time to be discarded permanently.
 
-## Restart button ## {#save_restart_button}
+## Restart button
 
 The Restart button clears the Save History and loads the start scene. The start scene is the scene that was active when the Save Menu was first initialized.
 
@@ -114,21 +114,21 @@ Remember that the player can choose to load or restart the game at any time. Fol
 
 # Terminology
 
-## Save Point ## {#save_term_save_point}
+## Save Point
 
 A Save Point is a snapshot of the state of the game at a point in time. Each Save Point records the current scene, the current point of Flowchart execution (i.e. at the Save Point command) and the current values of Flowchart variables. Only Boolean, Integer, Float and String variables are saved at present. 
 
-## Save Point command ## {#save_term_save_point_command}
+## Save Point command
 
 The Save Point command is used in a Flowchart to create a Save Point at that point in the execution. Each individual Save Point command should have a unique Save Point Key. The Resume On Load option causes execution to resume from this point after the Save Point is loaded.
 
-## Save Point Key ## {#save_term_save_point_key} 
+## Save Point Key 
 
 A Save Point Key is a unique string identifier for a single Save Point. By default, the name of the parent Block is used for the Save Point Key, but you can also use a custom key if required (e.g. multiple Save Point commands in a single Block). 
 
 N.B. Each key must be unique per scene or loading won’t work correctly!
 
-## Save History ## {#save_term_history}
+## Save History
 
 The Save History contains a list of previously recorded Save Points, stored in chronological order. When a Save Point command is executed, a new Save Point is created and appended to the Save History.
 
