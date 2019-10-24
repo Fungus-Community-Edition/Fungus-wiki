@@ -4,11 +4,7 @@
 
 We've teamed up with Paul Mc Grath to create an extensive [training course] which teaches how to make storytelling games using Fungus and Unity. Sales of this course help us to continue developing Fungus, so it's a nice way to learn Fungus and to support the work we're doing on the project.
 
-@htmlonly
-<div>
-<a target="_blank" href="https://www.udemy.com/make-interactive-games-with-fungus-unity3d-no-coding-required/?couponCode=FungusDiscount2016"><img hspace="20" src="./training.png"></a>
-</div>
-@endhtmlonly
+[Udemy Course](https://www.udemy.com/make-interactive-games-with-fungus-unity3d-no-coding-required/?couponCode=FungusDiscount2016)
 
 This course is aimed at anyone who wants to make interactive story based games, but, who doesn't know how to code.
 
