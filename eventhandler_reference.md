@@ -1,4 +1,4 @@
-# Event Handler Reference {#eventhandler_reference}
+# Event Handler Reference
 
 This is the reference documentation for all Fungus event handlers.
 
