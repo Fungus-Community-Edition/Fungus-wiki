@@ -2,9 +2,9 @@
 
 # Course Description
 
-We've teamed up with Paul Mc Grath to create an extensive [training course] which teaches how to make storytelling games using Fungus and Unity. Sales of this course help us to continue developing Fungus, so it's a nice way to learn Fungus and to support the work we're doing on the project.
+We've teamed up with Paul Mc Grath to create an extensive [Udemy training course] which teaches how to make storytelling games using Fungus and Unity. Sales of this course help us to continue developing Fungus, so it's a nice way to learn Fungus and to support the work we're doing on the project.
 
-[Udemy Course](https://www.udemy.com/make-interactive-games-with-fungus-unity3d-no-coding-required/?couponCode=FungusDiscount2016)
+[Udemy training course]
 
 This course is aimed at anyone who wants to make interactive story based games, but, who doesn't know how to code.
 
@@ -31,6 +31,6 @@ Fungus is a free Unity 3D plugin that allows non coders (like Paul) access to so
 - If you have struggled with code to create games in unity, this course is for you.
 - If you're able to code and know your way round Unity and love the joy of a visual coding interface, this course is for you.
 
-[training course]: https://www.udemy.com/make-interactive-games-with-fungus-unity3d-no-coding-required/?couponCode=FungusDiscount2016
+[Udemy training course]: http://fungusgames.com/udemy
 
 [img training]: https://github.com/snozbot/fungus/raw/master/Docs/resources/training_course/training.png
