@@ -24,6 +24,7 @@ There's a wide range of training material available here, suitable for both begi
 * [Coding Standard](coding_standard)
 * [Glossary](glossary)
 * [FAQ](faq)
+* [Versions](versions)
 * [Changelog](changelog)
 * [Code of Conduct](code_of_conduct)
 
