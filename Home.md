@@ -24,7 +24,8 @@ There's a wide range of training material available here, suitable for both begi
 * [Coding Standard](coding_standard)
 * [Glossary](glossary)
 * [FAQ](faq)
-* [Changelog](changelog)
+* [Versions](versions)
+* [Changelog](https://github.com/snozbot/fungus/blob/master/Assets/Fungus/Docs/CHANGELOG.txt)
 * [Code of Conduct](code_of_conduct)
 
 

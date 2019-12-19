@@ -73,7 +73,7 @@ These are some general best practices when writing code for Fungus. Where these 
 - Use for instead of foreach when possible. (Avoids allocating an iterator & GC problems).
 - Use string.Format or StringBuilder instead of concatenating strings. (Avoids allocations & GC problems).
 - Don't use LINQ. (Avoids allocations & GC problems.)
-- Don't use Assert. (We support back to Unity 5.0, before Assert was introduced).
+- Don't use Assert. (We support back to Unity versions, before Assert was introduced).
 - Use Mathf.Approximately when comparing float variables to constants.
 - Treat compiler warnings as errors. There should be zero warnings at build or runtime in normal operation.
 - Add global constants to FungusConstants.cs
@@ -85,7 +85,7 @@ We aim to maintain backwards compatibility with each new release (to a reasonabl
 - Projects should work correctly after upgrading to a newer Fungus version. Minor behavior changes are acceptable.
 - Custom code which uses the Fungus API should compile without error after upgrading. Minor compile errors that are trivial to fix are sometimes acceptable.
 - There are loads of Fungus tutorial videos and articles on the Internet, so avoid changing the UI too dramatically. Small UI tweaks and adding new controls is acceptable.
-- We support Unity 5.0+ so beware of API differences in newer versions. If in doubt, install Unity 5.0 and test your changes.
+- We support older versions of Unity so beware of API differences in newer versions. If in doubt, install an older version of Unity, 2017.4, and test your changes.
 
 # Contributing
 

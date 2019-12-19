@@ -40,7 +40,10 @@ Please use the forum to report bugs and request new features. You can also check
 If a bug is critical and we can't offer a sensible workaround, we will try to fix it as soon as possible. Otherwise, we will aim to fix the issue in the next release.
 
 # Can I get my hands on beta versions of Fungus?
-The very latest version is always available at our [github repository]
+The very latest version is always available at our [github repository]. There may also be pre-release packages available in the [releases](https://github.com/snozbot/fungus/releases)
+
+# What versions of Unity does Fungus Support?
+[Versions](Versions) may have more information about that. The most recent Fungus release tends to directly target the current or immediately previous version of Unity.
 
 # How can I contribute to Fungus?
 There are lots of ways to help the Fungus community to grow!
