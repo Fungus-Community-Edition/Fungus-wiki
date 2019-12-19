@@ -21,6 +21,10 @@ Target Object | UnityEngine.GameObject | Target monobehavior which contains the 
 Method Name | System.String | Name of the method to call
 Delay | System.Single | Delay (in seconds) before the method will be called
 
+# Debug Break
+Calls Debug.Break if enabled. Also useful for putting a visual studio breakbpoint within.
+
+Defined in Fungus.DebugBreak
 # Debug Log
 Writes a log message to the debug console.
 
