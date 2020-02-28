@@ -26,7 +26,7 @@ There's a wide range of training material available here, suitable for both begi
 * [FAQ](faq)
 * [Versions](versions)
 * [Changelog](https://github.com/snozbot/fungus/blob/master/Assets/Fungus/Docs/CHANGELOG.txt)
-* [Code of Conduct](code_of_conduct)
+* [Code of Conduct](https://github.com/snozbot/fungus/blob/master/CODE_OF_CONDUCT.md)
 
 
 [Unity]: http://unity3d.com
