@@ -4,6 +4,29 @@ This is a collection of quick tips for scripting Fungus from code.
 
 # Executing Blocks
 
+## Block Reference
+
+The BlockReference type uses a custom drawer to ensure direct reference to a block on a flowchart within the scene. Allows for selecting a block in your own scripts in a manner similar to selecting a block within a Command.
+
+```
+using UnityEngine;
+using Fungus;
+
+class MyComponent : public MonoBehaviour
+{
+	public BlockReference blockRef;
+}
+```
+
+To execute:
+```
+blockRef.Execute();
+```
+
+See [BlockReference.cs](https://github.com/snozbot/fungus/blob/master/Assets/Fungus/Scripts/Utils/BlockReference.cs) for more detail
+
+## Manually
+
 You first need to get a reference to your flowchart object.  Add a public Flowchart property to your component and set it to reference your flowchart in the inspector.
 ```
 using UnityEngine;
@@ -32,6 +55,25 @@ if (flowchart.HasExecutingBlocks())
 	// Do something
 }
 ```
+
+# Working with Fungus Variables
+
+Variables can be fetched via a flowchart Variables property or GetVariable by name or by type. Similar to a GetComponent.
+
+## Variable Reference
+
+For direct reference to a fungus variable in your own c# scripts, a VariableReference allows for selection similar to selecting a variable with in a Fungus Command. 
+
+```
+using UnityEngine;
+using Fungus;
+
+class MyComponent : public MonoBehaviour
+{
+	public VariableReference varRef;
+}
+```
+To access the instance uses generic Get and Set methods. See [VariableReference.cs](https://github.com/snozbot/fungus/blob/master/Assets/Fungus/Scripts/Utils/VariableReference.cs) for more details.
 
 # Block Signals
 
