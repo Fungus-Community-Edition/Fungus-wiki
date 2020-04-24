@@ -31,6 +31,8 @@ When working with more than one Block, its important to name each Block in a mea
 6. Now add a detailed description about the Block in the Description property in the Inspector window:
 ![block description]
 
+Note: Block names are shown in drop downs for selecting in various other parts of Fungus, as such you may wish to name them using categories. Placing a '/' in a block name will result in dropdowns collecting things into categories.
+
 <!-- **************************************************** -->
 # Creating a Block
 
