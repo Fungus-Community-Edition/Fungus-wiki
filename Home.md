@@ -5,6 +5,8 @@ Welcome to the documentation and community wiki for Fungus, the open source visu
 
 There's a wide range of training material available here, suitable for both beginner and experienced game developers. 
 
+There is a complete list of pages to the right and you can search within the wiki [here](https://github.com/search?q=repo%3Asnozbot%2Ffungus&type=Wikis)
+
 * [About Fungus](about_fungus)
 * [Training Course](training_course)
 * [Tutorial Videos](tutorial_videos)
