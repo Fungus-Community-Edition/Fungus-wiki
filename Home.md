@@ -22,13 +22,19 @@ There is a complete list of pages to the right and you can search within the wik
 * [Narrative Text Tags](narrative_text_tags)
 * [Text Variation System](text_variation_system)
 * [Save System](save_system)
-* [Coding Tips](coding_tips)
-* [Coding Standard](coding_standard)
 * [Glossary](glossary)
 * [FAQ](faq)
 * [Versions](versions)
 * [Changelog](https://github.com/snozbot/fungus/blob/master/Assets/Fungus/Docs/CHANGELOG.txt)
 * [Code of Conduct](https://github.com/snozbot/fungus/blob/master/CODE_OF_CONDUCT.md)
+
+# Developers
+* [Coding Tips](coding_tips)
+* [Coding Standard](coding_standard)
+* [Contributing](https://github.com/snozbot/fungus/blob/master/CONTRIBUTING.md)
+* [Adding a New Command](adding_command)
+* [Adding a New EventHandler](adding_eventhandler)
+* [Adding a New FungusVariable Type](adding_variable)
 
 
 [Unity]: http://unity3d.com
