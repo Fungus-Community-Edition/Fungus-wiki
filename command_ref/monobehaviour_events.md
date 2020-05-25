@@ -28,6 +28,7 @@ Defined in Fungus.CharacterControllerCollide
 
 Property | Type | Description
  --- | --- | ---
+Col Hit Var | Fungus.ControllerColliderHitVariable | Optional variable to store the ControllerColliderHit
 Tag Filter | System.String[] | Only fire the event if one of the tags match. Empty means any will fire.
 Suppress Block Auto Select | System.Boolean | If true, the flowchart window will not auto select the Block when the Event Handler fires. Affects Editor only.
 
@@ -38,7 +39,8 @@ Defined in Fungus.Collision
 
 Property | Type | Description
  --- | --- | ---
-Fire On | Fungus.BasePhysicsEventHandler+PhysicsMessageType | Which of the 3d physics messages to we trigger on.
+Collision Var | Fungus.CollisionVariable | Optional variable to store the collision object that is provided by Unity.
+Fire On | Fungus.BasePhysicsEventHandler+PhysicsMessageType | Which of the physics messages do we trigger on.
 Tag Filter | System.String[] | Only fire the event if one of the tags match. Empty means any will fire.
 Suppress Block Auto Select | System.Boolean | If true, the flowchart window will not auto select the Block when the Event Handler fires. Affects Editor only.
 
@@ -49,7 +51,8 @@ Defined in Fungus.Collision2D
 
 Property | Type | Description
  --- | --- | ---
-Fire On | Fungus.BasePhysicsEventHandler+PhysicsMessageType | Which of the 3d physics messages to we trigger on.
+Collision Var | Fungus.Collision2DVariable | Optional variable to store the collision object that is provided by Unity.
+Fire On | Fungus.BasePhysicsEventHandler+PhysicsMessageType | Which of the physics messages do we trigger on.
 Tag Filter | System.String[] | Only fire the event if one of the tags match. Empty means any will fire.
 Suppress Block Auto Select | System.Boolean | If true, the flowchart window will not auto select the Block when the Event Handler fires. Affects Editor only.
 
@@ -71,6 +74,7 @@ Defined in Fungus.Particle
 Property | Type | Description
  --- | --- | ---
 Fire On | Fungus.Particle+ParticleMessageFlags | Which of the Rendering messages to trigger on.
+G Ocollider Var | Fungus.GameObjectVariable | Optional variable to store the gameobject that particle collided with.
 Tag Filter | System.String[] | Only fire the event if one of the tags match. Empty means any will fire.
 Suppress Block Auto Select | System.Boolean | If true, the flowchart window will not auto select the Block when the Event Handler fires. Affects Editor only.
 
@@ -101,7 +105,8 @@ Defined in Fungus.Trigger
 
 Property | Type | Description
  --- | --- | ---
-Fire On | Fungus.BasePhysicsEventHandler+PhysicsMessageType | Which of the 3d physics messages to we trigger on.
+Collider Var | Fungus.ColliderVariable | Optional variable to store the collider that caused the trigger to occur.
+Fire On | Fungus.BasePhysicsEventHandler+PhysicsMessageType | Which of the physics messages do we trigger on.
 Tag Filter | System.String[] | Only fire the event if one of the tags match. Empty means any will fire.
 Suppress Block Auto Select | System.Boolean | If true, the flowchart window will not auto select the Block when the Event Handler fires. Affects Editor only.
 
@@ -112,7 +117,8 @@ Defined in Fungus.Trigger2D
 
 Property | Type | Description
  --- | --- | ---
-Fire On | Fungus.BasePhysicsEventHandler+PhysicsMessageType | Which of the 3d physics messages to we trigger on.
+Collider Var | Fungus.Collider2DVariable | Optional variable to store the collider that caused the trigger to occur.
+Fire On | Fungus.BasePhysicsEventHandler+PhysicsMessageType | Which of the physics messages do we trigger on.
 Tag Filter | System.String[] | Only fire the event if one of the tags match. Empty means any will fire.
 Suppress Block Auto Select | System.Boolean | If true, the flowchart window will not auto select the Block when the Event Handler fires. Affects Editor only.
 

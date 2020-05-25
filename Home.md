@@ -22,6 +22,8 @@ There is a complete list of pages to the right and you can search within the wik
 * [Narrative Text Tags](narrative_text_tags)
 * [Text Variation System](text_variation_system)
 * [Save System](save_system)
+* [Collections](collections)
+* [TMPro Support](tmpro_support)
 * [Glossary](glossary)
 * [FAQ](faq)
 * [Versions](versions)
@@ -40,3 +42,4 @@ There is a complete list of pages to the right and you can search within the wik
 [Unity]: http://unity3d.com
 [community forum]: http://fungusgames.com/forum
 [FungusGames.com]: http://fungusgames.com
+

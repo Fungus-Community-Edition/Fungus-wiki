@@ -1,5 +1,14 @@
 # Input commands
 
+# Get Mouse Position
+Store various interpretations of Input.mousePosition
+
+Defined in Fungus.GetMousePosition
+
+Property | Type | Description
+ --- | --- | ---
+Cast Camera | UnityEngine.Camera | If null, Camera.main is used
+
 # GetAxis
 Store Input.GetAxis in a variable
 

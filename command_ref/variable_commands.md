@@ -97,24 +97,24 @@ Defined in Fungus.SetVariable
 
 Property | Type | Description
  --- | --- | ---
-Variable | Fungus.Variable | The variable whos value will be set
 Set Operator | Fungus.SetOperator | The type of math operation to be performed
-Boolean Data | Fungus.BooleanData | Boolean value to set with
-Integer Data | Fungus.IntegerData | Integer value to set with
-Float Data | Fungus.FloatData | Float value to set with
-String Data | Fungus.StringDataMulti | String value to set with
-Animator Data | Fungus.AnimatorData | Animator value to set with
-Audio Source Data | Fungus.AudioSourceData | AudioSource value to set with
-Color Data | Fungus.ColorData | Color value to set with
-Game Object Data | Fungus.GameObjectData | GameObject value to set with
-Material Data | Fungus.MaterialData | Material value to set with
-Object Data | Fungus.ObjectData | Object value to set with
-Rigidbody2 D Data | Fungus.Rigidbody2DData | Rigidbody2D value to set with
-Sprite Data | Fungus.SpriteData | Sprite value to set with
-Texture Data | Fungus.TextureData | Texture value to set with
-Transform Data | Fungus.TransformData | Transform value to set with
-Vector2 Data | Fungus.Vector2Data | Vector2 value to set with
-Vector3 Data | Fungus.Vector3Data | Vector3 value to set with
+Variable | Fungus.Variable | Variable to use in expression
+Boolean Data | Fungus.BooleanData | Boolean value to compare against
+Integer Data | Fungus.IntegerData | Integer value to compare against
+Float Data | Fungus.FloatData | Float value to compare against
+String Data | Fungus.StringDataMulti | String value to compare against
+Animator Data | Fungus.AnimatorData | Animator value to compare against
+Audio Source Data | Fungus.AudioSourceData | AudioSource value to compare against
+Color Data | Fungus.ColorData | Color value to compare against
+Game Object Data | Fungus.GameObjectData | GameObject value to compare against
+Material Data | Fungus.MaterialData | Material value to compare against
+Object Data | Fungus.ObjectData | Object value to compare against
+Rigidbody2 D Data | Fungus.Rigidbody2DData | Rigidbody2D value to compare against
+Sprite Data | Fungus.SpriteData | Sprite value to compare against
+Texture Data | Fungus.TextureData | Texture value to compare against
+Transform Data | Fungus.TransformData | Transform value to compare against
+Vector2 Data | Fungus.Vector2Data | Vector2 value to compare against
+Vector3 Data | Fungus.Vector3Data | Vector3 value to compare against
 
 # To String
 Stores the result of a ToString on given variable in a string.

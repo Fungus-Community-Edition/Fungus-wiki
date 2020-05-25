@@ -28,7 +28,7 @@ Defined in Fungus.ElseIf
 
 Property | Type | Description
  --- | --- | ---
-Compare Operator | Fungus.CompareOperator | The type of comparison to be performed
+Any Or All Conditions | Fungus.VariableCondition+AnyOrAll | Selecting AnyOf will result in true if at least one of the conditions is true. Selecting AllOF will result in true only when all the conditions are true.
 Variable | Fungus.Variable | Variable to use in expression
 Boolean Data | Fungus.BooleanData | Boolean value to compare against
 Integer Data | Fungus.IntegerData | Integer value to compare against
@@ -51,6 +51,18 @@ Vector3 Data | Fungus.Vector3Data | Vector3 value to compare against
 Marks the end of a conditional block.
 
 Defined in Fungus.End
+# For
+Loop over a fixed integer range, similar to a common for loop.
+
+Defined in Fungus.LoopRange
+
+Property | Type | Description
+ --- | --- | ---
+Starting Value | Fungus.IntegerData | Starting value for the counter variable
+End Value | Fungus.IntegerData | End value for the counter variable, exclusive
+Counter | Fungus.IntegerData | Optional int var to hold the current loop counter.
+Step | Fungus.IntegerData | Step size for the counter, how much does it go up by each loop. Default 1
+
 # If
 If the test expression is true, execute the following command block.
 
@@ -58,7 +70,7 @@ Defined in Fungus.If
 
 Property | Type | Description
  --- | --- | ---
-Compare Operator | Fungus.CompareOperator | The type of comparison to be performed
+Any Or All Conditions | Fungus.VariableCondition+AnyOrAll | Selecting AnyOf will result in true if at least one of the conditions is true. Selecting AllOF will result in true only when all the conditions are true.
 Variable | Fungus.Variable | Variable to use in expression
 Boolean Data | Fungus.BooleanData | Boolean value to compare against
 Integer Data | Fungus.IntegerData | Integer value to compare against
@@ -104,6 +116,18 @@ Property | Type | Description
  --- | --- | ---
 _scene Name | Fungus.StringData | Name of the scene to load. The scene must also be added to the build settings.
 Loading Image | UnityEngine.Texture2D | Image to display while loading the scene
+
+# Loop Range
+Loop over a fixed integer range, similar to a common for loop.
+
+Defined in Fungus.LoopRange
+
+Property | Type | Description
+ --- | --- | ---
+Starting Value | Fungus.IntegerData | Starting value for the counter variable
+End Value | Fungus.IntegerData | End value for the counter variable, exclusive
+Counter | Fungus.IntegerData | Optional int var to hold the current loop counter.
+Step | Fungus.IntegerData | Step size for the counter, how much does it go up by each loop. Default 1
 
 # Lua Else If
 Marks the start of a command block to be executed when the preceding If statement is False and the test expression is true.
@@ -204,7 +228,7 @@ Defined in Fungus.While
 
 Property | Type | Description
  --- | --- | ---
-Compare Operator | Fungus.CompareOperator | The type of comparison to be performed
+Any Or All Conditions | Fungus.VariableCondition+AnyOrAll | Selecting AnyOf will result in true if at least one of the conditions is true. Selecting AllOF will result in true only when all the conditions are true.
 Variable | Fungus.Variable | Variable to use in expression
 Boolean Data | Fungus.BooleanData | Boolean value to compare against
 Integer Data | Fungus.IntegerData | Integer value to compare against

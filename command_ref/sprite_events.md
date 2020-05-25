@@ -7,7 +7,7 @@ Defined in Fungus.DragCancelled
 
 Property | Type | Description
  --- | --- | ---
-Draggable Object | Fungus.Draggable2D | Draggable object to listen for drag events on
+Draggable Objects | System.Collections.Generic.List`1[Fungus.Draggable2D] | Draggable object to listen for drag events on
 Suppress Block Auto Select | System.Boolean | If true, the flowchart window will not auto select the Block when the Event Handler fires. Affects Editor only.
 
 # Drag Completed

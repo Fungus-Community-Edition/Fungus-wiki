@@ -1,5 +1,14 @@
 # GameObject commands
 
+# FindAll
+Find all gameobjects by tag and store in a collection
+
+Defined in Fungus.GameObjectFind
+
+Property | Type | Description
+ --- | --- | ---
+Tag String | Fungus.StringData | Find all gameobjects of tag
+
 # Instantiate
 Instantiate a game object
 
