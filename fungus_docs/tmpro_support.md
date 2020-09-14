@@ -5,7 +5,7 @@ Fungus has some specific support and uses of TextMeshPro. The Fungus Writer and 
 <!-- **************************************************** -->
 # Animated Text
 
-TextMeshPro has link support, meaning it can tell you which characters are cotained within a link block and what that link refers to. Building on top of this is one of the recommended ways of creating animated text in TMPro. Fungus has some basic system for this and some builtin effects to use. See the the TMPro Link Default Effects scene. The default link types are detailed in the sample scene and the text below.
+TextMeshPro has link support, meaning it can tell you which characters are contained within a link block and what that link refers to. Building on top of this is one of the recommended ways of creating animated text in TMPro. Fungus has some basic system for this and some built-in effects to use. See the the TMPro Link Default Effects scene. The default link types are detailed in the sample scene and the text below.
 ```
 <link="shake">shake, shake, shake, sure</link>
 <link="wiggle">wiggle, wiggle, wiggle, yeah</link>
