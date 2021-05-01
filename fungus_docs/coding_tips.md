@@ -23,7 +23,54 @@ To execute:
 blockRef.Execute();
 ```
 
-See [BlockReference.cs](https://github.com/snozbot/fungus/blob/master/Assets/Fungus/Scripts/Utils/BlockReference.cs) for more detail
+See [BlockReference.cs](https://github.com/snozbot/fungus/blob/master/Assets/Fungus/Scripts/Utils/BlockReference.cs) for more detail  
+
+### Code example  
+```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Serialization;
+
+namespace Fungus {
+	[CommandInfo("Custom",
+			 "Execute Reference Block",
+			 "Receive an object of type Block Reference and execute it.")]
+	public class executeReferenceBlock : Command, IBlockCaller
+	{
+
+		[Tooltip("the block")]
+		[SerializeField] protected BlockReference whichBlock;
+
+		public override void OnEnter(){
+			if(whichBlock.block != null){
+				whichBlock.Execute();
+			}
+			Continue();
+		}
+
+		public override void GetConnectedBlocks(ref List<Block> connectedBlocks)
+        {
+            if (whichBlock.block != null)
+            {
+                connectedBlocks.Add(whichBlock.block);
+            }       
+        }
+
+		public bool MayCallBlock(Block block){
+            return block == whichBlock.block;
+        }
+
+	}
+}
+```
+
+
+This custom command explores receiving and storing blocks in the BlockReference container struct (see [BlockReference.cs](https://github.com/snozbot/fungus/blob/master/Assets/Fungus/Scripts/Utils/BlockReference.cs)). The inspector presents a Flowchart field and, when filled, populates a dropdown with that flowchart's blocks. Then, when this command is reached at runtime, the block is executed (no custom editor script needed).  
+
+![blockReferenceExecute](https://i.imgur.com/2kh3yRd.png)
+
+Note that to have the arrow lines drawn in the Flowchart window indicating that the selected block is connected, the connectedBlocks List's Add() must be passed the contained Block (whichBlock.block), not the BlockReference itself.
 
 ## Manually
 
