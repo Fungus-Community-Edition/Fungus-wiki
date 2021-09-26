@@ -9,8 +9,8 @@ This page explains how to download and install Unity and Fungus.
 # How do I install Fungus?
 
 1. Install the latest version of [Unity].
-3. Launch Unity and create a new Project by selecting File > New Project.
-4. Select 'Use Defaults for 2D' when creating the new project.
+2. Launch Unity and create a new Project by selecting File > New Project.
+3. Select 'Use Defaults for 2D' when creating the new project.
 
 ## To install Fungus from the Asset Store (recommended):
 
@@ -21,7 +21,8 @@ This page explains how to download and install Unity and Fungus.
 ## To install Fungus from the latest release on Github:
 
 1. Download the latest Fungus .unitypackage from [Github]
-2. Import Fungus into the new project by selecting Assets > Import Package > Custom Package.
+2. Note that there is the normal package, and then Compatibility is for older versions of Unity, and Lite is without examples.
+3. Import Fungus into the new project by selecting Assets > Import Package > Custom Package.
 
 # First steps
 
