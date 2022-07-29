@@ -43,7 +43,7 @@ We welcome all sorts of contributions to Fungus. You can report bugs, suggest ne
 
 [Chris Gregan] is the main author and maintainer of Fungus. He's co-founder of [Snozbot], along with [John O' Kane] and [Ronan Pearce].
 
-[Dr. Matt Smith] has kindly contributed the written documentation for the Fungus project. If you're new to Unity development then a great source of information, ideas and sample projects is his [Unity 5.x Cookbook], by Matt and [Chico Queiroz].
+[Dr. Matt Smith] has kindly contributed the written documentation for the Fungus project. If you're new to Unity development then a great source of information, ideas and sample projects is his [Unity 2021 Cookbook], by Matt and Shaun Ferns.
 
 ![img cookbook]
 
@@ -74,8 +74,7 @@ The Fungus documentation is licensed under the [Creative Commons Attribution-Non
 [Dr. Matt Smith]: https://github.com/dr-matt-smith/
 [Creative Commons Attribution-NonCommercial License]: https://creativecommons.org/licenses/by-nc/3.0/
 [Open Source MIT License]: https://github.com/snozbot/fungus/blob/master/LICENSE
-[Unity 5.x Cookbook]: https://www.packtpub.com/game-development/unity-5x-cookbook
-[Chico Queiroz]: https://www.linkedin.com/in/chicoqueiroz
+[Unity 2021 Cookbook]: https://www.packtpub.com/product/unity-2021-cookbook-fourth-edition/9781839217616
 
 [img community]: https://github.com/snozbot/fungus/raw/master/Docs/resources/about/community.jpeg
 [img fungus_town]: https://github.com/snozbot/fungus/raw/master/Docs/resources/about/fungus_town.png
