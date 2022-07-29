@@ -78,6 +78,6 @@ The Fungus documentation is licensed under the [Creative Commons Attribution-Non
 
 [img community]: https://github.com/snozbot/fungus/raw/master/Docs/resources/about/community.jpeg
 [img fungus_town]: https://github.com/snozbot/fungus/raw/master/Docs/resources/about/fungus_town.png
-[img cookbook]: https://github.com/snozbot/fungus/raw/master/Docs/resources/about/B03899_MockupCover_Cookbook.jpg
+[img cookbook]: https://github.com/PacktPublishing/Unity-2021-Cookbook-Fourth-Edition/blob/master/images/cover2021_smallest.png
 
 
