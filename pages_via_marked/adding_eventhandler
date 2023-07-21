@@ -1,0 +1,32 @@
+<h1 id="adding-an-eventhandler">Adding an EventHandler</h1>
+<p>EventHandlers are the mechanism for causing blocks to execute. As with commands, you can create your own by inheriting from the base class and setting information on an attribute. Since they are a MonoBehaviour, they may piggyback off existing messages from Unity or your own game systems. Some use Update to check for conditions being met then calling ExecuteBlock.
+Here&#39;s a simplified version of the GameStarted EventHandler.</p>
+<pre><code class="language-c#">using Fungus;
+using UnityEngine;
+
+[EventHandlerInfo(&quot;&quot;,
+                  &quot;Start&quot;,
+                  &quot;The block will execute when the Start is called by Unity.&quot;)]
+[AddComponentMenu(&quot;&quot;)]
+public class Start : EventHandler
+{
+    protected virtual void Start()
+    {
+        ExecuteBlock();
+    }
+}
+</code></pre>
+<p><strong>EventHandlerInfo</strong>
+This attribute adds the EventHandler to the SetEventHandler menu. First param determines its category, second its name in the list, 3rd, its tooltip in the menu.</p>
+<p><strong>AddComponentMenu</strong>
+This unity attribute, when given an empty string prevents the class from showing up in the AddComponent menu on regular gameobjects. </p>
+<p><strong>Inherit from EventHandler</strong>
+A Block has 0 or 1 EventHandler that tells the block when to run.</p>
+<p><strong>ExecuteBlock</strong>
+The method in base class EventHandler that, if all conditions are met, starts the block running.</p>
+<h2 id="data">Data</h2>
+<p>As with any MonoBehaviour, fields with public or SerializeField will be show in the editor when the command is selected. </p>
+<p>For FungusVariables you&#39;ll want to use either a typeData such as IntegerData, this allows for a local value to be set or a compatible FungusVariable to be selected. Where a FungusVariable is required you can use a Variable field with a VariableProperty attribute to only show variables of certain types such as.</p>
+<pre><code class="language-c#">[VariableProperty(typeof(FloatVariable), typeof(BooleanVariable), typeof(IntegerVariable))]
+[SerializeField] protected Variable outValue;
+</code></pre>

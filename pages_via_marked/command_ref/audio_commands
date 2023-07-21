@@ -1,0 +1,244 @@
+<h1 id="audio-commands">Audio commands</h1>
+<h1 id="control-audio">Control Audio</h1>
+<p>Plays, loops, or stops an audiosource. Any AudioSources with the same tag as the target Audio Source will automatically be stoped.</p>
+<p>Defined in Fungus.ControlAudio</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Control</td>
+<td>Fungus.ControlAudioType</td>
+<td>What to do to audio</td>
+</tr>
+<tr>
+<td>_audio Source</td>
+<td>Fungus.AudioSourceData</td>
+<td>Audio clip to play</td>
+</tr>
+<tr>
+<td>Start Volume</td>
+<td>System.Single</td>
+<td>Start audio at this volume</td>
+</tr>
+<tr>
+<td>End Volume</td>
+<td>System.Single</td>
+<td>End audio at this volume</td>
+</tr>
+<tr>
+<td>Fade Duration</td>
+<td>System.Single</td>
+<td>Time to fade between current volume level and target volume level.</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until this command has finished before executing the next command.</td>
+</tr>
+</tbody></table>
+<h1 id="play-ambiance-sound">Play Ambiance Sound</h1>
+<p>Plays a background sound to be overlayed on top of the music. Only one Ambiance can be played at a time.</p>
+<p>Defined in Fungus.PlayAmbianceSound</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Sound Clip</td>
+<td>UnityEngine.AudioClip</td>
+<td>Sound effect clip to play</td>
+</tr>
+<tr>
+<td>Volume</td>
+<td>System.Single</td>
+<td>Volume level of the sound effect</td>
+</tr>
+<tr>
+<td>Loop</td>
+<td>System.Boolean</td>
+<td>Sound effect clip to play</td>
+</tr>
+</tbody></table>
+<h1 id="play-music">Play Music</h1>
+<p>Plays looping game music. If any game music is already playing, it is stopped. Game music will continue playing across scene loads.</p>
+<p>Defined in Fungus.PlayMusic</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Music Clip</td>
+<td>UnityEngine.AudioClip</td>
+<td>Music sound clip to play</td>
+</tr>
+<tr>
+<td>At Time</td>
+<td>System.Single</td>
+<td>Time to begin playing in seconds. If the audio file is compressed, the time index may be inaccurate.</td>
+</tr>
+<tr>
+<td>Loop</td>
+<td>System.Boolean</td>
+<td>The music will start playing again at end.</td>
+</tr>
+<tr>
+<td>Fade Duration</td>
+<td>System.Single</td>
+<td>Length of time to fade out previous playing music.</td>
+</tr>
+</tbody></table>
+<h1 id="play-random-sound">Play Random Sound</h1>
+<p>Plays a once-off sound effect from a list of available sound effects. Multiple sound effects can be played at the same time.</p>
+<p>Defined in Fungus.PlayRandomSound</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Sound Clip</td>
+<td>UnityEngine.AudioClip[]</td>
+<td>Sound effect clip to play</td>
+</tr>
+<tr>
+<td>Volume</td>
+<td>System.Single</td>
+<td>Volume level of the sound effect</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the sound has finished playing before continuing execution.</td>
+</tr>
+</tbody></table>
+<h1 id="play-sound">Play Sound</h1>
+<p>Plays a once-off sound effect. Multiple sound effects can be played at the same time.</p>
+<p>Defined in Fungus.PlaySound</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Sound Clip</td>
+<td>UnityEngine.AudioClip</td>
+<td>Sound effect clip to play</td>
+</tr>
+<tr>
+<td>Volume</td>
+<td>System.Single</td>
+<td>Volume level of the sound effect</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the sound has finished playing before continuing execution.</td>
+</tr>
+</tbody></table>
+<h1 id="play-usfxr-sound">Play Usfxr Sound</h1>
+<p>Plays a usfxr synth sound. Use the usfxr editor [Tools &gt; Fungus &gt; Utilities &gt; Generate usfxr Sound Effects] to create the SettingsString. Set a ParentTransform if using positional sound. See <a href="https://github.com/zeh/usfxr">https://github.com/zeh/usfxr</a> for more information about usfxr.</p>
+<p>Defined in Fungus.PlayUsfxrSound</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Parent Transform</td>
+<td>UnityEngine.Transform</td>
+<td>Transform to use for positional audio</td>
+</tr>
+<tr>
+<td>_ Settings String</td>
+<td>Fungus.StringDataMulti</td>
+<td>Settings string which describes the audio</td>
+</tr>
+<tr>
+<td>Wait Duration</td>
+<td>System.Single</td>
+<td>Time to wait before executing the next command</td>
+</tr>
+</tbody></table>
+<h1 id="set-audio-pitch">Set Audio Pitch</h1>
+<p>Sets the global pitch level for audio played with Play Music and Play Sound commands.</p>
+<p>Defined in Fungus.SetAudioPitch</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Pitch</td>
+<td>System.Single</td>
+<td>Global pitch level for audio played using the Play Music and Play Sound commands</td>
+</tr>
+<tr>
+<td>Fade Duration</td>
+<td>System.Single</td>
+<td>Time to fade between current pitch level and target pitch level.</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the pitch change has finished before executing next command</td>
+</tr>
+</tbody></table>
+<h1 id="set-audio-volume">Set Audio Volume</h1>
+<p>Sets the global volume level for audio played with Play Music and Play Sound commands.</p>
+<p>Defined in Fungus.SetAudioVolume</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Volume</td>
+<td>System.Single</td>
+<td>Global volume level for audio played using Play Music and Play Sound</td>
+</tr>
+<tr>
+<td>Fade Duration</td>
+<td>System.Single</td>
+<td>Time to fade between current volume level and target volume level.</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the volume fade has completed before continuing.</td>
+</tr>
+</tbody></table>
+<h1 id="stop-ambiance">Stop Ambiance</h1>
+<p>Stops the currently playing game ambiance.</p>
+<p>Defined in Fungus.StopAmbiance</p>
+<h1 id="stop-music">Stop Music</h1>
+<p>Stops the currently playing game music.</p>
+<p>Defined in Fungus.StopMusic
+Auto-Generated by Fungus.ExportReferenceDocs</p>

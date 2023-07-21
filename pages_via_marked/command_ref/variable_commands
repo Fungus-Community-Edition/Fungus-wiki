@@ -1,0 +1,324 @@
+<h1 id="variable-commands">Variable commands</h1>
+<h1 id="delete-save-key">Delete Save Key</h1>
+<p>Deletes a saved value from permanent storage.</p>
+<p>Defined in Fungus.DeleteSaveKey</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Key</td>
+<td>System.String</td>
+<td>Name of the saved value. Supports variable substition e.g. &quot;player_{$PlayerNumber}</td>
+</tr>
+</tbody></table>
+<h1 id="from-string">From String</h1>
+<p>Attempts to parse a string into a given fungus variable type, such as integer or float</p>
+<p>Defined in Fungus.FromString</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Source String</td>
+<td>Fungus.StringVariable</td>
+<td>Source of string data to parse into another variables value</td>
+</tr>
+<tr>
+<td>Out Value</td>
+<td>Fungus.Variable</td>
+<td>The variable type to be parsed and value stored within</td>
+</tr>
+</tbody></table>
+<h1 id="load-variable">Load Variable</h1>
+<p>Loads a saved value and stores it in a Boolean, Integer, Float or String variable. If the key is not found then the variable is not modified.</p>
+<p>Defined in Fungus.LoadVariable</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Key</td>
+<td>System.String</td>
+<td>Name of the saved value. Supports variable substition e.g. &quot;player_{$PlayerNumber}&quot;</td>
+</tr>
+<tr>
+<td>Variable</td>
+<td>Fungus.Variable</td>
+<td>Variable to store the value in.</td>
+</tr>
+</tbody></table>
+<h1 id="random-float">Random Float</h1>
+<p>Sets an float variable to a random value in the defined range.</p>
+<p>Defined in Fungus.RandomFloat</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Variable</td>
+<td>Fungus.FloatVariable</td>
+<td>The variable whos value will be set</td>
+</tr>
+<tr>
+<td>Min Value</td>
+<td>Fungus.FloatData</td>
+<td>Minimum value for random range</td>
+</tr>
+<tr>
+<td>Max Value</td>
+<td>Fungus.FloatData</td>
+<td>Maximum value for random range</td>
+</tr>
+</tbody></table>
+<h1 id="random-integer">Random Integer</h1>
+<p>Sets an integer variable to a random value in the defined range.</p>
+<p>Defined in Fungus.RandomInteger</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Variable</td>
+<td>Fungus.IntegerVariable</td>
+<td>The variable whos value will be set</td>
+</tr>
+<tr>
+<td>Min Value</td>
+<td>Fungus.IntegerData</td>
+<td>Minimum value for random range</td>
+</tr>
+<tr>
+<td>Max Value</td>
+<td>Fungus.IntegerData</td>
+<td>Maximum value for random range</td>
+</tr>
+</tbody></table>
+<h1 id="read-text-file">Read Text File</h1>
+<p>Reads in a text file and stores the contents in a string variable</p>
+<p>Defined in Fungus.ReadTextFile</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Text File</td>
+<td>UnityEngine.TextAsset</td>
+<td>Text file to read into the string variable</td>
+</tr>
+<tr>
+<td>String Variable</td>
+<td>Fungus.StringVariable</td>
+<td>String variable to store the tex file contents in</td>
+</tr>
+</tbody></table>
+<h1 id="reset">Reset</h1>
+<p>Resets the state of all commands and variables in the Flowchart.</p>
+<p>Defined in Fungus.Reset</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Reset Commands</td>
+<td>System.Boolean</td>
+<td>Reset state of all commands in the script</td>
+</tr>
+<tr>
+<td>Reset Variables</td>
+<td>System.Boolean</td>
+<td>Reset variables back to their default values</td>
+</tr>
+</tbody></table>
+<h1 id="save-variable">Save Variable</h1>
+<p>Save an Boolean, Integer, Float or String variable to persistent storage using a string key. The value can be loaded again later using the Load Variable command. You can also use the Set Save Profile command to manage separate save profiles for multiple players.</p>
+<p>Defined in Fungus.SaveVariable</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Key</td>
+<td>System.String</td>
+<td>Name of the saved value. Supports variable substition e.g. &quot;player_{$PlayerNumber}</td>
+</tr>
+<tr>
+<td>Variable</td>
+<td>Fungus.Variable</td>
+<td>Variable to read the value from. Only Boolean, Integer, Float and String are supported.</td>
+</tr>
+</tbody></table>
+<h1 id="set-save-profile">Set Save Profile</h1>
+<p>Sets the active profile that the Save Variable and Load Variable commands will use. This is useful to crete multiple player save games. Once set, the profile applies across all Flowcharts and will also persist across scene loads.</p>
+<p>Defined in Fungus.SetSaveProfile</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Save Profile Name</td>
+<td>System.String</td>
+<td>Name of save profile to make active.</td>
+</tr>
+</tbody></table>
+<h1 id="set-variable">Set Variable</h1>
+<p>Sets a Boolean, Integer, Float or String variable to a new value using a simple arithmetic operation. The value can be a constant or reference another variable of the same type.</p>
+<p>Defined in Fungus.SetVariable</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Set Operator</td>
+<td>Fungus.SetOperator</td>
+<td>The type of math operation to be performed</td>
+</tr>
+<tr>
+<td>Variable</td>
+<td>Fungus.Variable</td>
+<td>Variable to use in expression</td>
+</tr>
+<tr>
+<td>Boolean Data</td>
+<td>Fungus.BooleanData</td>
+<td>Boolean value to compare against</td>
+</tr>
+<tr>
+<td>Integer Data</td>
+<td>Fungus.IntegerData</td>
+<td>Integer value to compare against</td>
+</tr>
+<tr>
+<td>Float Data</td>
+<td>Fungus.FloatData</td>
+<td>Float value to compare against</td>
+</tr>
+<tr>
+<td>String Data</td>
+<td>Fungus.StringDataMulti</td>
+<td>String value to compare against</td>
+</tr>
+<tr>
+<td>Animator Data</td>
+<td>Fungus.AnimatorData</td>
+<td>Animator value to compare against</td>
+</tr>
+<tr>
+<td>Audio Source Data</td>
+<td>Fungus.AudioSourceData</td>
+<td>AudioSource value to compare against</td>
+</tr>
+<tr>
+<td>Color Data</td>
+<td>Fungus.ColorData</td>
+<td>Color value to compare against</td>
+</tr>
+<tr>
+<td>Game Object Data</td>
+<td>Fungus.GameObjectData</td>
+<td>GameObject value to compare against</td>
+</tr>
+<tr>
+<td>Material Data</td>
+<td>Fungus.MaterialData</td>
+<td>Material value to compare against</td>
+</tr>
+<tr>
+<td>Object Data</td>
+<td>Fungus.ObjectData</td>
+<td>Object value to compare against</td>
+</tr>
+<tr>
+<td>Rigidbody2 D Data</td>
+<td>Fungus.Rigidbody2DData</td>
+<td>Rigidbody2D value to compare against</td>
+</tr>
+<tr>
+<td>Sprite Data</td>
+<td>Fungus.SpriteData</td>
+<td>Sprite value to compare against</td>
+</tr>
+<tr>
+<td>Texture Data</td>
+<td>Fungus.TextureData</td>
+<td>Texture value to compare against</td>
+</tr>
+<tr>
+<td>Transform Data</td>
+<td>Fungus.TransformData</td>
+<td>Transform value to compare against</td>
+</tr>
+<tr>
+<td>Vector2 Data</td>
+<td>Fungus.Vector2Data</td>
+<td>Vector2 value to compare against</td>
+</tr>
+<tr>
+<td>Vector3 Data</td>
+<td>Fungus.Vector3Data</td>
+<td>Vector3 value to compare against</td>
+</tr>
+</tbody></table>
+<h1 id="to-string">To String</h1>
+<p>Stores the result of a ToString on given variable in a string.</p>
+<p>Defined in Fungus.ToString</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Variable</td>
+<td>Fungus.Variable</td>
+<td>Target variable to get String of.</td>
+</tr>
+<tr>
+<td>Out Value</td>
+<td>Fungus.StringVariable</td>
+<td>Variable to store the result of ToString</td>
+</tr>
+</tbody></table>
+<p>Auto-Generated by Fungus.ExportReferenceDocs</p>

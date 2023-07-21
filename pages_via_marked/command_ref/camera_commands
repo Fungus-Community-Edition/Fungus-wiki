@@ -1,0 +1,188 @@
+<h1 id="camera-commands">Camera commands</h1>
+<h1 id="fade-screen">Fade Screen</h1>
+<p>Draws a fullscreen texture over the scene to give a fade effect. Setting Target Alpha to 1 will obscure the screen, alpha 0 will reveal the screen. If no Fade Texture is provided then a default flat color texture is used.</p>
+<p>Defined in Fungus.FadeScreen</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Duration</td>
+<td>System.Single</td>
+<td>Time for fade effect to complete</td>
+</tr>
+<tr>
+<td>Target Alpha</td>
+<td>System.Single</td>
+<td>Current target alpha transparency value. The fade gradually adjusts the alpha to approach this target value.</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the fade has finished before executing next command</td>
+</tr>
+<tr>
+<td>Fade Color</td>
+<td>UnityEngine.Color</td>
+<td>Color to render fullscreen fade texture with when screen is obscured.</td>
+</tr>
+<tr>
+<td>Fade Texture</td>
+<td>UnityEngine.Texture2D</td>
+<td>Optional texture to use when rendering the fullscreen fade effect.</td>
+</tr>
+</tbody></table>
+<h1 id="fade-to-view">Fade To View</h1>
+<p>Fades the camera out and in again at a position specified by a View object.</p>
+<p>Defined in Fungus.FadeToView</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Duration</td>
+<td>System.Single</td>
+<td>Time for fade effect to complete</td>
+</tr>
+<tr>
+<td>Fade Out</td>
+<td>System.Boolean</td>
+<td>Fade from fully visible to opaque at start of fade</td>
+</tr>
+<tr>
+<td>Target View</td>
+<td>Fungus.View</td>
+<td>View to transition to when Fade is complete</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the fade has finished before executing next command</td>
+</tr>
+<tr>
+<td>Fade Color</td>
+<td>UnityEngine.Color</td>
+<td>Color to render fullscreen fade texture with when screen is obscured.</td>
+</tr>
+<tr>
+<td>Fade Texture</td>
+<td>UnityEngine.Texture2D</td>
+<td>Optional texture to use when rendering the fullscreen fade effect.</td>
+</tr>
+<tr>
+<td>Target Camera</td>
+<td>UnityEngine.Camera</td>
+<td>Camera to use for the fade. Will use main camera if set to none.</td>
+</tr>
+</tbody></table>
+<h1 id="fullscreen">Fullscreen</h1>
+<p>Sets the application to fullscreen, windowed or toggles the current state.</p>
+<p>Defined in Fungus.Fullscreen</p>
+<h1 id="move-to-view">Move To View</h1>
+<p>Moves the camera to a location specified by a View object.</p>
+<p>Defined in Fungus.MoveToView</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Duration</td>
+<td>System.Single</td>
+<td>Time for move effect to complete</td>
+</tr>
+<tr>
+<td>Target View</td>
+<td>Fungus.View</td>
+<td>View to transition to when move is complete</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the fade has finished before executing next command</td>
+</tr>
+<tr>
+<td>Target Camera</td>
+<td>UnityEngine.Camera</td>
+<td>Camera to use for the pan. Will use main camera if set to none.</td>
+</tr>
+</tbody></table>
+<h1 id="shake-camera">Shake Camera</h1>
+<p>Applies a camera shake effect to the main camera.</p>
+<p>Defined in Fungus.ShakeCamera</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Duration</td>
+<td>System.Single</td>
+<td>Time for camera shake effect to complete</td>
+</tr>
+<tr>
+<td>Amount</td>
+<td>UnityEngine.Vector2</td>
+<td>Magnitude of shake effect in x &amp; y axes</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the shake effect has finished before executing next command</td>
+</tr>
+</tbody></table>
+<h1 id="start-swipe">Start Swipe</h1>
+<p>Activates swipe panning mode where the player can pan the camera within the area between viewA &amp; viewB.</p>
+<p>Defined in Fungus.StartSwipe</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>View A</td>
+<td>Fungus.View</td>
+<td>Defines one extreme of the scrollable area that the player can pan around</td>
+</tr>
+<tr>
+<td>View B</td>
+<td>Fungus.View</td>
+<td>Defines one extreme of the scrollable area that the player can pan around</td>
+</tr>
+<tr>
+<td>Duration</td>
+<td>System.Single</td>
+<td>Time to move the camera to a valid starting position between the two views</td>
+</tr>
+<tr>
+<td>Speed Multiplier</td>
+<td>System.Single</td>
+<td>Multiplier factor for speed of swipe pan</td>
+</tr>
+<tr>
+<td>Target Camera</td>
+<td>UnityEngine.Camera</td>
+<td>Camera to use for the pan. Will use main camera if set to none.</td>
+</tr>
+</tbody></table>
+<h1 id="stop-swipe">Stop Swipe</h1>
+<p>Deactivates swipe panning mode.</p>
+<p>Defined in Fungus.StopSwipe
+Auto-Generated by Fungus.ExportReferenceDocs</p>

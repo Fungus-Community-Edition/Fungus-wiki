@@ -1,0 +1,95 @@
+<h1 id="coding-standard">Coding Standard</h1>
+<p>The Fungus coding standard is designed to make the source code simple to understand for users and easy to maintain for contributors.</p>
+<p>This document is focussed on decisions that we&#39;ve made for the Fungus project. For general Unity coding tips, try <a href="http://www.gamasutra.com/blogs/HermanTulleken/20160812/279100/50_Tips_and_Best_Practices_for_Unity_2016_Edition.php">50 Tips and Best Practices for Unity</a>.</p>
+<h1 id="code-layout">Code layout</h1>
+<p>This is the typical layout of a class in Fungus:</p>
+<pre><code>using UnityEngine;
+
+namespace Fungus
+{
+    /// &lt;summary&gt;
+    /// Description of the component.
+    /// &lt;/summary&gt;
+    public class MyComponent : MonoBehaviour
+    {
+        [Tooltip(&quot;Tooltip comment displayed in the editor.&quot;)]
+        [SerializeField] protected float myProperty = 10f;
+
+        protected virtual void MyMethod()
+        {
+            if (myProperty &gt; 5f)
+            {
+                Debug.Log(&quot;A message&quot;);
+            }
+        }
+
+        #region Public members
+
+        /// &lt;summary&gt;
+        /// Documentation comment for public property.
+        /// &lt;/summary&gt;
+        public virtual float MyProperty { get; set; }
+
+        /// &lt;summary&gt;
+        /// Aspect ratio of the secondary view rectangle. e.g. a 2:1 aspect ratio = 2/1 = 2.0.
+        /// &lt;/summary&gt;
+        public virtual void DoSomething()
+        {
+        }
+
+        #endregion
+    }
+}
+</code></pre>
+<p>Things to note:</p>
+<ul>
+<li>Remove any unused using declarations (can spot these easily with static code analysis - see below).</li>
+<li>Runtime code goes in the Fungus namespace. </li>
+<li>Editor code goes in the Fungus.EditorUtils namespace.</li>
+<li>All public classes, structs, enums and class members should be documented using xml comments.</li>
+<li>You can document private and protected members if you want to, but ALL public members must have at least a summary comment.</li>
+<li>Parameter &amp; return descriptions are optional, add them if you feel the parameters require a non-trivial explanation.</li>
+<li>Serialized fields should NEVER be public. Use a public accessor property to access the field if external access is required.</li>
+<li>All serialized fields should have a Tooltip attribute. This doubles as code documentation for the field.</li>
+<li>All methods should be declared virtual and use protected instead of private. This allows for easy inheritance and extension (at the cost of some performance).</li>
+<li>All public members of a class (including public static &amp; delegate types) should be placed inside a &#39;Public members&#39; region for easy access.</li>
+<li>Braces go on a newline and use spaces exclusively instead of tabs.</li>
+</ul>
+<h1 id="coding-best-practices">Coding best practices</h1>
+<p>These are some general best practices when writing code for Fungus. Where these go against the usual recommended coding practice (e.g. Assert) it&#39;s because of an issue in Unity with doing it &#39;the right way&#39;.</p>
+<ul>
+<li>Use the static code analyser in MonoDevelop. <a href="http://tinyurl.com/h7xqpwg">http://tinyurl.com/h7xqpwg</a></li>
+<li>Use the c# xml comment style. <a href="https://msdn.microsoft.com/en-us/library/b2s063f7.aspx">https://msdn.microsoft.com/en-us/library/b2s063f7.aspx</a></li>
+<li>Declare all public enums at namespace scope, not inside a class. (Consistency, easier sharing of enums between classes).</li>
+<li>Use var instead of declaring variable types when possible. (More readable).</li>
+<li>Use for instead of foreach when possible. (Avoids allocating an iterator &amp; GC problems).</li>
+<li>Use string.Format or StringBuilder instead of concatenating strings. (Avoids allocations &amp; GC problems).</li>
+<li>Don&#39;t use LINQ. (Avoids allocations &amp; GC problems.)</li>
+<li>Don&#39;t use Assert. (We support back to Unity versions, before Assert was introduced).</li>
+<li>Use Mathf.Approximately when comparing float variables to constants.</li>
+<li>Treat compiler warnings as errors. There should be zero warnings at build or runtime in normal operation.</li>
+<li>Add global constants to FungusConstants.cs</li>
+</ul>
+<h1 id="backwards-compatibility">Backwards compatibility</h1>
+<p>We aim to maintain backwards compatibility with each new release (to a reasonable extent).</p>
+<ul>
+<li>Projects should work correctly after upgrading to a newer Fungus version. Minor behavior changes are acceptable.</li>
+<li>Custom code which uses the Fungus API should compile without error after upgrading. Minor compile errors that are trivial to fix are sometimes acceptable.</li>
+<li>There are loads of Fungus tutorial videos and articles on the Internet, so avoid changing the UI too dramatically. Small UI tweaks and adding new controls is acceptable.</li>
+<li>We support older versions of Unity so beware of API differences in newer versions. If in doubt, install an older version of Unity, 2017.4, and test your changes.</li>
+</ul>
+<h1 id="contributing">Contributing</h1>
+<p>We welcome pull requests from everyone. By contributing to this project, you agree to abide by the <a href="code_of_conduct">Code of Conduct</a>. You also agree that by submitting a pull request for this project, your contribution will be licensed under the <a href="https://github.com/snozbot/Fungus/blob/master/LICENSE">Open Source license</a> for this project.</p>
+<ul>
+<li>Fork and clone the Fungus repo.</li>
+<li>Make sure the tests pass locally (see the project readme for instructions).</li>
+<li>Make your change. Add tests for your change. Make the tests pass locally.</li>
+<li>Push to your fork and submit a pull request.</li>
+</ul>
+<p>Your pull request will have a better chance of being accepted if you do the following: </p>
+<ul>
+<li>Send one pull request for each new feature / bug fix. It&#39;s time consuming to review multi-feature changes and we won&#39;t merge a change unless we know exactly what it does.</li>
+<li>Write tests for each change / new feature (not always possible)</li>
+<li>Follow our coding standard (see above)</li>
+<li>Write a <a href="http://chris.beams.io/posts/git-commit/">good commit message</a>.</li>
+</ul>

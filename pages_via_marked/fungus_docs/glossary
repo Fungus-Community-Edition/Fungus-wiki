@@ -1,0 +1,375 @@
+<h1 id="glossary">Glossary</h1>
+<!-- ------------------------ -->
+<!-- ---------- A ----------- -->
+<!-- ------------------------ -->
+
+<h2 id="a">A</h2>
+<p><strong>Animator parameter</strong>: 
+Special variables that can be used to change what happens in an animation chart, such as when to trigger a chance from one animation state to another.</p>
+<!-- ******************************* -->
+<p><strong>Assets</strong>:
+The files on the computer/device, that are used in a game. Asset files include audio clips, video clips, 2D images, 3D models, and text files containing computer program code.</p>
+<!-- ******************************* -->
+<p><strong>Audio tag</strong>:
+One of the tags specially allowing the control of Audio from within the Story Text of a Say Command.</p>
+<p>There are four audio related tags:</p>
+<pre><code>{audio=AudioObjectName} Play Audio Once
+{audioloop=AudioObjectName} Play Audio Loop
+{audiopause=AudioObjectName} Pause Audio
+{audiostop=AudioObjectName} Stop Audio
+</code></pre>
+<p>For more information see: <a href="../../audio/#audio-tags-in-say-commands/index.html">Audio Tags recipe</a></p>
+<!-- ******************************* -->
+<p><strong>Audiosource</strong>:
+A special component of Unity objects that can refer to a particular audio clip file, and control its playing / pausing / 3d effects etc.</p>
+<!-- ------------------------ -->
+<!-- ---------- B ----------- -->
+<!-- ------------------------ -->
+
+<h2 id="b">B</h2>
+<!-- ******************************* -->
+<p><strong>Block</strong>:
+A Fungus Block is a sequence of Commands that have been created inside a Fungus Flowchart.</p>
+<!-- ******************************* -->
+<p><strong>Block Reference</strong>:
+A simple struct wrapping a reference to a Fungus Block. Allows for BlockReferenceDrawer. 
+This is the recommended way to directly reference a fungus block in external c# scripts, as it will give you an inspector field that gives a drop down of all the blocks on a flowchart, in a similar way to what you would expect from selecting a block on a command.
+If you want to showup in the Callers section of the block, ensure your monobehaviours 
+that have these also implement IBlockCaller.</p>
+<!-- ******************************* -->
+<p><strong>Block connection</strong>:
+When Commands in one Block cause the execution of Commands in another Block.</p>
+<!-- ******************************* -->
+<p><strong>Boolean variable</strong>:
+A true/false variable.</p>
+<!-- ******************************* -->
+<p><strong>Branching block</strong>:
+A Block that is <strong>not</strong> an Event Block, and causes execution of 2 or more other Blocks.</p>
+<p>Note: Branching Blocks are displayed as an orange hexagon in the Flowchart window.</p>
+<p><img src="./images/001_3_block_types/2_branching_block.png" alt="branching block" title="branching block"></p>
+<!-- ******************************* -->
+<p><strong>Branching narrative</strong>:
+When choices by the user (via the Menu Command for example) will change what Narrative Commands are executed and displayed to the user.</p>
+<!-- ******************************* -->
+<p><strong>Build platform</strong>:
+The target device for which a Unity game application will be built.</p>
+<!-- ******************************* -->
+<p><strong>Build settings</strong>:
+Build settings include the target platform, screen resolution, input devices, scenes to be included etc.</p>
+<!-- ******************************* -->
+<!-- ******************************* -->
+<!-- ******************************* -->
+<!-- ******************************* -->
+<!-- ******************************* -->
+<!-- ******************************* -->
+<!-- ******************************* -->
+
+<!--
+## Button
+-->
+
+<!-- ------------------------ -->
+<!-- ---------- C ----------- -->
+<!-- ------------------------ -->
+
+<h2 id="c">C</h2>
+<!-- ******************************* -->
+<p><strong>Csharp (C#)</strong>:
+A computer programming language developed by Microsoft, similar to Java. C# is one of the programming languages that can be used to write scripts for controlling Unity games.</p>
+<!-- ******************************* -->
+<p><strong>Character</strong>:
+A Fungus gameObject allowing the personalisation of narrative, allowing characters to have names, special colours for their text on screen, and a range of different named images so character images can be displayed corresponding to the content of their dialog.</p>
+<!-- ******************************* -->
+<p><strong>Clickable Sprite</strong>:
+A 2D image on screen that has been code to do something when clicked with the mouse or selected by the trackpad.</p>
+<!-- ******************************* -->
+<p><strong>Coding / Scripting</strong>:
+Writing lines of computer code to control execution of a computer program, such as a Unity game (as opposed to using a visual language such as Fungus Flowcharts).</p>
+<!-- ******************************* -->
+<p><strong>Command</strong>:
+An instruction for the Unity game engine to do something, examples are to play or stop a sound, or to display some text to the user in a dialog.</p>
+<!-- ******************************* -->
+<p><strong>Command category</strong>:
+THe Fungus commands are grouped according to what kind of action they will lead to.</p>
+<!-- ******************************* -->
+<p><strong>Command property panel</strong>:
+When a Block is selected in a Fungus Flowchart, the top-half of the Inspector window will show the properties and list of Commands for that Block. When one of the Commands is selected, that its properties are displayed in the bottom-half of the Inspector window.</p>
+<!-- ******************************* -->
+<p><strong>Condition</strong>:
+Conditions are tests that are either &quot;TRUE&quot; or &quot;FALSE&quot; at a particular point in time. Different Commands can be defined to be executed depending on the value of a condition test in a Fungus Block.</p>
+<!-- ******************************* -->
+<p><strong>CSV</strong>:
+Comma Separated Variable - a computer file format where the values of rows and columns are recorded, in a form that can be loaded into a spreadsheet..</p>
+<!-- ******************************* -->
+<p><strong>Custom strings</strong>:
+As well as the automatically generated rows for each Say, Menu, Command etc., you can also add your own rows to the localisation file using any string id you want. To use these custom strings, you use variable substitution.</p>
+<p>For example, say you have a custom string called &quot;PlayerName&quot;, you can put {$PlayerName} in any Say text to substitute the correct localised value from the localisation file.</p>
+<!-- ------------------------ -->
+<!-- ---------- D ----------- -->
+<!-- ------------------------ -->
+
+<h2 id="d">D</h2>
+<!-- ******************************* -->
+<p><strong>Draggable Sprite</strong>:
+A 2D image on screen that has been code to do something when clicked-and-dragged with the mouse or trackpad.</p>
+<!-- ******************************* -->
+<p><strong>DragTarget Sprite</strong>:
+A 2D image that has been defined to execute some action(s) if a Draggable Sprite is dragged and released over it.</p>
+<!-- ------------------------ -->
+<!-- ---------- E ----------- -->
+<!-- ------------------------ -->
+
+<h2 id="e">E</h2>
+<!-- ****************************** -->
+<p><strong>Editor</strong>:
+An application allowing the editing of game resources. The Unity Editor has multiple windows for viewing / editing properties of files, scene contents, UI dialogs, camera settings etc.</p>
+<!-- ******************************* -->
+<p><strong>Event Handler</strong>:
+A Fungus Block or a Unity coded &quot;method&quot; that will be executed when a particular &quot;Event&quot; occurs. For example when the &quot;SPACE&quot; key is pressed the game should respond to the user having executed a spell or fired a gun or whatever.</p>
+<!-- ******************************* -->
+<p><strong>Event block</strong>:
+Any Block whose execution is triggered by an Event, such as Game Started or Key Preses.</p>
+<p>Note: Event Blocks are displayed as rounded blue rectangles in the Flowchart window.</p>
+<p><img src="./images/001_3_block_types/1_event_block.png" alt="event block" title="event block"></p>
+<!-- ******************************* -->
+<p><strong>Excel</strong>:
+A computer spreadsheet application program from Microsoft, part of the MS Office suite.</p>
+<p>see the Microsoft website: <a href="http://products.office.com/excel">Microsoft Excel application</a></p>
+<!-- ******************************* -->
+<p><strong>Execution</strong>:
+The running of Commands or statements in a computer script / program. Making the computer do something.</p>
+<!-- ------------------------ -->
+<!-- ---------- F ----------- -->
+<!-- ------------------------ -->
+
+<h2 id="f">F</h2>
+<!-- ******************************* -->
+<p><strong>Float variable</strong>:
+A variable that stores decimal numbers, such as 5.5, -0.11 etc.</p>
+<!-- ******************************* -->
+<p><strong>Flowchart</strong>:
+A Fungus Flowchart contains a set of Blocks, each containing Commands to be executed.</p>
+<!-- ******************************* -->
+<p><strong>Flow control</strong>:
+A general term referring to how a computer decides what to do next. So it is deciding which Fungus Command or Unity code statement to execute next. Typical Flow commands include decision choices such as loops or IF-conditions etc.</p>
+<!-- ******************************* -->
+<p><strong>Flowchart item id</strong>:
+The unique number that is created for each Block of a Flowchart. This ID is used fpr serialisation (save and load) purposes, and not usually seen by the developer.</p>
+<!-- *************************** -->
+<p><strong>Flowchart Localization id</strong>:
+A special, unique name, used for associating language localization data for each Fungus game project.</p>
+<!-- ******************************* -->
+<p><strong>Flowchart Message</strong>:
+A Message is basically a piece of text, but one that plays the role of being able to act as a &#39;trigger event&#39; to cause Blocks to start executing.</p>
+<p>Messages can be sent (via the <code>Flow | Send Message</code> Command), either to the current Flowchart, or to <strong>ALL</strong> Flowcharts. One of the Events that can be defined to start the execution of a Block is if a particular Message has been received by the Flowchart.</p>
+<!-- ******************************* -->
+<p><strong>Flowchart Window</strong>:
+A special window available in the Unity Editor for editing and working with Fungus Flowcharts and their Blocks.</p>
+<!-- ------------------------ -->
+<!-- ---------- I ----------- -->
+<!-- ------------------------ -->
+
+<h2 id="i">I</h2>
+<!-- ******************************* -->
+<p><strong>Integer variable</strong>:
+A variable that stores whole numbers, such as 100, 2, 0, -2 etc.</p>
+<!-- ------------------------ -->
+<!-- ---------- L ----------- -->
+<!-- ------------------------ -->
+
+<h2 id="l">L</h2>
+<!-- ******************************* -->
+<p><strong>Landscape orientation</strong>:
+An orientation of an image or computer screen, where the width is greater than the height.</p>
+<!-- ******************************* -->
+<p><strong>Language Column</strong>:
+When you first export the localization .csv (Comma-Separated-Variable) file it has 3 columns (Key, Description, Standard).
+When you want to add a new language to the file you add a new column for that language. You can use whatever column name you like, though it&#39;s typical to use two letter language codes (FR, ES, DE, etc.).</p>
+<p>The Set Language command is provided with the name of the column for the language you wish to use in Fungus.</p>
+<!-- ******************************* -->
+<p><strong>Libre Office</strong>:
+A free and Open Source alternative to Microsoft Office.</p>
+<p>Lean more and download from: <a href="http://www.libreoffice.org/">LibreOffice.org</a></p>
+<!-- ******************************* -->
+<p><strong>Localization</strong>:
+Localization and Internationalization refer to coding a game in such a way that it can be deployed in a manner supporting playing and interactions in multiple human languages.</p>
+<!-- ******************************* -->
+<p><strong>Logging</strong>:
+The  <code>Scripting | Debug Log</code> Command allows the writing (&#39;logging&#39;) of messages to the Console window while a scene is running. Logs provide a record of what has happened when the game is running, useful for checking what happened was what was intended, or for debugging (hunting down where errors are located).</p>
+<!-- ------------------------ -->
+<!-- ---------- M ----------- -->
+<!-- ------------------------ -->
+
+<h2 id="m">M</h2>
+<!-- ******************************* -->
+<p><strong>Mecanim Animation</strong>:
+A Unity file representing an animation clip or pose. Animators manage the changes or mixing between one Animation clip and another.</p>
+<!-- ******************************* -->
+<p><strong>Mecanim Animator</strong>:
+A Unity state-chart controller, which manages animated gameObjects - deciding when and how quickly objects should &#39;blend&#39; into a different state or animation.</p>
+<!-- ******************************* -->
+<p><strong>Menu Dialog</strong>:
+The UI elements (background / lines / text) that define the visual style of how the Text of Menu Commands is presented to the user.</p>
+<p><img src="./images/011_menu_maths/9_menu_running.png" alt="menu running" title="menu running"></p>
+<p>Fungus provides a default Menu Dialog, but custom variations can be defined, for different games / scenes / characters etc.</p>
+<!-- ------------------------ -->
+<!-- ---------- O ----------- -->
+<!-- ------------------------ -->
+
+<h2 id="o">O</h2>
+<!-- ******************************* -->
+<p><strong>Order in layer</strong>:
+If multiple objects have been assigned to the same Unity Sorting Layer, then the numeric value of the Order in Layer property determines their visual sorting order (what appears in front of what).</p>
+<!-- ------------------------ -->
+<!-- ---------- P ----------- -->
+<!-- ------------------------ -->
+
+<p>##P</p>
+<!-- ******************************* -->
+<p><strong>Parallax Sprite</strong>:
+The use of 2D sprites, moving at different speeds, to give the impression of 3D movement (where sprites for objects meant to be further away from the user move more slowly than objects closer to the game object.</p>
+<!-- ******************************* -->
+<p><strong>Platform build</strong>:
+Refers to the device and type of application that the Unity editor will create. Examples are stand alone applications for Windows, Mac OS, iOS phone, Android phone, X-BOX etc.</p>
+<!-- ******************************* -->
+<p><strong>Portrait</strong>:
+The Fungus Portrait Command is used to make the game display one of the Character Portrait images on the Stage. A particular image can be selected, and it can be made to move on/off stage.</p>
+<!-- ******************************* -->
+<p><strong>Portrait orientation</strong>:
+An orientation of an image or computer screen, where the height is greater than the width.</p>
+<!-- ******************************* -->
+<p><strong>Procedural Sound</strong>:
+A method of creating sounds using computer algorithms.</p>
+<!-- ******************************* -->
+<p><strong>Private / Public variables</strong>:
+A Private variable as one that can only be accessed by Cmmands in Blocks in that Flowchart. A Public variable is one that can be accessed by Commands in Blocks in other Flowcharts as well as its own one.</p>
+<!-- ------------------------ -->
+<!-- ---------- S ----------- -->
+<!-- ------------------------ -->
+
+<h2 id="s">S</h2>
+<!-- ******************************* -->
+<p><strong>Save profile</strong>:
+The Save Profile is basically a string that gets prepended to the key used to save &amp; load variables in PlayerPrefs. This allows you to create  separate save profiles using different names. For example, player 1&#39;s save data might use the Save Profile &#39;Chris&#39;, while player 2&#39;s data would use the Save Profile &#39;Matt&#39;, and their data can be saved / loaded independently.</p>
+<p>The typical workflow would be:</p>
+<ol>
+<li><p>Choose a suitable value fo the Save Profile (e.g. &quot;player1&quot;)</p>
+</li>
+<li><p>Set Save Profile.</p>
+</li>
+<li><p>Save Variable(s).</p>
+</li>
+</ol>
+<!-- ******************************* -->
+<p><strong>Say Dialog</strong>:
+The UI elements (background / lines / text) that define the visual style of how the Story Text of Say Commands is presented to the user.</p>
+<p><img src="./images/010_say_command/4_scene_running.png" alt="story text output" title="story text output"></p>
+<p>Fungus provides a default Say Dialog, but custom variations can be defined, for different games / scenes / characters etc.</p>
+<!-- ******************************* -->
+<p><strong>Scenes</strong>:
+Unity Scenes are like chapters in a book, or &quot;screens&quot; in a game, or &quot;levels&quot; in a game. They allow the logic of a computer game to be broken into components. The &quot;gameObjects&quot; in a scene determine what software components will be created when a Scene starts running (others may be created or deleted once the Scene has started).</p>
+<!-- ******************************* -->
+<p><strong>Screen aspect ratio</strong>:
+The relationship of the width of an image or screen to its height. Typical rations include 4:3 ad 16:10.</p>
+<!-- ******************************* -->
+<p><strong>Screen resolution</strong>:
+The number of pixels wide and high a window or device supports.</p>
+<!-- ******************************* -->
+<p><strong>Sorting layer</strong>:
+Unity 2D objects are assigned to a &quot;Sorting Layer&quot;. This allows images/text to be assigned to layers such as Background, Foreground, Middleground, UI (on top of everything) etc.</p>
+<!-- ******************************* -->
+<p><strong>Spine</strong>:
+Spine is a third-party 2D animation system from <a href="http://esotericsoftware.com/">EsotericSoftware.com</a>.</p>
+<!-- ******************************* -->
+<p><strong>Spine Animation</strong>:
+Animation clip based on the Spine 2D system, that can be controlled from Fungus Commands (once  the Unity Spine and Fungus Spine add-on packages have been installed).</p>
+<!-- ******************************* -->
+<p><strong>Sprites</strong>:
+2D Images, that may be hidden / revealed. Sprite may be moved through Fungus Commands, or Unity code. Sprites can also be defined to be &quot;draggable&quot; by the users computer mouse pointer or mobile device touch gestures.</p>
+<!-- ******************************* -->
+<p><strong>Stage</strong>:
+A Fungus gameObject in the scene, used to define the position and start-end movements of Character Portrait images controlled by Fungus Portrait Commands.</p>
+<!-- ******************************* -->
+<p><strong>Standard block</strong>:
+A Fungus Block whose execution is <strong>not</strong> triggered by an event (so it is not an Event Block), and which does <strong>not</strong> cause the execution of 2 or more other Blocks (so is <strong>not</strong> a Branching Block).</p>
+<p>Note: Standard Blocks are displayed as yellow rectangles in the Flowchart window.</p>
+<p><img src="./images/001_3_block_types/3_standard_block.png" alt="standard block" title="standard block"></p>
+<!-- ******************************* -->
+<p><strong>Standard Text</strong>:
+When you export the localization file, there is a Standard Text field. This is populated with the text that has been entered into the Say, Menu, etc. text fields in the Unity editor. In normal usage, this field is in the localisation file for reference so localizers know what text needs to be translated. For example, if the project is drafted using English, then the text in Say, Menu Commands etc. would be in English, and in the exported localization file this text would appear in the Standard Text fields.</p>
+<p>Note, if you use the Set Language command with an empty language string then the values in the Standard Text field will be used when Fungus runs.</p>
+<!-- ******************************* -->
+<p><strong>Story Text Tags</strong>:
+Special instructions that can be embedded inside the Story Text of Say commands. Examples are tags that start/stop playing a sound, or send a message.</p>
+<!-- ******************************* -->
+<p><strong>String ID</strong>:
+This is an automatically generated ID code, that is stored in the first column of the localisation file. These IDs are generated automatically when you export the strings using the Localization object.</p>
+<p>The ID is needed since every localised text string needs a unique identifying name so that it can be mapped it back to the Say, Menu, etc. command that references it.</p>
+<!-- ******************************* -->
+<p><strong>String variable</strong>:
+A variable that stores text characters, such as the player&#39;s name, or colour of the potion they are carrying.</p>
+<!-- ------------------------ -->
+<!-- ---------- T ----------- -->
+<!-- ------------------------ -->
+
+<h2 id="t">T</h2>
+<!-- ******************************* -->
+<p><strong>Tag</strong>:
+Special characters that can be inserted into Fungus Say Commands, to control other aspects of the scene, such as the playing of a sound, or the shaking of the camera, or the sending of a message to cause other Blocks to start executing.</p>
+<!-- ------------------------ -->
+<!-- ---------- U ----------- -->
+<!-- ------------------------ -->
+
+<h2 id="u">U</h2>
+<!-- ****************************** -->
+<p><strong>Unity</strong>:
+A game engine and IDE (Interactive Development Environment) - with program code editor, and audio/graphics editing facilities. Able to build applications for deployment to Windows, Mac, Linus, iOS, Android, XBox etc.</p>
+<!-- ******************************* -->
+<p><strong>Unity UI</strong>:
+The building of visual interfaces for computer programs deployed by Unity.</p>
+<!-- ******************************* -->
+<p><strong>Usfxr</strong>:
+A system for generating sound effects from mathematical parameters.</p>
+<p>Built into Fungus and based on the open source project at: <a href="https://github.com/zeh/usfxr">Usfxr at GitHub</a></p>
+<!-- ------------------------ -->
+<!-- ---------- V ----------- -->
+<!-- ------------------------ -->
+
+<h2 id="v">V</h2>
+<!-- ******************************* -->
+<p><strong>Variable</strong>:
+A named memory location, from which values can be retrieved at a later date.</p>
+<!-- ******************************* -->
+<p><strong>Variable default value</strong>:
+A &quot;default&quot; value refers to the value given to a variable automatically, if no particular value is specified. In the Variables section at the bottom of the Flowchart window, as well as defining the names and data types of variables, you can also set default values here.</p>
+<p><img src="./images/001_variables/1_default_values.png" alt="default variable value" title="default variable value"></p>
+<!-- ******************************* -->
+<p><strong>Variables Panel</strong>:
+The very bottom section of the Flowchart window is where variables (such as score, playerName, carryingGreenKey etc.) can be defined for use in Fungus Commands.</p>
+<!-- ******************************* -->
+<p><strong>Variable saving</strong>:
+The saving of the value of a variable to the devices &#39;disk&#39;. So when another Unity Scene is loaded, the saved value can be loaded from saved memory. The saved value can also be loaded the next time the game application is executed on a device.</p>
+<!-- ******************************* -->
+<p><strong>Variable substitution</strong>:</p>
+<p>This relates to the use of a tag in the Story Text of a Say Command, whereby the contents of a Variable will be inserted into that part of the text for the Say Command</p>
+<p><code>{$VarName} Substitute variable</code></p>
+<!-- ******************************* -->
+<p><strong>View, Move, Rotate, Scale &amp; Rectangle tools</strong>:
+The core tools offered in the Unity editor for changing basic properties of 2D and 3D objects</p>
+<!-- ******************************* -->
+<p><strong>View</strong>:
+A Fungus gameObject that helps ensure good visual experience regardless of device aspect ration, and used for camera movements and control by Fungus Commands.</p>
+<!-- ******************************* -->
+<p><strong>Voice over</strong>:
+A sound clip file containing recorded audio that corresponds to text being displayed on screen.</p>
+<!-- ------------------------ -->
+<!-- ---------- W ----------- -->
+<!-- ------------------------ -->
+
+<h2 id="w">W</h2>
+<!-- ******************************* -->
+<p><strong>Webplayer</strong>:
+A Build option in Unity that creates an application that can play inside web pages that have the Unity Web Player plug-in installed. The need fo the plug-in and web-player option are being replaced by the WebGL Unity build facility.</p>
+<!-- ******************************* -->
+<p><strong>WebGL</strong>:
+<a href="https://en.wikipedia.org/wiki/WebGL">WebGL</a> is a technology available in modern browsers that allows for interactive, high quality computer graphics within web pages, without the need for any special plug-ins (such as Flash or the Unity Player). It promised to be the future for multimedia web page content and interaction.</p>

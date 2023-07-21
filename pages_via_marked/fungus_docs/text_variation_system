@@ -1,0 +1,46 @@
+<h1 id="text-variation-system">Text Variation System</h1>
+<p>A system for selecting a sub section of a larger string. Allows for simple changes to occur within the same block of text, instead of having to create multiple commands. The Text Variation System is inspired by <a href="https://github.com/inkle/ink">Ink</a>&#39;s <a href="https://github.com/inkle/ink/blob/master/Documentation/WritingWithInk.md#6-variable-text">Variable Text system</a>. Fungus&#39; Writer and Menu classes currently use this system, as such Say, Menu and Conversation commands can make use of it. Fungus Lua actions that result in Lua passing strings to the Fungus Writer or Menu will also work.</p>
+<p>Handles replacing vary text segments. Keeps history of previous replacements to allow for ordered sequence of variation.</p>
+<ul>
+<li>[] mark the bounds of the vary section</li>
+<li>| divide elements within the variation</li>
+</ul>
+<p>Default behaviour is to show one element after another and hold the final element. Such that [1|2|3] will show
+1 the first time it is parsed, 2 the second and every subsequent time it will show 3.</p>
+<p>Empty sections are allowed, such that [a||c], on second showing it will have 0 characters.</p>
+<p>Supports nested sections, that are only evaluated if their parent element is chosen. </p>
+<p>This behaviour can be modified with certain characters at the start of the [], e.g. [&amp;a|b|c];</p>
+<ul>
+<li>&amp; does not hold the final element it wraps back around to the beginning in a looping fashion</li>
+<li>! does not hold the final element, it instead returns empty for the varying section</li>
+<li>~ chooses a random element every time it is encountered </li>
+</ul>
+<h1 id="example-usage">Example Usage</h1>
+<p>In a simple case you may want to have a line read differently the first time the user encounters it. Perhaps a shop keeper, first time they say </p>
+<pre><code>Hail and well met, stranger. What can I help you with?
+</code></pre>
+<p>but when the same block is run again you want it to be more friendly </p>
+<pre><code>Welcome back, friend. What can I help you with?
+</code></pre>
+<p>Instead of creating diverging blocks of commands we could use text variation of.</p>
+<pre><code>[Hail and well met, stranger|Welcome back, friend]. What can I help you with?
+</code></pre>
+<p>Another common usage is for commonly repeated blocks where players return for menus or story branching points. You may want there to be some variation so it feels more natural. Perhaps by varying the greeting used to be randomised, among;</p>
+<ul>
+<li>Mornin.</li>
+<li>G&#39;day.</li>
+<li>How&#39;s it hanging?</li>
+<li>Oi oi.</li>
+<li>How are we?</li>
+<li>Let&#39;s do this.</li>
+</ul>
+<p>We could do a variation of</p>
+<pre><code>[~Mornin.|G&#39;day.|How&#39;s it hanging?|Oi oi.|How are we?|Let&#39;s do this.]
+</code></pre>
+<p>For a more complete and thorough example, see example scene at  FungusExamples\VariationText\TextVariation.unity</p>
+<h1 id="future-work">Future Work</h1>
+<ul>
+<li>Bundling of state tracking of variations so they can be saved along with other fungus data in save files</li>
+<li>Loading and Unbundling of state tracking for variations so that variations can continue across instances of the applications life.</li>
+<li>Conditional vary sections: sections that are only valid if a fungus variable is in a certain state.</li>
+</ul>

@@ -1,0 +1,21 @@
+<h1 id="the-create-menu">The Create Menu</h1>
+<p>The easiest way to add Lua scripting to your scene is via the Tools &gt; Fungus &gt; Create menu. This allows you to quickly instantiate one of the Lua prefabs that comes with FungusLua. The FungusLua prefabs all begin with &#39;Lua&#39;.</p>
+<p>You can also access these prefabs from Fungus/Thirdparty/FungusLua/Resources/Prefabs.</p>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/fungus_lua/create_menu.png" alt="Fungus Create Menu"></p>
+<h1 id="lua-prefab">Lua Prefab</h1>
+<p>This prefab provides a complete Lua setup, including the [[LuaEnvironment|lua_environment]], [[LuaUtils|lua_utils]], [[LuaBindings|lua_bindings]] and [[LuaScript|lua_script]] components in a single game object.</p>
+<p>This is perfect when you want to quickly set up a single script with a few bindings. If you&#39;re learning FungusLua, use the Lua object until you&#39;re comfortable with how all these components work.</p>
+<p>For more sophisticated scenarios it can be better to place these components in different game objects, e.g. one LuaEnvironment object, one LuaBindings object and multiple LuaScript objects that share the environment and bindings. The other prefab types listed below make it easy to set up this kind of configuration.</p>
+<h1 id="lua-file">Lua File</h1>
+<p>This option creates a Lua file in the folder you select. In Unity, Lua files use the .txt extension so they work properly with TextAsset properties and can be opened in the code editor. </p>
+<p>When you create a Lua file, add your Lua script to it in a text editor, and then select the file in the Lua File property of a LuaScript component or Execute Lua command to execute it. You can also use Lua&#39;s [[Script|lua_script]] &quot;module system&quot; and the require() function to include Lua code from other files. </p>
+<h1 id="lua-environment-prefab">Lua Environment Prefab</h1>
+<p>This prefab provides a [[LuaEnvironment|lua_environment]] component for executing Lua script, and the [[LuaUtils|lua_utils]] component which provides useful utilities for working with Lua, Unity and Fungus.</p>
+<p>FungusLua will automatically create a default LuaEnvironment if none exists when the scene starts, so you really only need to create a Lua Environment in your scene when you want to customize the default environment setup (e.g. Adding a string table file or registering additional c# types).</p>
+<h1 id="lua-bindings-prefab">Lua Bindings Prefab</h1>
+<p>This prefab provides a [[LuaBindings|lua_bindings]] component which you can use to bind objects in your scene / project to Lua variables so they can be accessed from Lua script. You can have multiple Lua Bindings in a scene, or additively load in a scene which contains a Lua Bindings for objects in that scene. At startup, all loaded Lua Bindings register their bindings with every Lua Environment in the scene (unless the All Environments option is switched off).</p>
+<p>If you want to make a prefab using Lua Bindings, all the bound objects must be children of the Lua Bindings prefab in the hierarchy so that Unity can maintain the object references correctly. This is a limitation of how Unity works.</p>
+<h1 id="lua-script-prefab">Lua Script Prefab</h1>
+<p>This prefab contains a [[Lua Script|lua_script]] component which you can use to execute Lua script, either typed in the inspector window or loaded via a text file. It also contains an Execute Handler component which supports executing the Lua Script when a Unity event occurs (e.g. start, update, on enter trigger, etc.)</p>
+<h1 id="lua-store-prefab">Lua Store Prefab</h1>
+<p>This prefab contains a [[Lua Store|lua_store]] component which you can use to persist Lua variables between scene loads.</p>

@@ -1,0 +1,23 @@
+<h1 id="luabindings">LuaBindings</h1>
+<p>The LuaBindings component allows you map gameobjects and components in your scenes to Lua variables which you can then access in your Lua scripts. You can bind to any component, including standard Unity components, components from the Unity Asset Store and your own custom scripts.</p>
+<p>As well as scene GameObjects and components, you can bind to any Unity object in your project. This includes things like Prefabs, Materials, TextAssets, Textures, ScriptableObjects, etc. </p>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/fungus_lua/lua_bindings.png" alt="LuaBinding"></p>
+<h1 id="adding-luabindings">Adding LuaBindings</h1>
+<p>To setup LuaBindings in your scene:</p>
+<ol>
+<li>Create a LuaBindings object (Tools &gt; Fungus &gt; Create &gt; LuaBindings)</li>
+<li>Drag the Unity object you want to access to the Object field in the Object Bindings list.</li>
+<li>The Key field is automatically populated based on the object name. This will be the variable name you use to access the bound object from Lua script. You can change this key to whatever string you prefer.</li>
+<li>If the bound object is a GameObject, you can optionally select a component within it to bind to.</li>
+</ol>
+<h1 id="using-a-global-table">Using a global table</h1>
+<p>The bindings specified in a LuaBindings component are automatically registered as global variables in all LuaEnvironments in the scene at startup. </p>
+<p>Registering as global variables is convenient when writing short scripts, but for more complex scripts it could cause problems if you accidentally define another variable with the same name as a binding. To avoid this problem, you can use the Table Name property to register bindings in a global table to add a degree of namespace safety.</p>
+<p>For example, if your binding is called &#39;camera&#39; and you&#39;ve set Table Name to &quot;myobjects&quot;, you would access the camera object like this:</p>
+<pre><code class="language-lua">myobjects.camera
+</code></pre>
+<p>Note that by default the LuaBindings component will register its bindings with all LuaEnvironments in the scene. If you don&#39;t want this behaviour, deselect the &#39;All Environments&#39; option and select the specific LuaEnvironment you want to use instead.</p>
+<h1 id="finding-member-info">Finding member info</h1>
+<p>The Member Info dropdown box lets you to quickly lookup properties and methods for any bound object. When you select a member, a description of the member is displayed together with the Lua script needed to access it. When binding to standard Unity objects, you can also check the API docs to find out more about the supported methods and properties.</p>
+<h1 id="register-types-option">Register Types option</h1>
+<p>In order to access a C# type from Lua, that type has to be registered with MoonSharp. When the Register Types option is selected, LuaBindings will automatically register the types of bound objects and all public properties &amp; methods that the type uses.</p>

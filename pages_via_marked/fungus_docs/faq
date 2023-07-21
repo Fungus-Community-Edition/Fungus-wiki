@@ -1,0 +1,42 @@
+<h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
+<h1 id="what-is-fungus">What is Fungus?</h1>
+<p>Fungus is a free open source tool for creating storytelling games, with a strong focus on accessibility for novice game developers. Users all over the world are now using it to create a wonderfully diverse range of storytelling games.</p>
+<h1 id="who-makes-fungus">Who makes Fungus?</h1>
+<p>Fungus is developed by <a href="http://snozbot.com">Snozbot</a>, a small independent games company. Chris Gregan is the main developer of Fungus.</p>
+<h1 id="where-do-i-get-fungus">Where do I get Fungus?</h1>
+<p>Fungus is available on the <a href="http://u3d.as/f0T">Unity Asset Store</a> and in the <a href="https://github.com/snozbot/fungus/releases">releases section</a> of the Fungus github repository.</p>
+<h1 id="is-fungus-really-free-to-use">Is Fungus really free to use?</h1>
+<p>Yes. Fungus has an Open Source M.I.T. license. You can use Fungus with both the free personal and pro versions of the Unity game engine.</p>
+<h1 id="can-i-sell-the-apps-i-make-with-fungus">Can I sell the apps I make with Fungus?</h1>
+<p>Yes. We do not charge a license fee.</p>
+<h1 id="what-platforms-does-fungus-support">What platforms does Fungus support?</h1>
+<p>Fungus runs on any platform supported by the Unity game engine. </p>
+<h1 id="do-i-need-to-be-a-programmer-to-use-fungus">Do I need to be a programmer to use Fungus?</h1>
+<p>No. Fungus can be used to make a variety of story-driven games with no coding required, via its visual scripting Flowchart system.</p>
+<h1 id="is-fungus-useful-for-programmers">Is Fungus useful for programmers?</h1>
+<p>Yes. Fungus provides an easy way to add visual novel features to any Unity game. It is also possible to extend Fungus to customise the workflow for your team. Checkout the documentation and tutorials for more information.</p>
+<h1 id="where-can-i-learn-more-about-fungus">Where can I learn more about Fungus?</h1>
+<p>We provide extensive tutorials and documentation on our website. There is also a comprehensive online training course suitable for beginners at Udemy.</p>
+<h1 id="ive-made-something-cool-with-fungus-wanna-see">I&#39;ve made something cool with Fungus. Wanna see?</h1>
+<p>Most definitely! Please tweet <a href="http://twitter.com/gofungus">gofungus</a> and/or post an item in the announcements section of our forum.</p>
+<h1 id="how-can-i-upload-my-fungus-game-for-others-to-see">How can I upload my Fungus game for others to see?</h1>
+<p>After creating a build, you can use a hosting service such as <a href="http://itch.io">itch.io</a>, <a href="http://gamejolt.com">gamejolt.com</a> or <a href="http://newgrounds.com">newgrounds.com</a></p>
+<h1 id="how-can-i-report-a-bug-or-suggest-new-features-for-fungus">How can I report a bug or suggest new features for Fungus?</h1>
+<p>Please use the forum to report bugs and request new features. You can also checkout our github issues list to see what we have planned.</p>
+<h1 id="how-long-will-i-have-to-wait-for-a-bug-fix">How long will I have to wait for a bug-fix?</h1>
+<p>If a bug is critical and we can&#39;t offer a sensible workaround, we will try to fix it as soon as possible. Otherwise, we will aim to fix the issue in the next release.</p>
+<h1 id="can-i-get-my-hands-on-beta-versions-of-fungus">Can I get my hands on beta versions of Fungus?</h1>
+<p>The very latest version is always available at our <a href="https://github.com/snozbot/fungus">github repository</a>. There may also be pre-release packages available in the <a href="https://github.com/snozbot/fungus/releases">releases</a></p>
+<h1 id="what-versions-of-unity-does-fungus-support">What versions of Unity does Fungus Support?</h1>
+<p><a href="Versions">Versions</a> may have more information about that. The most recent Fungus release tends to directly target the current or immediately previous version of Unity.</p>
+<h1 id="how-can-i-contribute-to-fungus">How can I contribute to Fungus?</h1>
+<p>There are lots of ways to help the Fungus community to grow!</p>
+<ol>
+<li>Answer questions and post tips on the forum</li>
+<li>Contribute code either via a Github pull request or post code snippets in the forums.</li>
+<li>Improve the documentation by editing the Docs folder on github and send in a pull request.</li>
+<li>Let us know on the forum if you&#39;ve made a game with Fungus so we can add it to the site.</li>
+<li>If you write an article, blog post, podcast, etc. about Fungus send it in and we&#39;ll add it to the @ref community_tutorials section.</li>
+</ol>
+<h1 id="are-you-planning-to-integrate-fungus-into-other-game-engines">Are you planning to integrate Fungus into other game engines?</h1>
+<p>Not currently. We&#39;re sticking with Unity for the foreseeable future.</p>

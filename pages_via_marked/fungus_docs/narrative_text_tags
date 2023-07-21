@@ -1,0 +1,32 @@
+<h1 id="narrative-text-tags">Narrative Text Tags</h1>
+<p>The following tokens can be used within Story Text to do things such as change the styling of text or clear the contents of a dialog area on input and much more. You can see this list in the editor by pressing the Tag Help button in the Say command.</p>
+<ul>
+<li>{b} Bold Text {/b}</li>
+<li>{i} Italic Text {/i}</li>
+<li>{color=red} Color Text (color){/color}</li>
+<li>{size=30} Text size {/size}</li>
+<li>{s}, {s=60} Writing speed (chars per sec){/s}</li>
+<li>{w}, {w=0.5} Wait (seconds)</li>
+<li>{wi} Wait for input</li>
+<li>{wc} Wait for input and clear</li>
+<li>{wvo} Wait for voice over line to complete</li>
+<li>{wp}, {wp=0.5} Wait on punctuation (seconds){/wp}</li>
+<li>{c} Clear</li>
+<li>{x} Exit, advance to the next command without waiting for input</li>
+<li>{vpunch=10,0.5} Vertically punch screen (intensity,time)</li>
+<li>{hpunch=10,0.5} Horizontally punch screen (intensity,time)</li>
+<li>{punch=10,0.5} Punch screen (intensity,time)</li>
+<li>{flash=0.5} Flash screen (duration)</li>
+<li>{audio=AudioObjectName} Play Audio Once</li>
+<li>{audioloop=AudioObjectName} Play Audio Loop</li>
+<li>{audiopause=AudioObjectName} Pause Audio</li>
+<li>{audiostop=AudioObjectName} Stop Audio</li>
+<li>{m=MessageName} Broadcast message</li>
+<li>{$VarName} Substitute variable</li>
+</ul>
+<p>Examples:</p>
+<pre><code>This is a line of dialog.
+{wc}
+This is another line of dialog with some {b}bold{/b} styling.
+This is another line of dialog with some {color=blue}blue{/b} text.
+</code></pre>

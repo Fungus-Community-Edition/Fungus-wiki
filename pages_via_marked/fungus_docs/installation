@@ -1,0 +1,47 @@
+<h1 id="installation">Installation</h1>
+<p>This page explains how to download and install Unity and Fungus.</p>
+<h1 id="video-tutorial">Video Tutorial</h1>
+<p><a href="https://www.youtube.com/watch?v=BQRdRz9Q5VY">YouTube Video</a></p>
+<h1 id="how-do-i-install-fungus">How do I install Fungus?</h1>
+<ol>
+<li>Install the latest version of <a href="http://unity3D.com/get-unity">Unity</a>.</li>
+<li>Launch Unity and create a new Project by selecting File &gt; New Project.</li>
+<li>Select &#39;Use Defaults for 2D&#39; when creating the new project.</li>
+</ol>
+<h2 id="to-install-fungus-from-the-asset-store-recommended">To install Fungus from the Asset Store (recommended):</h2>
+<ol>
+<li>Open the Asset Store window in Unity</li>
+<li>Search for Fungus on the <a href="http://u3d.as/f0T">Asset Store</a></li>
+<li>Download and import Fungus to your project using the Asset Store window.</li>
+</ol>
+<h2 id="to-install-fungus-from-the-latest-release-on-github">To install Fungus from the latest release on Github:</h2>
+<ol>
+<li>Download the latest Fungus .unitypackage from <a href="https://github.com/FungusGames/Fungus/releases/latest">Github</a></li>
+<li>Note that there is the normal package, and then Compatibility is for older versions of Unity, and Lite is without examples.</li>
+<li>Import Fungus into the new project by selecting Assets &gt; Import Package &gt; Custom Package.</li>
+</ol>
+<h1 id="first-steps">First steps</h1>
+<ol>
+<li>Display the Flowchart editor window by selecting Window &gt; Tools &gt; Fungus &gt; Flowchart Window.</li>
+<li>For convenience, you should dock the Flowchart window somewhere in the editor window.</li>
+<li>In the project window, open The Hunter example scene (FungusExamples &gt; TheHunter &gt; TheHunter.unity). </li>
+<li>Press play and click through the example game.</li>
+</ol>
+<p>Try playing the other example scenes and watch how the gameplay is controlled by the flowchart in the Fungus Script window.</p>
+<h1 id="how-do-i-upgrade">How do I upgrade?</h1>
+<p>To upgrade an existing project to the latest version of Fungus.</p>
+<ol>
+<li>Take a backup of your project. No really, do it!</li>
+<li>We recommend updating to the latest version of <a href="http://unity3D.com/get-unity">Unity</a>.</li>
+<li>Delete the Fungus and FungusExamples folders from your project.</li>
+<li>Download and import the latest version of Fungus.</li>
+</ol>
+<p>We try to maintain backwards compatibility between releases but sometimes breaking changes are necessary. If you&#39;re having trouble upgrading your project just ask for assistance on the forum.</p>
+<h1 id="system-requirements">System Requirements</h1>
+<ul>
+<li>We recommend installing the latest version of <a href="http://unity3D.com/get-unity">Unity</a>.</li>
+<li>Fungus requires at least Unity 5.0 and is not compatible with Unity 4.x or earlier.</li>
+<li>Fungus works with both the PC &amp; Mac versions of Unity</li>
+<li>Fungus works with both the free Personal and Professional editions of Unity</li>
+<li>Official Unity list of <a href="http://unity3d.com/unity/system-requirements">system requirements</a>.</li>
+</ul>

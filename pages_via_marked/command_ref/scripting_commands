@@ -1,0 +1,379 @@
+<h1 id="scripting-commands">Scripting commands</h1>
+<h1 id="comment">Comment</h1>
+<p>Use comments to record design notes and reminders about your game.</p>
+<p>Defined in Fungus.Comment</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Commenter Name</td>
+<td>System.String</td>
+<td>Name of Commenter</td>
+</tr>
+<tr>
+<td>Comment Text</td>
+<td>System.String</td>
+<td>Text to display for this comment</td>
+</tr>
+</tbody></table>
+<h1 id="assert">Assert</h1>
+<p>Assert based on compared values.</p>
+<p>Defined in Fungus.AssertCommand</p>
+<h1 id="call-method">Call Method</h1>
+<p>Calls a named method on a GameObject using the GameObject.SendMessage() system.</p>
+<p>Defined in Fungus.CallMethod</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Target Object</td>
+<td>UnityEngine.GameObject</td>
+<td>Target monobehavior which contains the method we want to call</td>
+</tr>
+<tr>
+<td>Method Name</td>
+<td>System.String</td>
+<td>Name of the method to call</td>
+</tr>
+<tr>
+<td>Delay</td>
+<td>System.Single</td>
+<td>Delay (in seconds) before the method will be called</td>
+</tr>
+</tbody></table>
+<h1 id="debug-break">Debug Break</h1>
+<p>Calls Debug.Break if enabled. Also useful for putting a visual studio breakbpoint within.</p>
+<p>Defined in Fungus.DebugBreak</p>
+<h1 id="debug-log">Debug Log</h1>
+<p>Writes a log message to the debug console.</p>
+<p>Defined in Fungus.DebugLog</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Log Type</td>
+<td>Fungus.DebugLogType</td>
+<td>Display type of debug log info</td>
+</tr>
+<tr>
+<td>Log Message</td>
+<td>Fungus.StringDataMulti</td>
+<td>Text to write to the debug log. Supports variable substitution, e.g. {$Myvar}</td>
+</tr>
+</tbody></table>
+<h1 id="destroy">Destroy</h1>
+<p>Destroys a specified game object in the scene.</p>
+<p>Defined in Fungus.Destroy</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_target Game Object</td>
+<td>Fungus.GameObjectData</td>
+<td>Reference to game object to destroy</td>
+</tr>
+<tr>
+<td>Destroy In X Seconds</td>
+<td>Fungus.FloatData</td>
+<td>Optional delay given to destroy</td>
+</tr>
+</tbody></table>
+<h1 id="destroyonload">DestroyOnLoad</h1>
+<p>Calls DontDestroyOnLoad on the target gameobject</p>
+<p>Defined in Fungus.DestroyOnLoad</p>
+<h1 id="execute-lua">Execute Lua</h1>
+<p>Executes a Lua code chunk using a Lua Environment.</p>
+<p>Defined in Fungus.ExecuteLua</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Lua Environment</td>
+<td>Fungus.LuaEnvironment</td>
+<td>Lua Environment to use to execute this Lua script</td>
+</tr>
+<tr>
+<td>Lua File</td>
+<td>UnityEngine.TextAsset</td>
+<td>A text file containing Lua script to execute.</td>
+</tr>
+<tr>
+<td>Lua Script</td>
+<td>System.String</td>
+<td>Lua script to execute. This text is appended to the contents of Lua file (if one is specified).</td>
+</tr>
+<tr>
+<td>Run As Coroutine</td>
+<td>System.Boolean</td>
+<td>Execute this Lua script as a Lua coroutine</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Pause command execution until the Lua script has finished execution</td>
+</tr>
+<tr>
+<td>Return Variable</td>
+<td>Fungus.Variable</td>
+<td>A Flowchart variable to store the returned value in.</td>
+</tr>
+</tbody></table>
+<h1 id="invoke-event">Invoke Event</h1>
+<p>Calls a list of component methods via the Unity Event System (as used in the Unity UI). This command is more efficient than the Invoke Method command but can only pass a single parameter and doesn&#39;t support return values.</p>
+<p>Defined in Fungus.InvokeEvent</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Description</td>
+<td>System.String</td>
+<td>A description of what this command does. Appears in the command summary.</td>
+</tr>
+<tr>
+<td>Delay</td>
+<td>System.Single</td>
+<td>Delay (in seconds) before the methods will be called</td>
+</tr>
+<tr>
+<td>Invoke Type</td>
+<td>Fungus.InvokeType</td>
+<td>Selects type of method parameter to pass</td>
+</tr>
+<tr>
+<td>Static Event</td>
+<td>UnityEngine.Events.UnityEvent</td>
+<td>List of methods to call. Supports methods with no parameters or exactly one string, int, float or object parameter.</td>
+</tr>
+<tr>
+<td>Boolean Parameter</td>
+<td>Fungus.BooleanData</td>
+<td>Boolean parameter to pass to the invoked methods.</td>
+</tr>
+<tr>
+<td>Boolean Event</td>
+<td>Fungus.InvokeEvent+BooleanEvent</td>
+<td>List of methods to call. Supports methods with one boolean parameter.</td>
+</tr>
+<tr>
+<td>Integer Parameter</td>
+<td>Fungus.IntegerData</td>
+<td>Integer parameter to pass to the invoked methods.</td>
+</tr>
+<tr>
+<td>Integer Event</td>
+<td>Fungus.InvokeEvent+IntegerEvent</td>
+<td>List of methods to call. Supports methods with one integer parameter.</td>
+</tr>
+<tr>
+<td>Float Parameter</td>
+<td>Fungus.FloatData</td>
+<td>Float parameter to pass to the invoked methods.</td>
+</tr>
+<tr>
+<td>Float Event</td>
+<td>Fungus.InvokeEvent+FloatEvent</td>
+<td>List of methods to call. Supports methods with one float parameter.</td>
+</tr>
+<tr>
+<td>String Parameter</td>
+<td>Fungus.StringDataMulti</td>
+<td>String parameter to pass to the invoked methods.</td>
+</tr>
+<tr>
+<td>String Event</td>
+<td>Fungus.InvokeEvent+StringEvent</td>
+<td>List of methods to call. Supports methods with one string parameter.</td>
+</tr>
+</tbody></table>
+<h1 id="invoke-method">Invoke Method</h1>
+<p>Invokes a method of a component via reflection. Supports passing multiple parameters and storing returned values in a Fungus variable.</p>
+<p>Defined in Fungus.InvokeMethod</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Description</td>
+<td>System.String</td>
+<td>A description of what this command does. Appears in the command summary.</td>
+</tr>
+<tr>
+<td>Target Object</td>
+<td>UnityEngine.GameObject</td>
+<td>GameObject containing the component method to be invoked</td>
+</tr>
+<tr>
+<td>Target Component Assembly Name</td>
+<td>System.String</td>
+<td>Name of assembly containing the target component</td>
+</tr>
+<tr>
+<td>Target Component Fullname</td>
+<td>System.String</td>
+<td>Full name of the target component</td>
+</tr>
+<tr>
+<td>Target Component Text</td>
+<td>System.String</td>
+<td>Display name of the target component</td>
+</tr>
+<tr>
+<td>Target Method</td>
+<td>System.String</td>
+<td>Name of target method to invoke on the target component</td>
+</tr>
+<tr>
+<td>Target Method Text</td>
+<td>System.String</td>
+<td>Display name of target method to invoke on the target component</td>
+</tr>
+<tr>
+<td>Method Parameters</td>
+<td>Fungus.InvokeMethodParameter[]</td>
+<td>List of parameters to pass to the invoked method</td>
+</tr>
+<tr>
+<td>Save Return Value</td>
+<td>System.Boolean</td>
+<td>If true, store the return value in a flowchart variable of the same type.</td>
+</tr>
+<tr>
+<td>Return Value Variable Key</td>
+<td>System.String</td>
+<td>Name of Fungus variable to store the return value in</td>
+</tr>
+<tr>
+<td>Return Value Type</td>
+<td>System.String</td>
+<td>The type of the return value</td>
+</tr>
+<tr>
+<td>Show Inherited</td>
+<td>System.Boolean</td>
+<td>If true, list all inherited methods for the component</td>
+</tr>
+<tr>
+<td>Call Mode</td>
+<td>Fungus.CallMode</td>
+<td>The coroutine call behavior for methods that return IEnumerator</td>
+</tr>
+</tbody></table>
+<h1 id="open-url">Open URL</h1>
+<p>Opens the specified URL in the browser.</p>
+<p>Defined in Fungus.OpenURL</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Url</td>
+<td>Fungus.StringData</td>
+<td>URL to open in the browser</td>
+</tr>
+</tbody></table>
+<h1 id="set-active">Set Active</h1>
+<p>Sets a game object in the scene to be active / inactive.</p>
+<p>Defined in Fungus.SetActive</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_target Game Object</td>
+<td>Fungus.GameObjectData</td>
+<td>Reference to game object to enable / disable</td>
+</tr>
+<tr>
+<td>Active State</td>
+<td>Fungus.BooleanData</td>
+<td>Set to true to enable the game object</td>
+</tr>
+</tbody></table>
+<h1 id="spawn-object">Spawn Object</h1>
+<p>Spawns a new object based on a reference to a scene or prefab game object.</p>
+<p>Defined in Fungus.SpawnObject</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_source Object</td>
+<td>Fungus.GameObjectData</td>
+<td>Game object to copy when spawning. Can be a scene object or a prefab.</td>
+</tr>
+<tr>
+<td>_parent Transform</td>
+<td>Fungus.TransformData</td>
+<td>Transform to use as parent during instantiate.</td>
+</tr>
+<tr>
+<td>_spawn At Self</td>
+<td>Fungus.BooleanData</td>
+<td>If true, will use the Transfrom of this Flowchart for the position and rotation.</td>
+</tr>
+<tr>
+<td>_spawn Position</td>
+<td>Fungus.Vector3Data</td>
+<td>Local position of newly spawned object.</td>
+</tr>
+<tr>
+<td>_spawn Rotation</td>
+<td>Fungus.Vector3Data</td>
+<td>Local rotation of newly spawned object.</td>
+</tr>
+<tr>
+<td>_newly Spawned Object</td>
+<td>Fungus.GameObjectData</td>
+<td>Optional variable to store the GameObject that was just created.</td>
+</tr>
+</tbody></table>
+<h1 id="throw-exception">Throw Exception</h1>
+<p>Throw a fungus exception</p>
+<p>Defined in Fungus.ThrowException
+Auto-Generated by Fungus.ExportReferenceDocs</p>

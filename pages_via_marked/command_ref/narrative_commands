@@ -1,0 +1,379 @@
+<h1 id="narrative-commands">Narrative commands</h1>
+<h1 id="clear-menu">Clear Menu</h1>
+<p>Clears the options from a menu dialogue</p>
+<p>Defined in Fungus.ClearMenu</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Menu Dialog</td>
+<td>Fungus.MenuDialog</td>
+<td>Menu Dialog to clear the options on</td>
+</tr>
+</tbody></table>
+<h1 id="control-stage">Control Stage</h1>
+<p>Controls the stage on which character portraits are displayed.</p>
+<p>Defined in Fungus.ControlStage</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Stage</td>
+<td>Fungus.Stage</td>
+<td>Stage to display characters on</td>
+</tr>
+<tr>
+<td>Replaced Stage</td>
+<td>Fungus.Stage</td>
+<td>Stage to swap with</td>
+</tr>
+<tr>
+<td>Use Default Settings</td>
+<td>System.Boolean</td>
+<td>Use Default Settings</td>
+</tr>
+<tr>
+<td>Fade Duration</td>
+<td>System.Single</td>
+<td>Fade Duration</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the tween has finished before executing the next command</td>
+</tr>
+<tr>
+<td>Display</td>
+<td>Fungus.StageDisplayType</td>
+<td>Display type</td>
+</tr>
+</tbody></table>
+<h1 id="conversation">Conversation</h1>
+<p>Do multiple say and portrait commands in a single block of text. Format is: [character] [portrait] [stage position] [hide] [&lt;&lt;&lt; | &gt;&gt;&gt;] [clear | noclear] [wait | nowait] [fade | nofade] [: Story text]</p>
+<p>Defined in Fungus.Conversation</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Wait For Seconds</td>
+<td>Fungus.FloatData</td>
+<td>a wait for seconds added to each item of the conversation.</td>
+</tr>
+</tbody></table>
+<h1 id="menu">Menu</h1>
+<p>Displays a button in a multiple choice menu</p>
+<p>Defined in Fungus.Menu</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Text</td>
+<td>System.String</td>
+<td>Text to display on the menu button</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>System.String</td>
+<td>Notes about the option text for other authors, localization, etc.</td>
+</tr>
+<tr>
+<td>Target Block</td>
+<td>Fungus.Block</td>
+<td>Block to execute when this option is selected</td>
+</tr>
+<tr>
+<td>Hide If Visited</td>
+<td>System.Boolean</td>
+<td>Hide this option if the target block has been executed previously</td>
+</tr>
+<tr>
+<td>Interactable</td>
+<td>Fungus.BooleanData</td>
+<td>If false, the menu option will be displayed but will not be selectable</td>
+</tr>
+<tr>
+<td>Set Menu Dialog</td>
+<td>Fungus.MenuDialog</td>
+<td>A custom Menu Dialog to use to display this menu. All subsequent Menu commands will use this dialog.</td>
+</tr>
+<tr>
+<td>Hide This Option</td>
+<td>Fungus.BooleanData</td>
+<td>If true, this option will be passed to the Menu Dialogue but marked as hidden, this can be used to hide options while maintaining a Menu Shuffle.</td>
+</tr>
+</tbody></table>
+<h1 id="menu-shuffle">Menu Shuffle</h1>
+<p>Shuffle the order of the items in a Fungus Menu</p>
+<p>Defined in Fungus.MenuShuffle</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Shuffle Mode</td>
+<td>Fungus.MenuShuffle+Mode</td>
+<td>Determines if the order is shuffled everytime this command is it (Every) or if it is consistent when returned to but random (Once)</td>
+</tr>
+</tbody></table>
+<h1 id="menu-timer">Menu Timer</h1>
+<p>Displays a timer bar and executes a target block if the player fails to select a menu option in time.</p>
+<p>Defined in Fungus.MenuTimer</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_duration</td>
+<td>Fungus.FloatData</td>
+<td>Length of time to display the timer for</td>
+</tr>
+<tr>
+<td>Target Block</td>
+<td>Fungus.Block</td>
+<td>Block to execute when the timer expires</td>
+</tr>
+</tbody></table>
+<h1 id="portrait">Portrait</h1>
+<p>Controls a character portrait.</p>
+<p>Defined in Fungus.Portrait</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Stage</td>
+<td>Fungus.Stage</td>
+<td>Stage to display portrait on</td>
+</tr>
+<tr>
+<td>Character</td>
+<td>Fungus.Character</td>
+<td>Character to display</td>
+</tr>
+<tr>
+<td>Replaced Character</td>
+<td>Fungus.Character</td>
+<td>Character to swap with</td>
+</tr>
+<tr>
+<td>Portrait</td>
+<td>UnityEngine.Sprite</td>
+<td>Portrait to display</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>Fungus.PositionOffset</td>
+<td>Move the portrait from/to this offset position</td>
+</tr>
+<tr>
+<td>From Position</td>
+<td>UnityEngine.RectTransform</td>
+<td>Move the portrait from this position</td>
+</tr>
+<tr>
+<td>To Position</td>
+<td>UnityEngine.RectTransform</td>
+<td>Move the portrait to this position</td>
+</tr>
+<tr>
+<td>Facing</td>
+<td>Fungus.FacingDirection</td>
+<td>Direction character is facing</td>
+</tr>
+<tr>
+<td>Use Default Settings</td>
+<td>System.Boolean</td>
+<td>Use Default Settings</td>
+</tr>
+<tr>
+<td>Fade Duration</td>
+<td>System.Single</td>
+<td>Fade Duration</td>
+</tr>
+<tr>
+<td>Move Duration</td>
+<td>System.Single</td>
+<td>Movement Duration</td>
+</tr>
+<tr>
+<td>Shift Offset</td>
+<td>UnityEngine.Vector2</td>
+<td>Shift Offset</td>
+</tr>
+<tr>
+<td>Move</td>
+<td>System.Boolean</td>
+<td>Move portrait into new position</td>
+</tr>
+<tr>
+<td>Shift Into Place</td>
+<td>System.Boolean</td>
+<td>Start from offset position</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the tween has finished before executing the next command</td>
+</tr>
+<tr>
+<td>Display</td>
+<td>Fungus.DisplayType</td>
+<td>Display type</td>
+</tr>
+</tbody></table>
+<h1 id="say">Say</h1>
+<p>Writes text in a dialog box.</p>
+<p>Defined in Fungus.Say</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Description</td>
+<td>System.String</td>
+<td>Notes about this story text for other authors, localization, etc.</td>
+</tr>
+<tr>
+<td>Character</td>
+<td>Fungus.Character</td>
+<td>Character that is speaking</td>
+</tr>
+<tr>
+<td>Portrait</td>
+<td>UnityEngine.Sprite</td>
+<td>Portrait that represents speaking character</td>
+</tr>
+<tr>
+<td>Voice Over Clip</td>
+<td>UnityEngine.AudioClip</td>
+<td>Voiceover audio to play when writing the text</td>
+</tr>
+<tr>
+<td>Show Always</td>
+<td>System.Boolean</td>
+<td>Always show this Say text when the command is executed multiple times</td>
+</tr>
+<tr>
+<td>Show Count</td>
+<td>System.Int32</td>
+<td>Number of times to show this Say text when the command is executed multiple times</td>
+</tr>
+<tr>
+<td>Extend Previous</td>
+<td>System.Boolean</td>
+<td>Type this text in the previous dialog box.</td>
+</tr>
+<tr>
+<td>Fade When Done</td>
+<td>System.Boolean</td>
+<td>Fade out the dialog box when writing has finished and not waiting for input.</td>
+</tr>
+<tr>
+<td>Wait For Click</td>
+<td>System.Boolean</td>
+<td>Wait for player to click before continuing.</td>
+</tr>
+<tr>
+<td>Stop Voiceover</td>
+<td>System.Boolean</td>
+<td>Stop playing voiceover when text finishes writing.</td>
+</tr>
+<tr>
+<td>Wait For V O</td>
+<td>System.Boolean</td>
+<td>Wait for the Voice Over to complete before continuing</td>
+</tr>
+<tr>
+<td>Set Say Dialog</td>
+<td>Fungus.SayDialog</td>
+<td>Sets the active Say dialog with a reference to a Say Dialog object in the scene. All story text will now display using this Say Dialog.</td>
+</tr>
+</tbody></table>
+<h1 id="set-language">Set Language</h1>
+<p>Set the active language for the scene. A Localization object with a localization file must be present in the scene.</p>
+<p>Defined in Fungus.SetLanguage</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_language Code</td>
+<td>Fungus.StringData</td>
+<td>Code of the language to set. e.g. ES, DE, JA</td>
+</tr>
+</tbody></table>
+<h1 id="set-menu-dialog">Set Menu Dialog</h1>
+<p>Sets a custom menu dialog to use when displaying multiple choice menus</p>
+<p>Defined in Fungus.SetMenuDialog</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Menu Dialog</td>
+<td>Fungus.MenuDialog</td>
+<td>The Menu Dialog to use for displaying menu buttons</td>
+</tr>
+</tbody></table>
+<h1 id="set-say-dialog">Set Say Dialog</h1>
+<p>Sets a custom say dialog to use when displaying story text</p>
+<p>Defined in Fungus.SetSayDialog</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Say Dialog</td>
+<td>Fungus.SayDialog</td>
+<td>The Say Dialog to use for displaying Say story text</td>
+</tr>
+</tbody></table>
+<p>Auto-Generated by Fungus.ExportReferenceDocs</p>

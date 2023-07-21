@@ -1,0 +1,144 @@
+<h1 id="coding-tips">Coding Tips</h1>
+<p>This is a collection of quick tips for scripting Fungus from code.</p>
+<h1 id="executing-blocks">Executing Blocks</h1>
+<h2 id="block-reference">Block Reference</h2>
+<p>The BlockReference type uses a custom drawer to ensure direct reference to a block on a flowchart within the scene. Allows for selecting a block in your own scripts in a manner similar to selecting a block within a Command.</p>
+<pre><code>using UnityEngine;
+using Fungus;
+
+class MyComponent : public MonoBehaviour
+{
+    public BlockReference blockRef;
+}
+</code></pre>
+<p>To execute:</p>
+<pre><code>blockRef.Execute();
+</code></pre>
+<p>See <a href="https://github.com/snozbot/fungus/blob/master/Assets/Fungus/Scripts/Utils/BlockReference.cs">BlockReference.cs</a> for more detail  </p>
+<h3 id="code-example">Code example</h3>
+<pre><code>using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Serialization;
+
+namespace Fungus {
+    [CommandInfo(&quot;Custom&quot;,
+             &quot;Execute Reference Block&quot;,
+             &quot;Receive an object of type Block Reference and execute it.&quot;)]
+    public class executeReferenceBlock : Command, IBlockCaller
+    {
+
+        [Tooltip(&quot;the block&quot;)]
+        [SerializeField] protected BlockReference whichBlock;
+
+        public override void OnEnter(){
+            if(whichBlock.block != null){
+                whichBlock.Execute();
+            }
+            Continue();
+        }
+
+        public override void GetConnectedBlocks(ref List&lt;Block&gt; connectedBlocks)
+        {
+            if (whichBlock.block != null)
+            {
+                connectedBlocks.Add(whichBlock.block);
+            }       
+        }
+
+        public bool MayCallBlock(Block block){
+            return block == whichBlock.block;
+        }
+
+    }
+}
+</code></pre>
+<p>This custom command explores receiving and storing blocks in the BlockReference container struct (see <a href="https://github.com/snozbot/fungus/blob/master/Assets/Fungus/Scripts/Utils/BlockReference.cs">BlockReference.cs</a>). The inspector presents a Flowchart field and, when filled, populates a dropdown with that flowchart&#39;s blocks. Then, when this command is reached at runtime, the block is executed (no custom editor script needed).  </p>
+<p><img src="https://i.imgur.com/2kh3yRd.png" alt="blockReferenceExecute"></p>
+<p>Note that to have the arrow lines drawn in the Flowchart window indicating that the selected block is connected, the connectedBlocks List&#39;s Add() must be passed the contained Block (whichBlock.block), not the BlockReference itself.</p>
+<h2 id="manually">Manually</h2>
+<p>You first need to get a reference to your flowchart object.  Add a public Flowchart property to your component and set it to reference your flowchart in the inspector.</p>
+<pre><code>using UnityEngine;
+using Fungus;
+
+class MyComponent : public MonoBehaviour
+{
+    public Flowchart flowchart;
+}
+</code></pre>
+<p>To execute a named Block in the Flowchart:</p>
+<pre><code>flowchart.ExecuteBlock(&quot;BlockName&quot;);
+</code></pre>
+<p>To start execution at a specific command index:</p>
+<pre><code>flowchart.ExecuteBlock(&quot;BlockName&quot;, 3);
+</code></pre>
+<p>To tell if a Flowchart has any executing Blocks:</p>
+<pre><code>if (flowchart.HasExecutingBlocks())
+{
+    // Do something
+}
+</code></pre>
+<h1 id="working-with-fungus-variables">Working with Fungus Variables</h1>
+<p>Variables can be fetched via a flowchart Variables property or GetVariable by name or by type. Similar to a GetComponent.</p>
+<h2 id="variable-reference">Variable Reference</h2>
+<p>For direct reference to a fungus variable in your own c# scripts, a VariableReference allows for selection similar to selecting a variable with in a Fungus Command. </p>
+<pre><code>using UnityEngine;
+using Fungus;
+
+class MyComponent : public MonoBehaviour
+{
+    public VariableReference varRef;
+}
+</code></pre>
+<p>To access the instance uses generic Get and Set methods. See <a href="https://github.com/snozbot/fungus/blob/master/Assets/Fungus/Scripts/Utils/VariableReference.cs">VariableReference.cs</a> for more details.</p>
+<h1 id="block-signals">Block Signals</h1>
+<p>You can use the BlockSignals class to listen for events from the Block execution system.</p>
+<pre><code>using Fungus;
+
+public MyComponent : MonoBehaviour
+{
+    void OnEnable() 
+    {
+        // Register as listener for Block events
+        BlockSignals.OnBlockStart += OnBlockStart;
+    }
+
+    void OnDisable()
+    {
+        // Unregister as listener for Block events
+        BlockSignals.OnBlockStart -= OnBlockStart;
+    }
+
+    void OnBlockStart(Block block)
+    {
+        Debug.Log(&quot;Block started &quot; + block.BlockName);
+    }
+}
+</code></pre>
+<h1 id="writer-signals">Writer Signals</h1>
+<p>You can use the WriterSignals class to listen for a variety of events from the text writing system.</p>
+<pre><code>using Fungus;
+
+public MyComponent : MonoBehaviour
+{
+    void OnEnable() 
+    {
+        // Register as listener for Writer state change events
+        WriterSignals.OnWriterState += OnWriterState;
+    }
+
+    void OnDisable()
+    {
+        // Unregister as listener for Writer state change events
+        WriterSignals.OnWriterState -= OnWriterState;
+    }
+
+    void OnWriterState(Writer writer, WriterState writerState)
+    {
+        if (writerState == WriterState.Start)
+        {
+            Debug.Log(&quot;Writing started&quot;);
+        }
+    }
+}
+</code></pre>

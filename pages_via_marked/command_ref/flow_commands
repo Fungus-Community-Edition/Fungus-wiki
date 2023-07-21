@@ -1,0 +1,676 @@
+<h1 id="flow-commands">Flow commands</h1>
+<h1 id="break">Break</h1>
+<p>Force a loop to terminate immediately.</p>
+<p>Defined in Fungus.Break</p>
+<h1 id="call">Call</h1>
+<p>Execute another block in the same Flowchart as the command, or in a different Flowchart.</p>
+<p>Defined in Fungus.Call</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Target Flowchart</td>
+<td>Fungus.Flowchart</td>
+<td>Flowchart which contains the block to execute. If none is specified then the current Flowchart is used.</td>
+</tr>
+<tr>
+<td>Target Block</td>
+<td>Fungus.Block</td>
+<td>Block to start executing</td>
+</tr>
+<tr>
+<td>Start Label</td>
+<td>Fungus.StringData</td>
+<td>Label to start execution at. Takes priority over startIndex.</td>
+</tr>
+<tr>
+<td>Start Index</td>
+<td>System.Int32</td>
+<td>Command index to start executing</td>
+</tr>
+<tr>
+<td>Call Mode</td>
+<td>Fungus.CallMode</td>
+<td>Select if the calling block should stop or continue executing commands, or wait until the called block finishes.</td>
+</tr>
+</tbody></table>
+<h1 id="else">Else</h1>
+<p>Marks the start of a command block to be executed when the preceding If statement is False.</p>
+<p>Defined in Fungus.Else</p>
+<h1 id="else-if">Else If</h1>
+<p>Marks the start of a command block to be executed when the preceding If statement is False and the test expression is true.</p>
+<p>Defined in Fungus.ElseIf</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Any Or All Conditions</td>
+<td>Fungus.VariableCondition+AnyOrAll</td>
+<td>Selecting AnyOf will result in true if at least one of the conditions is true. Selecting AllOF will result in true only when all the conditions are true.</td>
+</tr>
+<tr>
+<td>Variable</td>
+<td>Fungus.Variable</td>
+<td>Variable to use in expression</td>
+</tr>
+<tr>
+<td>Boolean Data</td>
+<td>Fungus.BooleanData</td>
+<td>Boolean value to compare against</td>
+</tr>
+<tr>
+<td>Integer Data</td>
+<td>Fungus.IntegerData</td>
+<td>Integer value to compare against</td>
+</tr>
+<tr>
+<td>Float Data</td>
+<td>Fungus.FloatData</td>
+<td>Float value to compare against</td>
+</tr>
+<tr>
+<td>String Data</td>
+<td>Fungus.StringDataMulti</td>
+<td>String value to compare against</td>
+</tr>
+<tr>
+<td>Animator Data</td>
+<td>Fungus.AnimatorData</td>
+<td>Animator value to compare against</td>
+</tr>
+<tr>
+<td>Audio Source Data</td>
+<td>Fungus.AudioSourceData</td>
+<td>AudioSource value to compare against</td>
+</tr>
+<tr>
+<td>Color Data</td>
+<td>Fungus.ColorData</td>
+<td>Color value to compare against</td>
+</tr>
+<tr>
+<td>Game Object Data</td>
+<td>Fungus.GameObjectData</td>
+<td>GameObject value to compare against</td>
+</tr>
+<tr>
+<td>Material Data</td>
+<td>Fungus.MaterialData</td>
+<td>Material value to compare against</td>
+</tr>
+<tr>
+<td>Object Data</td>
+<td>Fungus.ObjectData</td>
+<td>Object value to compare against</td>
+</tr>
+<tr>
+<td>Rigidbody2 D Data</td>
+<td>Fungus.Rigidbody2DData</td>
+<td>Rigidbody2D value to compare against</td>
+</tr>
+<tr>
+<td>Sprite Data</td>
+<td>Fungus.SpriteData</td>
+<td>Sprite value to compare against</td>
+</tr>
+<tr>
+<td>Texture Data</td>
+<td>Fungus.TextureData</td>
+<td>Texture value to compare against</td>
+</tr>
+<tr>
+<td>Transform Data</td>
+<td>Fungus.TransformData</td>
+<td>Transform value to compare against</td>
+</tr>
+<tr>
+<td>Vector2 Data</td>
+<td>Fungus.Vector2Data</td>
+<td>Vector2 value to compare against</td>
+</tr>
+<tr>
+<td>Vector3 Data</td>
+<td>Fungus.Vector3Data</td>
+<td>Vector3 value to compare against</td>
+</tr>
+</tbody></table>
+<h1 id="end">End</h1>
+<p>Marks the end of a conditional block.</p>
+<p>Defined in Fungus.End</p>
+<h1 id="for">For</h1>
+<p>Loop over a fixed integer range, similar to a common for loop.</p>
+<p>Defined in Fungus.LoopRange</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Starting Value</td>
+<td>Fungus.IntegerData</td>
+<td>Starting value for the counter variable</td>
+</tr>
+<tr>
+<td>End Value</td>
+<td>Fungus.IntegerData</td>
+<td>End value for the counter variable, exclusive</td>
+</tr>
+<tr>
+<td>Counter</td>
+<td>Fungus.IntegerData</td>
+<td>Optional int var to hold the current loop counter.</td>
+</tr>
+<tr>
+<td>Step</td>
+<td>Fungus.IntegerData</td>
+<td>Step size for the counter, how much does it go up by each loop. Default 1</td>
+</tr>
+</tbody></table>
+<h1 id="if">If</h1>
+<p>If the test expression is true, execute the following command block.</p>
+<p>Defined in Fungus.If</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Any Or All Conditions</td>
+<td>Fungus.VariableCondition+AnyOrAll</td>
+<td>Selecting AnyOf will result in true if at least one of the conditions is true. Selecting AllOF will result in true only when all the conditions are true.</td>
+</tr>
+<tr>
+<td>Variable</td>
+<td>Fungus.Variable</td>
+<td>Variable to use in expression</td>
+</tr>
+<tr>
+<td>Boolean Data</td>
+<td>Fungus.BooleanData</td>
+<td>Boolean value to compare against</td>
+</tr>
+<tr>
+<td>Integer Data</td>
+<td>Fungus.IntegerData</td>
+<td>Integer value to compare against</td>
+</tr>
+<tr>
+<td>Float Data</td>
+<td>Fungus.FloatData</td>
+<td>Float value to compare against</td>
+</tr>
+<tr>
+<td>String Data</td>
+<td>Fungus.StringDataMulti</td>
+<td>String value to compare against</td>
+</tr>
+<tr>
+<td>Animator Data</td>
+<td>Fungus.AnimatorData</td>
+<td>Animator value to compare against</td>
+</tr>
+<tr>
+<td>Audio Source Data</td>
+<td>Fungus.AudioSourceData</td>
+<td>AudioSource value to compare against</td>
+</tr>
+<tr>
+<td>Color Data</td>
+<td>Fungus.ColorData</td>
+<td>Color value to compare against</td>
+</tr>
+<tr>
+<td>Game Object Data</td>
+<td>Fungus.GameObjectData</td>
+<td>GameObject value to compare against</td>
+</tr>
+<tr>
+<td>Material Data</td>
+<td>Fungus.MaterialData</td>
+<td>Material value to compare against</td>
+</tr>
+<tr>
+<td>Object Data</td>
+<td>Fungus.ObjectData</td>
+<td>Object value to compare against</td>
+</tr>
+<tr>
+<td>Rigidbody2 D Data</td>
+<td>Fungus.Rigidbody2DData</td>
+<td>Rigidbody2D value to compare against</td>
+</tr>
+<tr>
+<td>Sprite Data</td>
+<td>Fungus.SpriteData</td>
+<td>Sprite value to compare against</td>
+</tr>
+<tr>
+<td>Texture Data</td>
+<td>Fungus.TextureData</td>
+<td>Texture value to compare against</td>
+</tr>
+<tr>
+<td>Transform Data</td>
+<td>Fungus.TransformData</td>
+<td>Transform value to compare against</td>
+</tr>
+<tr>
+<td>Vector2 Data</td>
+<td>Fungus.Vector2Data</td>
+<td>Vector2 value to compare against</td>
+</tr>
+<tr>
+<td>Vector3 Data</td>
+<td>Fungus.Vector3Data</td>
+<td>Vector3 value to compare against</td>
+</tr>
+</tbody></table>
+<h1 id="jump">Jump</h1>
+<p>Move execution to a specific Label command in the same block</p>
+<p>Defined in Fungus.Jump</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_target Label</td>
+<td>Fungus.StringData</td>
+<td>Name of a label in this block to jump to</td>
+</tr>
+</tbody></table>
+<h1 id="label">Label</h1>
+<p>Marks a position in the command list for execution to jump to.</p>
+<p>Defined in Fungus.Label</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Key</td>
+<td>System.String</td>
+<td>Display name for the label</td>
+</tr>
+</tbody></table>
+<h1 id="load-scene">Load Scene</h1>
+<p>Loads a new Unity scene and displays an optional loading image. This is useful for splitting a large game across multiple scene files to reduce peak memory usage. Previously loaded assets will be released before loading the scene to free up memory.The scene to be loaded must be added to the scene list in Build Settings.</p>
+<p>Defined in Fungus.LoadScene</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_scene Name</td>
+<td>Fungus.StringData</td>
+<td>Name of the scene to load. The scene must also be added to the build settings.</td>
+</tr>
+<tr>
+<td>Loading Image</td>
+<td>UnityEngine.Texture2D</td>
+<td>Image to display while loading the scene</td>
+</tr>
+</tbody></table>
+<h1 id="loop-range">Loop Range</h1>
+<p>Loop over a fixed integer range, similar to a common for loop.</p>
+<p>Defined in Fungus.LoopRange</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Starting Value</td>
+<td>Fungus.IntegerData</td>
+<td>Starting value for the counter variable</td>
+</tr>
+<tr>
+<td>End Value</td>
+<td>Fungus.IntegerData</td>
+<td>End value for the counter variable, exclusive</td>
+</tr>
+<tr>
+<td>Counter</td>
+<td>Fungus.IntegerData</td>
+<td>Optional int var to hold the current loop counter.</td>
+</tr>
+<tr>
+<td>Step</td>
+<td>Fungus.IntegerData</td>
+<td>Step size for the counter, how much does it go up by each loop. Default 1</td>
+</tr>
+</tbody></table>
+<h1 id="lua-else-if">Lua Else If</h1>
+<p>Marks the start of a command block to be executed when the preceding If statement is False and the test expression is true.</p>
+<p>Defined in Fungus.LuaElseIf</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Lua Environment</td>
+<td>Fungus.LuaEnvironment</td>
+<td>Lua Environment to use to execute this Lua script (null for global)</td>
+</tr>
+<tr>
+<td>Lua Compare String</td>
+<td>System.String</td>
+<td>The lua comparison string to run; implicitly prepends &#39;return&#39; onto this</td>
+</tr>
+</tbody></table>
+<h1 id="lua-if">Lua If</h1>
+<p>If the test expression is true, execute the following command block.</p>
+<p>Defined in Fungus.LuaIf</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Lua Environment</td>
+<td>Fungus.LuaEnvironment</td>
+<td>Lua Environment to use to execute this Lua script (null for global)</td>
+</tr>
+<tr>
+<td>Lua Compare String</td>
+<td>System.String</td>
+<td>The lua comparison string to run; implicitly prepends &#39;return&#39; onto this</td>
+</tr>
+</tbody></table>
+<h1 id="quit">Quit</h1>
+<p>Quits the application. Does not work in Editor or Webplayer builds. Shouldn&#39;t generally be used on iOS.</p>
+<p>Defined in Fungus.Quit</p>
+<h1 id="save-point">Save Point</h1>
+<p>Creates a Save Point and adds it to the Save History. The player can save the Save History to persistent storage and load it again later using the Save Menu.</p>
+<p>Defined in Fungus.SavePoint</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Is Start Point</td>
+<td>System.Boolean</td>
+<td>Marks this Save Point as the starting point for Flowchart execution in the scene. Each scene in your game should have exactly one Save Point with this enabled.</td>
+</tr>
+<tr>
+<td>Key Mode</td>
+<td>Fungus.SavePoint+KeyMode</td>
+<td>How the Save Point Key for this Save Point is defined.</td>
+</tr>
+<tr>
+<td>Custom Key</td>
+<td>System.String</td>
+<td>A string key which uniquely identifies this save point.</td>
+</tr>
+<tr>
+<td>Key Separator</td>
+<td>System.String</td>
+<td>A string to seperate the block name and custom key when using KeyMode.Both.</td>
+</tr>
+<tr>
+<td>Description Mode</td>
+<td>Fungus.SavePoint+DescriptionMode</td>
+<td>How the description for this Save Point is defined.</td>
+</tr>
+<tr>
+<td>Custom Description</td>
+<td>System.String</td>
+<td>A short description of this save point.</td>
+</tr>
+<tr>
+<td>Fire Event</td>
+<td>System.Boolean</td>
+<td>Fire a Save Point Loaded event when this command executes.</td>
+</tr>
+<tr>
+<td>Resume On Load</td>
+<td>System.Boolean</td>
+<td>Resume execution from this location after loading this Save Point.</td>
+</tr>
+</tbody></table>
+<h1 id="send-message">Send Message</h1>
+<p>Sends a message to either the owner Flowchart or all Flowcharts in the scene. Blocks can listen for this message using a Message Received event handler.</p>
+<p>Defined in Fungus.SendMessage</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Message Target</td>
+<td>Fungus.MessageTarget</td>
+<td>Target flowchart(s) to send the message to</td>
+</tr>
+<tr>
+<td>_message</td>
+<td>Fungus.StringData</td>
+<td>Name of the message to send</td>
+</tr>
+</tbody></table>
+<h1 id="stop">Stop</h1>
+<p>Stop executing the Block that contains this command.</p>
+<p>Defined in Fungus.Stop</p>
+<h1 id="stop-block">Stop Block</h1>
+<p>Stops executing the named Block</p>
+<p>Defined in Fungus.StopBlock</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Flowchart</td>
+<td>Fungus.Flowchart</td>
+<td>Flowchart containing the Block. If none is specified, the parent Flowchart is used.</td>
+</tr>
+<tr>
+<td>Block Name</td>
+<td>Fungus.StringData</td>
+<td>Name of the Block to stop</td>
+</tr>
+</tbody></table>
+<h1 id="stop-flowchart">Stop Flowchart</h1>
+<p>Stops execution of all Blocks in a Flowchart</p>
+<p>Defined in Fungus.StopFlowchart</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Stop Parent Flowchart</td>
+<td>System.Boolean</td>
+<td>Stop all executing Blocks in the Flowchart that contains this command</td>
+</tr>
+<tr>
+<td>Target Flowcharts</td>
+<td>System.Collections.Generic.List`1[Fungus.Flowchart]</td>
+<td>Stop all executing Blocks in a list of target Flowcharts</td>
+</tr>
+</tbody></table>
+<h1 id="wait">Wait</h1>
+<p>Waits for period of time before executing the next command in the block.</p>
+<p>Defined in Fungus.Wait</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_duration</td>
+<td>Fungus.FloatData</td>
+<td>Duration to wait for</td>
+</tr>
+</tbody></table>
+<h1 id="wait-frames">Wait Frames</h1>
+<p>Waits for a number of frames before executing the next command in the block.</p>
+<p>Defined in Fungus.WaitFrames</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Frame Count</td>
+<td>Fungus.IntegerData</td>
+<td>Number of frames to wait for</td>
+</tr>
+</tbody></table>
+<h1 id="while">While</h1>
+<p>Continuously loop through a block of commands while the condition is true. Use the Break command to force the loop to terminate immediately.</p>
+<p>Defined in Fungus.While</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Any Or All Conditions</td>
+<td>Fungus.VariableCondition+AnyOrAll</td>
+<td>Selecting AnyOf will result in true if at least one of the conditions is true. Selecting AllOF will result in true only when all the conditions are true.</td>
+</tr>
+<tr>
+<td>Variable</td>
+<td>Fungus.Variable</td>
+<td>Variable to use in expression</td>
+</tr>
+<tr>
+<td>Boolean Data</td>
+<td>Fungus.BooleanData</td>
+<td>Boolean value to compare against</td>
+</tr>
+<tr>
+<td>Integer Data</td>
+<td>Fungus.IntegerData</td>
+<td>Integer value to compare against</td>
+</tr>
+<tr>
+<td>Float Data</td>
+<td>Fungus.FloatData</td>
+<td>Float value to compare against</td>
+</tr>
+<tr>
+<td>String Data</td>
+<td>Fungus.StringDataMulti</td>
+<td>String value to compare against</td>
+</tr>
+<tr>
+<td>Animator Data</td>
+<td>Fungus.AnimatorData</td>
+<td>Animator value to compare against</td>
+</tr>
+<tr>
+<td>Audio Source Data</td>
+<td>Fungus.AudioSourceData</td>
+<td>AudioSource value to compare against</td>
+</tr>
+<tr>
+<td>Color Data</td>
+<td>Fungus.ColorData</td>
+<td>Color value to compare against</td>
+</tr>
+<tr>
+<td>Game Object Data</td>
+<td>Fungus.GameObjectData</td>
+<td>GameObject value to compare against</td>
+</tr>
+<tr>
+<td>Material Data</td>
+<td>Fungus.MaterialData</td>
+<td>Material value to compare against</td>
+</tr>
+<tr>
+<td>Object Data</td>
+<td>Fungus.ObjectData</td>
+<td>Object value to compare against</td>
+</tr>
+<tr>
+<td>Rigidbody2 D Data</td>
+<td>Fungus.Rigidbody2DData</td>
+<td>Rigidbody2D value to compare against</td>
+</tr>
+<tr>
+<td>Sprite Data</td>
+<td>Fungus.SpriteData</td>
+<td>Sprite value to compare against</td>
+</tr>
+<tr>
+<td>Texture Data</td>
+<td>Fungus.TextureData</td>
+<td>Texture value to compare against</td>
+</tr>
+<tr>
+<td>Transform Data</td>
+<td>Fungus.TransformData</td>
+<td>Transform value to compare against</td>
+</tr>
+<tr>
+<td>Vector2 Data</td>
+<td>Fungus.Vector2Data</td>
+<td>Vector2 value to compare against</td>
+</tr>
+<tr>
+<td>Vector3 Data</td>
+<td>Fungus.Vector3Data</td>
+<td>Vector3 value to compare against</td>
+</tr>
+</tbody></table>
+<p>Auto-Generated by Fungus.ExportReferenceDocs</p>
