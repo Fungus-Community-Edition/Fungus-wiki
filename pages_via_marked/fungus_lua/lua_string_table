@@ -1,0 +1,52 @@
+<h1 id="string-table">String Table</h1>
+<h1 id="text-localisation">Text localisation</h1>
+<p>The LuaUtils component provides support for simple text localisation.</p>
+<ol>
+<li>Define your language strings in a JSON file and save it in the project assets folder.</li>
+<li>Add a LuaEnvironment component to your scene - e.g. Tools &gt; Fungus &gt; Create &gt; LuaEnvironment </li>
+<li>In the LuaUtils component, set the String Table property to reference your JSON file asset.</li>
+<li>Use the {$VarName} syntax to subsitute a localised string anywhere that string substitution is supported. e.g. in a Lua script:</li>
+</ol>
+<pre><code class="language-lua">say(&quot;{$hello_world}&quot;)
+</code></pre>
+<p>You can use the {$VarName} syntax anywhere that variable subsitution is supported. This includes:</p>
+<ul>
+<li>Say command</li>
+<li>Menu command</li>
+<li>Set Text command</li>
+<li>Write command</li>
+<li>Conversation command</li>
+<li>Character object - character name</li>
+<li>Debug Log command</li>
+<li>Load Variable command - save key</li>
+<li>Save Variable command - save key</li>
+<li>Delete Save Key command</li>
+</ul>
+<p>You can also extend the Fungus string substitution system with your own components. Implement the StringSubstituter.ISubstitutionHandler interface in a Monobehavior subclass and then return the modified string from SubstituteStrings().</p>
+<h1 id="json-format">JSON Format</h1>
+<p>This is an example of the JSON format for the string table. To use this localised string, you would use the {$hello_world} tag.</p>
+<pre><code class="language-json">{
+    &quot;hello_world&quot; : {
+        &quot;en&quot; : &quot;Hello world!&quot;,
+        &quot;fr&quot; : &quot;Bonjour le monde!&quot;,
+        &quot;de&quot; : &quot;Hallo Welt!&quot;
+    },
+    &quot;goodbye_world&quot; : {
+        &quot;en&quot; : &quot;Goodbye world!&quot;,
+        &quot;fr&quot; : &quot;Au revoir monde!&quot;,
+        &quot;de&quot; : &quot;Auf Wiedersehen Welt!&quot;
+    }
+}
+</code></pre>
+<h1 id="lua-functions">Lua Functions</h1>
+<p>These Lua functions are available for working with the string table.</p>
+<pre><code class="language-lua">-- Set active language for string table
+setlanguage(languagecode)
+
+-- Get a named string from the string table
+getstring(key)
+
+-- Substitutes variables and localisation strings into a piece of text
+-- e.g. v = 10, &quot;Subbed value is [$v]&quot; =&gt; &quot;Subbed value is 10&quot;
+sub(text)
+</code></pre>

@@ -1,0 +1,214 @@
+<h1 id="controlling-fungus">Controlling Fungus</h1>
+<p>The Fungus module provides several functions for working with the standard Fungus narrative features and flowcharts.</p>
+<p>You can control Say and Menu dialogs in much the same way you use Say and Menu commands in a normal Fungus flowchart.</p>
+<p>When you use the menu() function, you supply another Lua function to call when that menu option is selected. Make sure to define the function higher up in the file before referencing it in a menu() call. If you don&#39;t explicitly set a SayDialog or MenuDialog object to use default ones are created automatically.</p>
+<h1 id="narrative-example">Narrative example</h1>
+<p>This example Lua script demonstrates some of the Say and Menu dialog functions. To try it out, add a Lua object to the scene (Tools &gt; Fungus &gt; Create &gt; Lua) and copy this script into the Lua Script text box. You may also need to add an EventSystem object in the scene (GameObject &gt; UI &gt; Event System) so that the menu buttons will respond to user input.</p>
+<pre><code class="language-lua">-- Display text in a SayDialog
+say(&quot;Hi there&quot;)
+say &quot;This syntax also works for say commands&quot;
+
+-- Display a list of options in a MenuDialog
+-- (Note the curly braces here!)
+local choice = choose{ &quot;Go left&quot;, &quot;Go right&quot; }
+
+if choice == 1 then
+    say(&quot;You chose left&quot;)
+elseif choice == 2 then
+    say(&quot;You chose right&quot;)
+end
+</code></pre>
+<p>Note: The curly braces syntax means that the list of options is passed as a single table parameter to the choose() function. It&#39;s a shortcut for writing this:</p>
+<pre><code class="language-lua">local choice = choose( {&quot;Go left&quot;, &quot;Go right&quot;} )
+</code></pre>
+<h1 id="say-dialog-functions">Say Dialog functions</h1>
+<p>To use a custom SayDialog:</p>
+<ol>
+<li>Add as SayDialog to the scene (Tools &gt; Fungus &gt; Create &gt; SayDialog)</li>
+<li>Select the Lua object in the hierarchy and find the LuaBindings component.</li>
+<li>Add a binding to the SayDialog game object, and select the SayDialog component. N.B. Make sure to select the correct component!</li>
+<li>In Lua script, you can now activate this SayDialog using the setsaydialog() function, by passing the key of the SayDialog binding.</li>
+</ol>
+<p>To change the behaviour of the say() function, e.g. to not wait for input when done, do this:</p>
+<pre><code class="language-lua">sayoptions.waitforinput = false
+</code></pre>
+<p>You can bind Character objects in a similar fashion, and set the speaking character using the setcharacter() function.</p>
+<p>This is the list of available functions for controlling SayDialogs.</p>
+<pre><code class="language-lua">-- Options for configuring Say Dialog behaviour
+sayoptions.clearprevious = true | false
+sayoptions.waitforinput = true | false
+sayoptions.fadewhendone = true | false
+sayoptions.stopvoiceover = true | false
+
+-- Set the active saydialog to use with the say function
+-- saydialog: A binding to a SayDialog component
+setsaydialog(saydialog)
+
+-- Gets the active say dialog, or creates one if none exists yet
+getsaydialog()
+
+-- Set the active character on the Say Dialog
+-- character: A Fungus.Character component
+-- portrait: The name of a sprite in the character&#39;s portrait list
+setcharacter(character, portrait)
+
+-- Write text to the active Say Dialog
+-- text: A string to write to the say dialog
+-- voice: A voiceover audioclip to play
+say(text, voiceclip)
+</code></pre>
+<h1 id="menu-dialog-functions">Menu Dialog functions</h1>
+<p>You setup custom MenuDialogs in the same manner as SayDialogs, use the setmenudialog() function to set the active MenuDialog.</p>
+<p>The easiest way to display a list of options is using the choose() function. Remember that in Lua array indices start at 1 instead of 0 like in most other languages.</p>
+<p>You can set an option to be displayed but not selectable by prepending it with the ~ character.</p>
+<pre><code class="language-lua">local choice = choose { &quot;Option 1&quot;, &quot;Option 2&quot;, &quot;~Option 3&quot; } 
+
+if choice == 1 then 
+    say &quot;Chose option 1&quot;
+elseif choice == 2 then 
+    say &quot;Chose option 2&quot;
+end
+-- Option 3 is displayed but can&#39;t be selected
+
+say &quot;End options&quot;
+</code></pre>
+<p>A useful pattern is to use choose() together with Lua&#39;s goto statement and labels. This can be handy for &#39;flattening out&#39; nested menu options. The <a href="http://lua-users.org/wiki/GotoStatement">goto statement</a> doesn&#39;t support jumping into the scope of a local variable, but it&#39;s easy to work around this by declaring the local variable in the outer scope. You could also use a global variable (by not using the local keyword).</p>
+<pre><code class="language-lua">local choice = 0
+
+choice = choose { &quot;Option A&quot;, &quot;Option B&quot; } 
+if choice == 1 then goto optionA end
+if choice == 2 then goto optionB end
+
+::optionA::
+say &quot;Chose option A&quot;
+goto endoptions
+
+::optionB::
+choice = choose { &quot;Option C&quot;, &quot;Option D&quot; } 
+if choice == 1 then goto optionC end
+if choice == 2 then goto optionD end
+goto endoptions
+
+::optionC::
+say &quot;Chose option C&quot;
+goto endoptions
+
+::optionD::
+say &quot;Chose option D&quot;
+goto endoptions
+
+::endoptions::
+say &quot;End options&quot;
+</code></pre>
+<p>The menu() and menutimer() functions provide an alternative way to use the MenuDialog. These functions return immediately, and a callback function is called when the player selects an option from the menu.</p>
+<p>This is the list of available MenuDialog functions.</p>
+<pre><code class="language-lua">-- Set the active menudialog to use with the menu function
+setmenudialog(menudialog)
+
+-- Gets the active menu dialog, or creates one if none exists yet
+getmenudialog()
+
+-- Display a list of menu options and wait for user to choose one.
+-- When an option starts with the ~ character it will be displayed but not be selectable.
+-- Returns the index of the selected option.
+-- Returns 0 if options list is empty. Note: Lua array indices start at 1, not 0).
+-- options: an array of option strings. e.g. { &quot;Option 1&quot;, &quot;Option 2&quot; }
+choose(options)
+
+-- Display a list of menu options and wait for user to choose one, or for a timer to expire.
+-- When an option starts with the ~ character it will be displayed but not be selectable.
+-- Returns the index of the selected option, or the defaultoption if the timer expires.
+-- Returns 0 if options list is empty. Note: Lua array indices start at 1, not 0).
+-- options: an array of option strings. e.g. { &quot;Option 1&quot;, &quot;Option 2&quot; }
+-- duration: Time player has to pick an option.
+-- defaultoption: Option index to return if the timer expires.
+choosetimer(options, duration, defaultoption)
+
+-- Display a menu button
+-- text: text to display on the button
+-- callback: function to call when this option is selected
+-- interactive (optional): if false, displays the option as disabled
+menu(text, callback, interactive)
+
+-- Display a timer during which the player has to choose an option.
+-- duration: The length of time to display the timer.
+-- callback: Function to call if the timer expires before an option is selected.
+menutimer(duration, callback)
+
+-- Clear all currently displayed menu options
+clearmenu()
+</code></pre>
+<h1 id="portrait-functions">Portrait functions</h1>
+<p>Stage portraits can be controlled by using the stage.</p>
+<p>First, add your characters and stage to the LuaBindings list.</p>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/fungus_lua/lua_stage_binding.png" alt="Lua Stage Binding"></p>
+<p>Then, in a lua script, use the stage commands show, showPortrait and hide to control the portraits on stage.</p>
+<pre><code class="language-lua">-- Show a character at this stage position
+stage.show(character, &quot;left&quot;)
+
+-- show a character with a specific portrait and move it
+-- from one stage position to another.
+stage.show(character, &quot;happy&quot;, &quot;offscreen right&quot;, &quot;right&quot;)
+
+-- show a specific portrait
+stage.showPortrait(character, &quot;amused&quot;)
+
+-- hide a character
+stage.hide(character)
+
+-- Hide a character fading out to a position
+stage.hide(character, &quot;offscreen left&quot;)
+</code></pre>
+<p>You can also specify any Portrait option available by using named arguments.</p>
+<pre><code class="language-lua">stage.show{character=character, fromPosition=&quot;left&quot;, toPosition=&quot;right&quot;}
+
+stage.show{character=character, portrait=&quot;angry&quot;, facing=&quot;left&quot;}
+
+stage.hide{character=character}
+</code></pre>
+<h1 id="conversation-function">Conversation function</h1>
+<p>The conversation() function allows you to perform long dialogue exchanges with a single function call. Lua&#39;s multiline string syntax [[ ]] is handy here. As the conversation() function takes a single string parameter you can also omit the usual function parentheses.</p>
+<pre><code class="language-text">conversation [[
+john: Hello!
+sherlock: Greetings.
+]]
+</code></pre>
+<p>See the docs for the @ref conversation_system.</p>
+<h1 id="flowchart-functions">Flowchart functions</h1>
+<p>We&#39;ve added special functions for say() and menu() because these are so common in Fungus games. To execute any other commands in Fungus from Lua, you must do it in conjunction with a Flowchart &amp; Block, like this:</p>
+<ol>
+<li>Add a Flowchart and a Block (e.g. &quot;MyBlock&quot;) in the scene.</li>
+<li>Add the Fungus commands you want to execute from Lua in the Block. (e.g Play Sound)</li>
+<li>Add a Lua object to the scene (Tools &gt; Fungus &gt; Create &gt; Lua)</li>
+<li>In the LuaBindings component, add a binding to the Flowchart gameobject, and select the Flowchart component.</li>
+<li>In the LuaScript component, use the runblock() function to execute the Block, passing the bound flowchart and name of the block as parameters.</li>
+</ol>
+<pre><code class="language-lua">runblock(flowchart, &quot;MyBlock&quot;)
+</code></pre>
+<p>You can also access any Flowchart variable from Lua via the getvar() function.</p>
+<pre><code class="language-lua">-- Assume the &#39;flowchart&#39; variable is bound to a Flowchart component in LuaBindings
+-- MyVar is a string variable defined on the Flowchart
+
+local myvar = getvar(flowchart, &quot;MyVar&quot;)
+
+print(myvar.value)
+
+myvar.value = &quot;New value for string&quot;
+</code></pre>
+<p>This is the list of available functions for controlling Flowcharts.</p>
+<pre><code class="language-lua">-- Returns the specified Variable in a Flowchart.
+-- To access the value of the variable, use its .value property. e.g.
+--  v = getvar(flowchart, &quot;FloatVar&quot;)
+--  v.value = 10    -- Sets the value of the variable to 10
+--  f = v.value     -- f now contains 10
+-- flowchart: The Fungus Flowchart containing the Block to run.
+-- varname: The name of the Variable to get.
+getvar(flowchart, varname)
+
+-- Runs the specified Block in a Flowchart
+-- flowchart: The Fungus Flowchart containing the Block to run.
+-- blockname: The name of the Block to run.
+-- commandindex: Index of the command to start execution at
+-- nowait: If false, will yield until the Block finishes execution. If true will continue immediately.
+runblock(flowchart, blockname, commandindex, nowait)
+</code></pre>

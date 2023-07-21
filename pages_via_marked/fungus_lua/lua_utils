@@ -1,0 +1,110 @@
+<h1 id="luautils">LuaUtils</h1>
+<p>LuaUtils is a component that extends the Lua environment with some commonly used functionality. </p>
+<p>It can be accessed from Lua scripts via the &#39;luautils&#39; global variable. This component mostly does a lot of setup work in the background, but it also provides some handy functions for instantiating, finding and destroying gameobjects in the scene.</p>
+<h1 id="example">Example</h1>
+<p>Here&#39;s an example of the kind of thing you can do:</p>
+<pre><code class="language-lua">local go = luautils.Find(&quot;MyObject&quot;) -- Find a game object by name
+luautils.Destroy(go) -- Destroy it
+</code></pre>
+<h1 id="gameobject-functions">GameObject Functions</h1>
+<p>This is the list of GameObject functions provided in luautils.</p>
+<pre><code class="language-lua">-- Find a game object by name and returns it.
+GameObject Find(string name)
+
+-- Returns one active GameObject tagged tag. Returns null if no GameObject was found.
+GameObject FindWithTag(string tag)
+
+-- Returns a list of active GameObjects tagged tag. Returns empty array if no GameObject was found.
+GameObject[] FindGameObjectsWithTag(string tag)
+            
+-- Create a copy of a GameObject.
+-- Can be used to instantiate prefabs.
+GameObject Instantiate(GameObject go)
+
+-- Destroys an instance of a GameObject.
+Destroy(GameObject go)
+
+-- Spawns an instance of a named prefab resource.
+-- The prefab must exist in a Resources folder in the project.
+GameObject Spawn(string resourceName)
+</code></pre>
+<h1 id="registering-c-types">Registering C# Types</h1>
+<p>The most important function of the LuaUtils component is registering C# types so that instances of those types can be accessed from Lua scripts. </p>
+<p>In order to access the members of a C# type from Lua, the type first has to be registered with MoonSharp. Note that for objects added using the LuaBindings component, the relevant types are registered automatically.</p>
+<p>In some cases however, you will need to register a type explicitly. The easiest way to do this is by adding the type&#39;s name to the FungusTypes.txt or UnityTypes.txt JSON files referenced by the LuaUtils component. You can also create your own JSON files to register additional types. Note that types that are not contained in the main application DLL will need to use the <a href="https://msdn.microsoft.com/en-us/library/system.type.assemblyqualifiedname(v=vs.110).aspx">namespace qualified type name</a> in the JSON file.</p>
+<h1 id="example-json-type-file">Example JSON Type File</h1>
+<p>Example of a types JSON file:</p>
+<pre><code class="language-json">{
+    &quot;registerTypes&quot; : [
+        &quot;Fungus.Block&quot;
+    ],
+    &quot;extensionTypes&quot; : [
+        &quot;Fungus.LuaExtensions&quot;
+    ]
+}
+</code></pre>
+<h1 id="registering-types-directly">Registering Types Directly</h1>
+<p>If you need to register types directly from C#, or do a more complex type of registration, you can use the MoonSharp UserData class to do this. See the MoonSharp documentation for a list of supported registration methods. A good place to register C# types is in the Awake method of a custom component.</p>
+<h1 id="other-utilities">Other Utilities</h1>
+<p>LuaUtils creates bindings for several useful C# classes and components so that you can access them from Lua script.</p>
+<table>
+<thead>
+<tr>
+<th>Binding name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>time</td>
+<td>The <a href="http://docs.unity3d.com/ScriptReference/Time.html">Unity Time class</a>. e.g. &#39;time.deltaTime&#39; returns the delta time for this frame</td>
+</tr>
+<tr>
+<td>playerprefs</td>
+<td>The @ref lua_preferences &quot;Lua Preferences&quot; class. Used for saving data to disk.</td>
+</tr>
+<tr>
+<td>prefs</td>
+<td>The @ref lua_preferences &quot;Fungus Prefs&quot; class, our own wrapper around PlayerPrefs that adds a slots systems.</td>
+</tr>
+<tr>
+<td>factory</td>
+<td>The @ref lua_utils &quot;PODTypeFactory&quot; class for creating common plain-old-data types</td>
+</tr>
+<tr>
+<td>luaenvironment</td>
+<td>The LuaEnvironment component used to execute Lua scripts</td>
+</tr>
+<tr>
+<td>luautils</td>
+<td>A reference to the LuaUtils component itself</td>
+</tr>
+<tr>
+<td>test</td>
+<td>Support for @ref lua_unity_test_tools (if installed)</td>
+</tr>
+<tr>
+<td>stringtable</td>
+<td>The FungusLua localisation @ref lua_string_table</td>
+</tr>
+</tbody></table>
+<h1 id="podfactory">PODFactory</h1>
+<p>Due to limitations in C# / Mono, MoonSharp has limited support for working with Plain-Old-Data (struct) types like <a href="http://docs.unity3d.com/ScriptReference/Vector3.html">Vector3</a>, <a href="http://docs.unity3d.com/ScriptReference/Color.html">Color</a>, etc. </p>
+<p>The best approach here is to treat POD properties as immutable objects, and never try to modify a POD variable that has been acquired from a C# object. Instead, you should construct a new POD object, populate it with the required values and then pass that object in calls to C# code. The LuaUtils PODFactory class helps do this for common Unity types.</p>
+<pre><code class="language-lua">-- Returns a new Color object
+local c = factory.color(1,1,1,1)
+
+-- Returns a new Vector2 object
+local v2 = factory.vector2(1, 2)
+
+-- Returns a new Vector3 object
+local v3 = factory.vector3(1, 2, 3)
+
+-- Returns a new Vector4 object
+local v4 = factory.vector4(1, 2, 3, 4)
+
+-- Returns a new Quaternion object
+local q = factory.quaternion(float x, float y, float z) -- Rotation in euler angles
+            
+-- Returns a new Rect object
+local r = factory.rect(float x, float y, float width, float height)
+</code></pre>

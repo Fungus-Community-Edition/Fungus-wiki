@@ -1,0 +1,245 @@
+<h1 id="ui-commands">UI commands</h1>
+<h1 id="fade-ui">Fade UI</h1>
+<p>Fades a UI object</p>
+<p>Defined in Fungus.FadeUI</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Target Objects</td>
+<td>System.Collections.Generic.List`1[UnityEngine.GameObject]</td>
+<td>List of objects to be affected by the tween</td>
+</tr>
+<tr>
+<td>Tween Type</td>
+<td>LeanTweenType</td>
+<td>Type of tween easing to apply</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>Fungus.BooleanData</td>
+<td>Wait until this command completes before continuing execution</td>
+</tr>
+<tr>
+<td>Duration</td>
+<td>Fungus.FloatData</td>
+<td>Time for the tween to complete</td>
+</tr>
+</tbody></table>
+<h1 id="get-text">Get Text</h1>
+<p>Gets the text property from a UI Text object and stores it in a string variable.</p>
+<p>Defined in Fungus.GetText</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Target Text Object</td>
+<td>UnityEngine.GameObject</td>
+<td>Text object to get text value from</td>
+</tr>
+<tr>
+<td>String Variable</td>
+<td>Fungus.StringVariable</td>
+<td>String variable to store the text value in</td>
+</tr>
+</tbody></table>
+<h1 id="get-toggle-state">Get Toggle State</h1>
+<p>Gets the state of a toggle UI object and stores it in a boolean variable.</p>
+<p>Defined in Fungus.GetToggleState</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Toggle</td>
+<td>UnityEngine.UI.Toggle</td>
+<td>Target toggle object to get the value from</td>
+</tr>
+<tr>
+<td>Toggle State</td>
+<td>Fungus.BooleanVariable</td>
+<td>Boolean variable to store the state of the toggle value in.</td>
+</tr>
+</tbody></table>
+<h1 id="set-interactable">Set Interactable</h1>
+<p>Set the interactable state of selectable objects.</p>
+<p>Defined in Fungus.SetInteractable</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Target Objects</td>
+<td>System.Collections.Generic.List`1[UnityEngine.GameObject]</td>
+<td>List of objects to be affected by the command</td>
+</tr>
+<tr>
+<td>Interactable State</td>
+<td>Fungus.BooleanData</td>
+<td>Controls if the selectable UI object be interactable or not</td>
+</tr>
+</tbody></table>
+<h1 id="set-slider-value">Set Slider Value</h1>
+<p>Sets the value property of a slider object</p>
+<p>Defined in Fungus.SetSliderValue</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Slider</td>
+<td>UnityEngine.UI.Slider</td>
+<td>Target slider object to set the value on</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>Fungus.FloatData</td>
+<td>Float value to set the slider value to.</td>
+</tr>
+</tbody></table>
+<h1 id="set-text">Set Text</h1>
+<p>Sets the text property on a UI Text object and/or an Input Field object.</p>
+<p>Defined in Fungus.SetText</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Target Text Object</td>
+<td>UnityEngine.GameObject</td>
+<td>Text object to set text on. Can be a UI Text, Text Field or Text Mesh object.</td>
+</tr>
+<tr>
+<td>Text</td>
+<td>Fungus.StringDataMulti</td>
+<td>String value to assign to the text object</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>System.String</td>
+<td>Notes about this story text for other authors, localization, etc.</td>
+</tr>
+</tbody></table>
+<h1 id="set-toggle-state">Set Toggle State</h1>
+<p>Sets the state of a toggle UI object</p>
+<p>Defined in Fungus.SetToggleState</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Toggle</td>
+<td>UnityEngine.UI.Toggle</td>
+<td>Target toggle object to set the state on</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>Fungus.BooleanData</td>
+<td>Boolean value to set the toggle state to.</td>
+</tr>
+</tbody></table>
+<h1 id="set-ui-image">Set UI Image</h1>
+<p>Changes the Image property of a list of UI Images.</p>
+<p>Defined in Fungus.SetUIImage</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Images</td>
+<td>System.Collections.Generic.List`1[UnityEngine.UI.Image]</td>
+<td>List of UI Images to set the source image property on</td>
+</tr>
+<tr>
+<td>Sprite</td>
+<td>UnityEngine.Sprite</td>
+<td>The sprite set on the source image property</td>
+</tr>
+</tbody></table>
+<h1 id="write">Write</h1>
+<p>Writes content to a UI Text or Text Mesh object.</p>
+<p>Defined in Fungus.Write</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Text Object</td>
+<td>UnityEngine.GameObject</td>
+<td>Text object to set text on. Text, Input Field and Text Mesh objects are supported.</td>
+</tr>
+<tr>
+<td>Text</td>
+<td>Fungus.StringDataMulti</td>
+<td>String value to assign to the text object</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>System.String</td>
+<td>Notes about this story text for other authors, localization, etc.</td>
+</tr>
+<tr>
+<td>Clear Text</td>
+<td>System.Boolean</td>
+<td>Clear existing text before writing new text</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until this command finishes before executing the next command</td>
+</tr>
+<tr>
+<td>Text Color</td>
+<td>Fungus.TextColor</td>
+<td>Color mode to apply to the text.</td>
+</tr>
+<tr>
+<td>Set Alpha</td>
+<td>Fungus.FloatData</td>
+<td>Alpha to apply to the text.</td>
+</tr>
+<tr>
+<td>Set Color</td>
+<td>Fungus.ColorData</td>
+<td>Color to apply to the text.</td>
+</tr>
+</tbody></table>
+<p>Auto-Generated by Fungus.ExportReferenceDocs</p>

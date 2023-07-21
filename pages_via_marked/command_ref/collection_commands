@@ -1,0 +1,198 @@
+<h1 id="collection-commands">Collection commands</h1>
+<h1 id="add">Add</h1>
+<p>Add an item to a collection</p>
+<p>Defined in Fungus.CollectionCommandAdd</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Only If Unique</td>
+<td>Fungus.BooleanData</td>
+<td>Only add if the item does not already exist in the collection</td>
+</tr>
+</tbody></table>
+<h1 id="add-all">Add All</h1>
+<p>Add all items in given rhs collection to target collection</p>
+<p>Defined in Fungus.CollectionCommandAddAll</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Only If Unique</td>
+<td>Fungus.BooleanData</td>
+<td>Only add if the item does not already exist in the collection</td>
+</tr>
+</tbody></table>
+<h1 id="clear">Clear</h1>
+<p>Clears a target collection</p>
+<p>Defined in Fungus.CollectionCommandClear</p>
+<h1 id="contains">Contains</h1>
+<p>Does the collection contain the given variable</p>
+<p>Defined in Fungus.CollectionCommandContains</p>
+<h1 id="contains-all-of">Contains All Of</h1>
+<p>Does target collection, contain all rhs collection items</p>
+<p>Defined in Fungus.CollectionCommandContainsAll</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>In Same Order</td>
+<td>Fungus.BooleanData</td>
+<td>Do they have to be in the same order?</td>
+</tr>
+</tbody></table>
+<h1 id="contains-any-of">Contains Any Of</h1>
+<p>Does target collection, contain any of the items in the rhs collection items</p>
+<p>Defined in Fungus.CollectionCommandContainsAny</p>
+<h1 id="copy">Copy</h1>
+<p>Clears target and then adds all of rhs to target.</p>
+<p>Defined in Fungus.CollectionCommandCopy</p>
+<h1 id="count">Count</h1>
+<p>Number of items in the collection</p>
+<p>Defined in Fungus.CollectionCommandCount</p>
+<h1 id="element">Element</h1>
+<p>Get or Set, an element in a collection</p>
+<p>Defined in Fungus.CollectionCommandElement</p>
+<h1 id="exclusive">Exclusive</h1>
+<p>Remove all items from collection that are also in RHS and add all the items in RHS that are not already in target. Similar to a xor</p>
+<p>Defined in Fungus.CollectionCommandExclusive</p>
+<h1 id="find">Find</h1>
+<p>Find an item in a collection</p>
+<p>Defined in Fungus.CollectionCommandFind</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Last Instead Of First</td>
+<td>Fungus.BooleanData</td>
+<td>If true, will find the last occurance rather than first occurance.</td>
+</tr>
+</tbody></table>
+<h1 id="for-each">For Each</h1>
+<p>Loop over each element in the given collection, similar to a foreach but internally uses indicies</p>
+<p>Defined in Fungus.ForEach</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Cur Index</td>
+<td>Fungus.IntegerData</td>
+<td>Optional</td>
+</tr>
+</tbody></table>
+<h1 id="indexof">IndexOf</h1>
+<p>Find an item in a collection</p>
+<p>Defined in Fungus.CollectionCommandFind</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Last Instead Of First</td>
+<td>Fungus.BooleanData</td>
+<td>If true, will find the last occurance rather than first occurance.</td>
+</tr>
+</tbody></table>
+<h1 id="insert">Insert</h1>
+<p>Add at a specific location in the collection</p>
+<p>Defined in Fungus.CollectionCommandInsert</p>
+<h1 id="intersection">Intersection</h1>
+<p>Remove all items from collection that aren&#39;t also in RHS, similar to an overlap.</p>
+<p>Defined in Fungus.CollectionCommandIntersection</p>
+<h1 id="length">Length</h1>
+<p>Number of items in the collection</p>
+<p>Defined in Fungus.CollectionCommandCount</p>
+<h1 id="occurrences">Occurrences</h1>
+<p>How many occurrences of a given variable exist in a target collection</p>
+<p>Defined in Fungus.CollectionCommandOccurrences</p>
+<h1 id="randombag">RandomBag</h1>
+<p>Use the collection as a source of random items and turn it into a random bag. Drawing the next random item until out of items and then reshuffling them.</p>
+<p>Defined in Fungus.CollectionRandomBag</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Duplicates To Put In Bag</td>
+<td>Fungus.IntegerData</td>
+<td>Will add this many copies to the bag. If you want 5 of everything, you want 4 copies.</td>
+</tr>
+</tbody></table>
+<h1 id="randomitem">RandomItem</h1>
+<p>Use the collection as a source of random selection. Picking a random item each run.</p>
+<p>Defined in Fungus.CollectionRandom</p>
+<h1 id="remove">Remove</h1>
+<p>Remove an item to a collection</p>
+<p>Defined in Fungus.CollectionCommandRemove</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>All Occurances</td>
+<td>Fungus.BooleanData</td>
+<td>Should it remove ALL occurances of variable</td>
+</tr>
+</tbody></table>
+<h1 id="remove-all-of">Remove All Of</h1>
+<p>Remove all items in given rhs collection to target collection</p>
+<p>Defined in Fungus.CollectionCommandRemoveAllOf</p>
+<h1 id="remove-at">Remove At</h1>
+<p>Remove item at given index</p>
+<p>Defined in Fungus.CollectionCommandRemoveAt</p>
+<h1 id="reserve">Reserve</h1>
+<p>Reserve space for given number of items in the collection</p>
+<p>Defined in Fungus.CollectionCommandReserve</p>
+<h1 id="resize">Resize</h1>
+<p>Resize will grow the collection to be the given size, will not remove items to shrink</p>
+<p>Defined in Fungus.CollectionCommandResize</p>
+<h1 id="reverse">Reverse</h1>
+<p>Reverse the current order of a target collection</p>
+<p>Defined in Fungus.CollectionCommandReverse</p>
+<h1 id="shuffle">Shuffle</h1>
+<p>Randomly reorders all elements of a target collection</p>
+<p>Defined in Fungus.CollectionCommandShuffle</p>
+<h1 id="sort">Sort</h1>
+<p>Sort a target collection</p>
+<p>Defined in Fungus.CollectionCommandSort</p>
+<h1 id="unique">Unique</h1>
+<p>Removes all duplicates.</p>
+<p>Defined in Fungus.CollectionCommandUnique
+Auto-Generated by Fungus.ExportReferenceDocs</p>

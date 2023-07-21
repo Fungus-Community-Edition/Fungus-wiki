@@ -1,0 +1,70 @@
+<h1 id="adding-a-command">Adding a Command</h1>
+<p>New Fungus commands can be easily created and then used in your blocks. To do so, you create a new class that inherits from Command (or one of its child classes).</p>
+<p>Let&#39;s start by looking at the simplest Command we can write.</p>
+<pre><code class="language-c#">using UnityEngine;
+using Fungus;
+
+[CommandInfo(&quot;Other&quot;,
+             &quot;ExampleCommand&quot;,
+             &quot;Just an example.&quot;)]
+[AddComponentMenu(&quot;&quot;)]
+public class ExampleCommand : Command
+{
+    public override void OnEnter()
+    {
+        Debug.Log(&quot;Example command&quot;);
+        Continue();
+    }
+}
+</code></pre>
+<p><strong>CommandInfo</strong>
+This attribute adds the Command the the AddCommand drop down list in the block editor. The first param defines its Category, the second the name it will show up as, and the third its tooltip in the AddCommand menu and the description when the command is selected in the editor.</p>
+<p><strong>AddComponentMenu</strong>
+This unity attribute, when given an empty string prevents the class from showing up in the AddComponent menu on regular gameobjects. </p>
+<p><strong>Inherit from Command</strong>
+Blocks keep a list of commands to execute, and this base class defines what commands can do and when they will be called. See Command.cs for more details.</p>
+<p><strong>OnEnter</strong>
+Called by the block when the command is asked to start running. Most commands compete their task within the OnEnter. </p>
+<p><strong>Continue</strong>
+A command needs to call this to notify the calling Block that this command has completed its task and the Block should move to the next Command.</p>
+<h2 id="data">Data</h2>
+<p>As with any MonoBehaviour, fields with public or SerializeField will be show in the editor when the command is selected. </p>
+<p>For FungusVariables you&#39;ll want to use either a typeData such as IntegerData, this allows for a local value to be set or a compatible FungusVariable to be selected. Where a FungusVariable is required you can use a Variable field with a VariableProperty attribute to only show variables of certain types such as.</p>
+<pre><code class="language-c#">[VariableProperty(typeof(FloatVariable), typeof(BooleanVariable), typeof(IntegerVariable))]
+[SerializeField] protected Variable outValue;
+</code></pre>
+<h2 id="common-methods">Common Methods</h2>
+<p>Many, if not most, Commands use some of the following common Command methods.</p>
+<pre><code class="language-c#">public override string GetSummary()
+{
+    return logMessage.GetDescription();
+}
+</code></pre>
+<p>Returns a message to show next to the command in the command list of the block. Returning a string starting with &#39;Error:&#39;&#39; will cause it to show with red colour.</p>
+<pre><code class="language-c#">public override Color GetButtonColor()
+{
+    return new Color32(235, 191, 217, 255);
+}
+</code></pre>
+<p>Returned colour sets the tint of the command in the command list.</p>
+<pre><code class="language-c#">public override bool HasReference(Variable variable)
+{
+    return logMessage.stringRef == variable || base.HasReference(variable);
+}
+</code></pre>
+<p>If your command uses any FungusVariables then returning the comparison against all of them, as above, allows variable references to be tinted in the variable list to show usage.</p>
+<pre><code class="language-c#">#region Editor caches
+#if UNITY_EDITOR
+protected override void RefreshVariableCache()
+{
+    base.RefreshVariableCache();
+
+    var f = GetFlowchart();
+
+    f.DetermineSubstituteVariables(logMessage.Value, referencedVariables);
+}
+#endif
+#endregion Editor caches
+</code></pre>
+<p>RefreshVariableCache is editor only and intended for use by commands that use SubstituteVariables so they can show variable use caused by substitutions.</p>
+<p>For more detail you&#39;ll want to investigate the Command source file.</p>

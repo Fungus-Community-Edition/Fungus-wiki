@@ -1,0 +1,167 @@
+<h1 id="blocks">Blocks</h1>
+<p>A fundamental concept of Fungus is the <strong>Block</strong>. Blocks contain your Fungus Commands, and reside inside Flowcharts.</p>
+<!-- **************************************************** -->
+<h1 id="inspecting-block-properties">Inspecting Block properties</h1>
+<p>Blocks are found inside Flowcharts. Blocks are where your Fungus Commands are stored. Each Block can contain 1 or more Fungus Commands:</p>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/005_blocks/1_block.png" alt="block" title="block"></p>
+<p>To inspect the properties of a Block do the following:</p>
+<ol>
+<li>(setup) Create a Fungus Flowchart.</li>
+<li>Click to select the default Block in the new Flowchart. You should see the Block&#39;s properties displayed in the Inspector window:</li>
+</ol>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/005_blocks/2_properties.png" alt="block properties" title="block properties"></p>
+<!-- **************************************************** -->
+<h1 id="setting-block-name">Setting Block name</h1>
+<p>When working with more than one Block, its important to name each Block in a meaningful way. To rename a Block do the following:</p>
+<ol>
+<li>(setup) Create a Fungus Flowchart.</li>
+<li>Click to select the default Block in the new Flowchart. The selected block has a green outline.</li>
+<li>You should see the Block&#39;s properties displayed in the Inspector window:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/011_block_name/2_inspect_block.png" alt="block name" title="block name"></li>
+<li>In the Inspector change the text for the Block Name property to &quot;Say Hello&quot;.</li>
+<li>You should now see the Block has been renamed in the Flowchart window:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/011_block_name/3_rename.png" alt="block renamed" title="block renamed"></li>
+<li>Now add a detailed description about the Block in the Description property in the Inspector window:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/011_block_name/4_description.png" alt="block description" title="block description"></li>
+</ol>
+<p>Note: Block names are shown in drop downs for selecting in various other parts of Fungus, as such you may wish to name them using categories. Placing a &#39;/&#39; in a block name will result in dropdowns collecting things into categories.</p>
+<!-- **************************************************** -->
+<h1 id="creating-a-block">Creating a Block</h1>
+<p>To create a new Block do the following:</p>
+<ol>
+<li>(setup) Create a Fungus Flowchart (or be viewing the Flowchart for your current project).</li>
+<li>Click the Add New Block button (the plus-sign &quot;+&quot;) in the top-left of the Fungus Flowchart window:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/006_block_create/1_add_block_button.png" alt="add block button" title="add block button"></li>
+<li>A new Block should have been added to your Flowchart (with the default name &quot;New Block&quot;, or &quot;New Block1/2/3 etc.&quot; so each name is unique)
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/006_block_create/2_new_block_created.png" alt="new block" title="new block"></li>
+</ol>
+<p>Note - a good time to choose a meaningful name a Block is immediately after creating a new Block ...</p>
+<!-- **************************************************** -->
+<h1 id="delete-a-block">Delete a Block</h1>
+<p>To delete a Block from the current Flowchart, do the following:</p>
+<ol>
+<li>(setup) Create a Fungus Flowchart (or be viewing the Flowchart for your current project).</li>
+<li>Right-mouse-click over the Block you wish to delete, and choose menu: <code>Delete</code>:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/007_block_delete/1_delete_menu.png" alt="delete block" title="delete block"></li>
+<li>The Block should now have been removed from the Flowchart:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/007_block_delete/2_block_deleted.png" alt="deleted block" title="deleted block"></li>
+</ol>
+<!-- **************************************************** -->
+<h1 id="duplicate-a-block">Duplicate a Block</h1>
+<p>To duplicate (clone / make an exact copy of) a Block from the current Flowchart, do the following:</p>
+<ol>
+<li>(setup) Create a Fungus Flowchart (or be viewing the Flowchart for your current project).</li>
+<li>Right-mouse-click over the Block you wish to duplicate, and choose menu: <code>Duplicate</code>:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/009_block_duplicate/1_duplicate_menu.png" alt="duplicate block" title="duplicate block"></li>
+<li>A copy of the Block should now have been added to the Flowchart (with &quot;(copy)&quot; appended the name of the duplicate):
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/009_block_duplicate/2_duplicate_created.png" alt="duplicated block" title="duplicated block"></li>
+</ol>
+<p>Note - a good time to choose a meaningful name a Block is immediately after duplicating one ...</p>
+<!-- **************************************************** -->
+<h1 id="moving-blocks">Moving blocks</h1>
+<p>To move / rearrange Blocks in the Flowchart window do the following:</p>
+<ol>
+<li>(setup) Create a Fungus Flowchart (or be viewing the Flowchart for your current project).</li>
+<li>Move a Block by clicking-and-dragging with the left mouse button:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/010_block_move/1_move1.png" alt="move block" title="move block"></li>
+<li>When you release the mouse button the Block will remain where it was dragged:</li>
+</ol>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/010_block_move/2_move2.png" alt="release block" title="release block"></p>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/010_block_move/animated_block_move.gif" alt="animated move block" title="animated move block"></p>
+<!-- **************************************************** -->
+<h1 id="the-3-types-of-block">The 3 types of Block</h1>
+<p>Fungus Flowcharts visually differentiate three differents kinds of Block behavior:</p>
+<ol>
+<li>Event Block - blue rounded rectangle (Block execution triggered by an event)</li>
+<li>Branching Block - orange hexagon (passes control to 2 or more other Blocks, and not an Event Block)</li>
+<li>Standard Block - yellow rectangle (no event, passes control to 0 or 1 other blocks)</li>
+</ol>
+<h2 id="1-event-block---blue-rounded-rectangle">1: Event Block - blue rounded rectangle</h2>
+<p>One way Fungus decides when to start executing the Commands inside a Block is if a Block has defined an Execute On Event. If a Block has any of the possible Execute On Events chosen (such as Game Started, Message Received, Sprite Drag Completed, Key Pressed etc.) then this Block will be displayed as a <strong>blue rounded rectangle</strong>:</p>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/001_3_block_types/1_event_block.png" alt="event block" title="event block"></p>
+<p>As we can see, the default Block created with every new Flowchart automatically defines the Game Started Execute On Event, so this default Block always is displayed as an Event Block.</p>
+<p>NOTE: A Block with an Execute On Event will always appear as an Event Block in the Flowchart, regardless of whether its Commands contain menus or calls to 2 or more Blocks). In other words, in terms of Flowchart appearance, display of an Event Block overrides display of a Branching Block.</p>
+<h2 id="2-branching-block---orange-hexagon">2: Branching Block - orange hexagon</h2>
+<p>If a Block is <em>not</em> an Event Block, and its Commands include Calls and/or Menu commands to execute Commands in 2 or more other Blocks, then in the Flowchart window this Block will be displayed as a Branching Block, visually appearing as an <strong>orange hexagon</strong>.</p>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/001_3_block_types/2_branching_block.png" alt="branching block" title="branching block"></p>
+<h2 id="3-standard-block---yellow-rectangle">3: Standard Block - yellow rectangle</h2>
+<p>If a Block is <em>neither</em> an Event Block <em>nor</em> a Command Block, then it is a Standard Block, and will be displayed as an <strong>yellow rectangle</strong>.</p>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/001_3_block_types/3_standard_block.png" alt="standard block" title="standard block"></p>
+<!-- **************************************************** -->
+<h1 id="connections-between-blocks">Connections between Blocks</h1>
+<p>A whole scene&#39;s logic can rarely fit all into a single Block, therefore we need ways for one Block to pass execution control to other Blocks. There are several ways to do this, the most common being:</p>
+<ol>
+<li>the Call Command</li>
+<li>the Menu Command</li>
+</ol>
+<!-- **************************************************** -->
+<h2 id="executing-commands-in-another-block-with-the-call-command">Executing Commands in another Block with the Call Command</h2>
+<p>The Call Command tells Fungus to go and start executing the Commands in named Block. There are several ways to do this, we can tell Fungus to Stop execution completely in the current Block, and just pass control to named Block. We can also tell Fungus to go and completed all Commands in the named Block, and when they are finished, to then continue executing any remaining commands in the current Block. Finally, and perhaps the most complicated/sophisticated technique, we can tell Fungus to both started executing Commands in a named Block WHILE simultaneously continuing to execute remaining Commands in the current Block.</p>
+<p>To pass control to another Block, and stop executing Commands in the current Block, do the following:</p>
+<ol>
+<li>(setup) If you have not already done so: Create a new scene, add a Fungus Flowchart to the scene, and select the Block in the Flowchart.</li>
+<li>Rename this Block &quot;Start&quot;.</li>
+<li>Add to Block &quot;Start&quot; a Say Command with the Story Text &quot;I am in Start&quot;.
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/002_call_other_blocks/1_start.png" alt="block start" title="block start"></li>
+<li>Add a new Block to your Flowchart named &quot;Block2&quot;.</li>
+<li>Add to Block &quot;Block2&quot; a Say Command with the Story Text &quot;I am in Block2&quot;.
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/002_call_other_blocks/2_block2.png" alt="block 2" title="block 2"></li>
+<li>Add to Block &quot;Start&quot; a Call Command, by choosing menu: <code>Flow | Call</code>:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/002_call_other_blocks/3_menu_call.png" alt="flow call" title="flow call"></li>
+<li>With this Call Command Selected, in the Inspector choose Block2 from the list of Blocks for property <strong>Target Block</strong>:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/002_call_other_blocks/4_call_block.png" alt="call block menu" title="call block menu"></li>
+<li>Note: We will keep the default of <strong>Target Flowchart</strong> (None), which means the current Flowchart.</li>
+<li>Note: We will keep the default of <strong>Call Mode</strong> Stop, which means that execution in the current Block (Start) will stop once execution of the called Block has begun.</li>
+<li>You should now see an arrow in the Flowchart window, connecting Block &quot;Start&quot; with Block &quot;Block2&quot;. This visually tells us (the game developer) that a Call or Menu Command is present inside Block &quot;Start&quot; that tells Fungus to execute commands in Block &quot;Block2&quot;:</li>
+</ol>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/002_call_other_blocks/5_arrow.png" alt="arrow between blocks" title="arrow between blocks"></p>
+<!-- **************************************** -->
+<h1 id="executing-another-block">Executing another Block</h1>
+<p>Let&#39;s use a Say command above to ask a tricky mathematical question, and demonstrate the Menu command by offering the user a choice been &quot;correct&#39; and &quot;incorrect&quot; answers.  Menu commands transfer control to another block - so we&#39;ll need to add 2 new blocks to correspond to the 2 answers.
+Do the following:</p>
+<ol>
+<li>(setup) Create a new scene, add a Fungus Flowchart to the scene, and select the Block in the Flowchart.</li>
+<li>Rename the Block in the Flowchart to &quot;Question&quot;.</li>
+<li>Create a Say command, with <strong>Story Text</strong> to ask the question: &quot;Is 2 + 2?&quot;.</li>
+<li>Uncheck the &quot;Wait For Click&quot; checkbox (this is so we see the menu options immediately after the Say command has displayed the question):
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/004_menu_maths/2_edited_say.png" alt="maths say command" title="maths say command"></li>
+<li>Create a new Block, named &quot;Correct&quot; which contains a <strong>Say</strong> command with the text &quot;Well done, you are very mathematical!&quot;. Click the plus-sign button in the Flowchart window to add a new Block to the Flowchart, rename it &quot;Correct&quot; and then add that Say command:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/004_menu_maths/1_correct_block.png" alt="correct block" title="correct block"></li>
+<li>Select the &quot;Question&quot; block, and add a Menu command by clicking the plus-sign add Command button in the Inspector and then choosing menu: <code>Narrative | Menu</code>.
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/004_menu_maths/6_add_menu.png" alt="add menu command" title="add menu command"></li>
+<li>With this new Menu command selected (green) in the top half of the Inspector window, set the <strong>Text</strong> to &quot;Yes&quot; and the <strong>Target Block</strong> to your new &quot;Correct&quot; block:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/004_menu_maths/4_menu_correct.png" alt="menu command" title="menu command"></li>
+<li>You should now see how the &#39;flow&#39; of commands can change from Block &quot;hello&quot; to Block &quot;Correct&quot; in the Flowchart window:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/004_menu_maths/5_connected_blocks.png" alt="flow between blocks in Flowchart" title="flow between blocks in Flowchart"></li>
+<li>Add a second new Block named &quot;Wrong&quot;, containing a Say command with text &quot;Bad luck, perhaps consider a non-mathematical career path...&quot;
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/004_menu_maths/7_wrong_block.png" alt="block for wrong answer" title="block for wrong answer"></li>
+<li>Now we need to add another Menu command to our &quot;hello&quot; block, offering the user the &quot;No&quot; answer to our maths question, and passing control to Block &quot;Wrong&quot; if they disagree that 2 + 2 = 4. Select the &quot;hello&quot; block, and add a Menu command. With this new Menu command selected (green) in the top half of the Inspector window, set the <strong>Text</strong> to &quot;No&quot; and the <strong>Target Block</strong> to your new &quot;Wrong&quot; block.</li>
+<li>You should now see in the Flowchart window how block &quot;hello&quot; can pass control to either block &quot;Correct&quot; or Block &quot;Wrong&quot; - depending on which menu answer the user selects.
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/004_menu_maths/8_three_block_menu.png" alt="block connected to 2 others" title="block connected to 2 others"></li>
+<li>Run the scene, and you should see the Say question appear at the bottom of the screen, and also the two Menu buttons &quot;Yes&quot; and &quot;No&quot; in the middle of the screen. Clicking &quot;Yes&quot; then runs the &quot;Correct&quot; Block&#39;s commands, and clicking &quot;No&quot; runs the &quot;Wrong&quot; block&#39;s commands:</li>
+</ol>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/004_menu_maths/9_menu_running.png" alt="menu running" title="menu running"></p>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/004_menu_maths/10_correct.png" alt="correct screen" title="correct screen"></p>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/004_menu_maths/11_wrong.png" alt="wrong screen" title="wrong screen"></p>
+<!-- **************************************************** -->
+<h1 id="highlighting-connections">Highlighting connections</h1>
+<p>In the Inspector window, if you select a Call or Menu Command (executing Commands in another Block in <strong>the same Flowchart</strong>), then you&#39;ll see the arrow between the 2 Blocks highlighted in GREEN:</p>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/003_highlight_green_arrow/5_arrow.png" alt="green arrow highlight" title="green arrow highlight"></p>
+<!-- **************************************************** -->
+<h1 id="setting-an-event-handler">Setting an Event Handler</h1>
+<p>Events are one way to declare when you want execution of the Commands in a Block to begin. Typical events include:</p>
+<ul>
+<li>Game Started</li>
+<li>Flowchart enabled</li>
+<li>Message Received</li>
+<li>Key Pressed (Up / Down / Repeat)</li>
+<li>Sprite clicking / drag-dropping interactions</li>
+</ul>
+<p>The most common Event used to define when a Block should start execution is, of course, the <strong>Game Started</strong> event. Each new Flowchart automatically starts with a single empty Block that is defined to begin execution when the game starts:</p>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/001_3_block_types/1_event_block.png" alt="event block" title="event block"></p>
+<p>To change the Event defined for a Block, or to assign an event for a Block that had None, do the following:</p>
+<ol>
+<li>Select the Block in the Flowchart window.</li>
+<li>In the Inspector window, for property <strong>Execute On Event</strong> choose from the popup menu the desired Event:</li>
+</ol>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/blocks/012_define_event/1_define_event.png" alt="define event" title="define event"></p>

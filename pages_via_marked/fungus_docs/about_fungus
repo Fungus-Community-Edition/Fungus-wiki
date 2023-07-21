@@ -1,0 +1,38 @@
+<h1 id="what-is-fungus">What is Fungus?</h1>
+<p>Fungus is a tool which makes it easy to add colourful characters and craft gripping storylines in your game, even if you have never used <a href="http://unity3d.com" target="_blank">Unity</a> before. Our intuitive interface lets everyone create beautiful story games easily - <b>for free and with no coding</b>!</p>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/about/fungus_town.png" alt="img fungus_town"></p>
+<h1 id="whos-it-for">Who&#39;s it for?</h1>
+<p>Fungus is for writers, illustrators, animators and game designers, especially visual novel &amp; interactive fiction authors. Many people using Fungus are creating games in Unity for the very first time. It is a popular choice for game jams and game design courses.</p>
+<h1 id="free--open-source">Free &amp; Open Source</h1>
+<p>We believe that interactive storytelling should be accessible to everyone, so Fungus is <b>100% free &amp; open source</b>. It works great with both the free and pro versions of Unity 3D. Fungus is inspired by other great open source storytelling tools like <a href="http://twinery.org">Twine</a>, <a href="https://www.renpy.org">Ren&#39;Py</a> and <a href="https://scratch.mit.edu">Scratch</a>.</p>
+<h1 id="community">Community</h1>
+<p>The Fungus community is very welcoming and helpful to newcomers. Many people using Fungus have never used Unity or even made a game before, so feel free to ask questions on our <a href="http://fungusgames.com/forum">community forum</a>. Helping other people with their questions is a fantastic and very welcome way to contribute back to the community.</p>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/about/community.jpeg" alt="img community"></p>
+<h1 id="features">Features</h1>
+<p><a href="https://youtube.com/embed/kP767dFQaCU?t=5m20s">Video</a></p>
+<p>Fungus allows you to easily add storytelling features to your Unity games with no coding, via an intuitive visual scripting system.</p>
+<ul>
+<li>Suitable for making visual novels, RPGs, hidden object, puzzle and interactive fiction games.</li>
+<li>Flowchart-based character dialogue</li>
+<li>Internationalization of your character dialogue.</li>
+<li>Easy control of sprites, camera and audio to help tell your story</li>
+<li>Works for both 2D and 3D Unity games</li>
+<li>Integrates easily with other Unity code and simple to extend.</li>
+<li>Powerful Lua scripting support for more experienced users</li>
+<li>100% free and open source</li>
+</ul>
+<h1 id="contribute">Contribute</h1>
+<p>We welcome all sorts of contributions to Fungus. You can report bugs, suggest new features, contribute source code, write an article, help answer questions on the forums or even just tell your friends about the project!</p>
+<ul>
+<li>Issue Tracker: <a href="https://github.com/snozbot/fungus/issues">GitHub issue tracker</a></li>
+<li>Source Code: <a href="https://github.com/snozbot/fungus">GitHub code repository</a></li>
+</ul>
+<h1 id="credits">Credits</h1>
+<p><a href="http://twitter.com/gofungus">Chris Gregan</a> is the main author and maintainer of Fungus. He&#39;s co-founder of <a href="http://snozbot.com">Snozbot</a>, along with <a href="https://twitter.com/johnokane">John O&#39; Kane</a> and <a href="https://twitter.com/ronanpearce">Ronan Pearce</a>.</p>
+<p><a href="https://github.com/dr-matt-smith/">Dr. Matt Smith</a> has kindly contributed the written documentation for the Fungus project. If you&#39;re new to Unity development then a great source of information, ideas and sample projects is his <a href="https://www.packtpub.com/product/unity-2021-cookbook-fourth-edition/9781839217616">Unity 2021 Cookbook</a>, by Matt and Shaun Ferns.</p>
+<p><img src="https://github.com/PacktPublishing/Unity-2021-Cookbook-Fourth-Edition/blob/master/images/cover2021_smallest.png" alt="img cookbook"></p>
+<p><a href="http://whackala.com">Paul Mc Grath</a> is Animator / Designer / Film-maker at Whackala. He contributed the @ref tutorial_videos for this site as well as creating the @ref training_course. Special thanks also to <a href="https://twitter.com/whykay">Vicky Lee</a> and <a href="https://www.codinggrace.com">Coding Grace</a> who have helped us to organise loads of Fungus workshops,</p>
+<p>Fungus wouldn&#39;t be possible without all the awesome people in our community who have contributed to the project and supported us in myriad ways. Thank you all!</p>
+<h1 id="license">License</h1>
+<p>The Fungus software is licensed under the <a href="https://github.com/snozbot/fungus/blob/master/LICENSE">Open Source MIT License</a>.</p>
+<p>The Fungus documentation is licensed under the <a href="https://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial License</a>.</p>

@@ -1,0 +1,1011 @@
+<h1 id="itween-commands">iTween commands</h1>
+<h1 id="look-from">Look From</h1>
+<p>Instantly rotates a GameObject to look at the supplied Vector3 then returns it to it&#39;s starting rotation over time.</p>
+<p>Defined in Fungus.LookFrom</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_from Transform</td>
+<td>Fungus.TransformData</td>
+<td>Target transform that the GameObject will look at</td>
+</tr>
+<tr>
+<td>_from Position</td>
+<td>Fungus.Vector3Data</td>
+<td>Target world position that the GameObject will look at, if no From Transform is set</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>Fungus.iTweenAxis</td>
+<td>Restricts rotation to the supplied axis only</td>
+</tr>
+<tr>
+<td>_target Object</td>
+<td>Fungus.GameObjectData</td>
+<td>Target game object to apply the Tween to</td>
+</tr>
+<tr>
+<td>_tween Name</td>
+<td>Fungus.StringData</td>
+<td>An individual name useful for stopping iTweens by name</td>
+</tr>
+<tr>
+<td>_duration</td>
+<td>Fungus.FloatData</td>
+<td>The time in seconds the animation will take to complete</td>
+</tr>
+<tr>
+<td>Ease Type</td>
+<td>Fungus.iTween+EaseType</td>
+<td>The shape of the easing curve applied to the animation</td>
+</tr>
+<tr>
+<td>Loop Type</td>
+<td>Fungus.iTween+LoopType</td>
+<td>The type of loop to apply once the animation has completed</td>
+</tr>
+<tr>
+<td>Stop Previous Tweens</td>
+<td>System.Boolean</td>
+<td>Stop any previously added iTweens on this object before adding this iTween</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the tween has finished before executing the next command</td>
+</tr>
+</tbody></table>
+<h1 id="look-to">Look To</h1>
+<p>Rotates a GameObject to look at a supplied Transform or Vector3 over time.</p>
+<p>Defined in Fungus.LookTo</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_to Transform</td>
+<td>Fungus.TransformData</td>
+<td>Target transform that the GameObject will look at</td>
+</tr>
+<tr>
+<td>_to Position</td>
+<td>Fungus.Vector3Data</td>
+<td>Target world position that the GameObject will look at, if no From Transform is set</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>Fungus.iTweenAxis</td>
+<td>Restricts rotation to the supplied axis only</td>
+</tr>
+<tr>
+<td>_target Object</td>
+<td>Fungus.GameObjectData</td>
+<td>Target game object to apply the Tween to</td>
+</tr>
+<tr>
+<td>_tween Name</td>
+<td>Fungus.StringData</td>
+<td>An individual name useful for stopping iTweens by name</td>
+</tr>
+<tr>
+<td>_duration</td>
+<td>Fungus.FloatData</td>
+<td>The time in seconds the animation will take to complete</td>
+</tr>
+<tr>
+<td>Ease Type</td>
+<td>Fungus.iTween+EaseType</td>
+<td>The shape of the easing curve applied to the animation</td>
+</tr>
+<tr>
+<td>Loop Type</td>
+<td>Fungus.iTween+LoopType</td>
+<td>The type of loop to apply once the animation has completed</td>
+</tr>
+<tr>
+<td>Stop Previous Tweens</td>
+<td>System.Boolean</td>
+<td>Stop any previously added iTweens on this object before adding this iTween</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the tween has finished before executing the next command</td>
+</tr>
+</tbody></table>
+<h1 id="move-add">Move Add</h1>
+<p>Moves a game object by a specified offset over time.</p>
+<p>Defined in Fungus.MoveAdd</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_offset</td>
+<td>Fungus.Vector3Data</td>
+<td>A translation offset in space the GameObject will animate to</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>UnityEngine.Space</td>
+<td>Apply the transformation in either the world coordinate or local cordinate system</td>
+</tr>
+<tr>
+<td>_target Object</td>
+<td>Fungus.GameObjectData</td>
+<td>Target game object to apply the Tween to</td>
+</tr>
+<tr>
+<td>_tween Name</td>
+<td>Fungus.StringData</td>
+<td>An individual name useful for stopping iTweens by name</td>
+</tr>
+<tr>
+<td>_duration</td>
+<td>Fungus.FloatData</td>
+<td>The time in seconds the animation will take to complete</td>
+</tr>
+<tr>
+<td>Ease Type</td>
+<td>Fungus.iTween+EaseType</td>
+<td>The shape of the easing curve applied to the animation</td>
+</tr>
+<tr>
+<td>Loop Type</td>
+<td>Fungus.iTween+LoopType</td>
+<td>The type of loop to apply once the animation has completed</td>
+</tr>
+<tr>
+<td>Stop Previous Tweens</td>
+<td>System.Boolean</td>
+<td>Stop any previously added iTweens on this object before adding this iTween</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the tween has finished before executing the next command</td>
+</tr>
+</tbody></table>
+<h1 id="move-from">Move From</h1>
+<p>Moves a game object from a specified position back to its starting position over time. The position can be defined by a transform in another object (using To Transform) or by setting an absolute position (using To Position, if To Transform is set to None).</p>
+<p>Defined in Fungus.MoveFrom</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_from Transform</td>
+<td>Fungus.TransformData</td>
+<td>Target transform that the GameObject will move from</td>
+</tr>
+<tr>
+<td>_from Position</td>
+<td>Fungus.Vector3Data</td>
+<td>Target world position that the GameObject will move from, if no From Transform is set</td>
+</tr>
+<tr>
+<td>Is Local</td>
+<td>System.Boolean</td>
+<td>Whether to animate in world space or relative to the parent. False by default.</td>
+</tr>
+<tr>
+<td>_target Object</td>
+<td>Fungus.GameObjectData</td>
+<td>Target game object to apply the Tween to</td>
+</tr>
+<tr>
+<td>_tween Name</td>
+<td>Fungus.StringData</td>
+<td>An individual name useful for stopping iTweens by name</td>
+</tr>
+<tr>
+<td>_duration</td>
+<td>Fungus.FloatData</td>
+<td>The time in seconds the animation will take to complete</td>
+</tr>
+<tr>
+<td>Ease Type</td>
+<td>Fungus.iTween+EaseType</td>
+<td>The shape of the easing curve applied to the animation</td>
+</tr>
+<tr>
+<td>Loop Type</td>
+<td>Fungus.iTween+LoopType</td>
+<td>The type of loop to apply once the animation has completed</td>
+</tr>
+<tr>
+<td>Stop Previous Tweens</td>
+<td>System.Boolean</td>
+<td>Stop any previously added iTweens on this object before adding this iTween</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the tween has finished before executing the next command</td>
+</tr>
+</tbody></table>
+<h1 id="move-to">Move To</h1>
+<p>Moves a game object to a specified position over time. The position can be defined by a transform in another object (using To Transform) or by setting an absolute position (using To Position, if To Transform is set to None).</p>
+<p>Defined in Fungus.MoveTo</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_to Transform</td>
+<td>Fungus.TransformData</td>
+<td>Target transform that the GameObject will move to</td>
+</tr>
+<tr>
+<td>_to Position</td>
+<td>Fungus.Vector3Data</td>
+<td>Target world position that the GameObject will move to, if no From Transform is set</td>
+</tr>
+<tr>
+<td>Is Local</td>
+<td>System.Boolean</td>
+<td>Whether to animate in world space or relative to the parent. False by default.</td>
+</tr>
+<tr>
+<td>_target Object</td>
+<td>Fungus.GameObjectData</td>
+<td>Target game object to apply the Tween to</td>
+</tr>
+<tr>
+<td>_tween Name</td>
+<td>Fungus.StringData</td>
+<td>An individual name useful for stopping iTweens by name</td>
+</tr>
+<tr>
+<td>_duration</td>
+<td>Fungus.FloatData</td>
+<td>The time in seconds the animation will take to complete</td>
+</tr>
+<tr>
+<td>Ease Type</td>
+<td>Fungus.iTween+EaseType</td>
+<td>The shape of the easing curve applied to the animation</td>
+</tr>
+<tr>
+<td>Loop Type</td>
+<td>Fungus.iTween+LoopType</td>
+<td>The type of loop to apply once the animation has completed</td>
+</tr>
+<tr>
+<td>Stop Previous Tweens</td>
+<td>System.Boolean</td>
+<td>Stop any previously added iTweens on this object before adding this iTween</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the tween has finished before executing the next command</td>
+</tr>
+</tbody></table>
+<h1 id="punch-position">Punch Position</h1>
+<p>Applies a jolt of force to a GameObject&#39;s position and wobbles it back to its initial position.</p>
+<p>Defined in Fungus.PunchPosition</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_amount</td>
+<td>Fungus.Vector3Data</td>
+<td>A translation offset in space the GameObject will animate to</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>UnityEngine.Space</td>
+<td>Apply the transformation in either the world coordinate or local cordinate system</td>
+</tr>
+<tr>
+<td>_target Object</td>
+<td>Fungus.GameObjectData</td>
+<td>Target game object to apply the Tween to</td>
+</tr>
+<tr>
+<td>_tween Name</td>
+<td>Fungus.StringData</td>
+<td>An individual name useful for stopping iTweens by name</td>
+</tr>
+<tr>
+<td>_duration</td>
+<td>Fungus.FloatData</td>
+<td>The time in seconds the animation will take to complete</td>
+</tr>
+<tr>
+<td>Ease Type</td>
+<td>Fungus.iTween+EaseType</td>
+<td>The shape of the easing curve applied to the animation</td>
+</tr>
+<tr>
+<td>Loop Type</td>
+<td>Fungus.iTween+LoopType</td>
+<td>The type of loop to apply once the animation has completed</td>
+</tr>
+<tr>
+<td>Stop Previous Tweens</td>
+<td>System.Boolean</td>
+<td>Stop any previously added iTweens on this object before adding this iTween</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the tween has finished before executing the next command</td>
+</tr>
+</tbody></table>
+<h1 id="punch-rotation">Punch Rotation</h1>
+<p>Applies a jolt of force to a GameObject&#39;s rotation and wobbles it back to its initial rotation.</p>
+<p>Defined in Fungus.PunchRotation</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_amount</td>
+<td>Fungus.Vector3Data</td>
+<td>A rotation offset in space the GameObject will animate to</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>UnityEngine.Space</td>
+<td>Apply the transformation in either the world coordinate or local cordinate system</td>
+</tr>
+<tr>
+<td>_target Object</td>
+<td>Fungus.GameObjectData</td>
+<td>Target game object to apply the Tween to</td>
+</tr>
+<tr>
+<td>_tween Name</td>
+<td>Fungus.StringData</td>
+<td>An individual name useful for stopping iTweens by name</td>
+</tr>
+<tr>
+<td>_duration</td>
+<td>Fungus.FloatData</td>
+<td>The time in seconds the animation will take to complete</td>
+</tr>
+<tr>
+<td>Ease Type</td>
+<td>Fungus.iTween+EaseType</td>
+<td>The shape of the easing curve applied to the animation</td>
+</tr>
+<tr>
+<td>Loop Type</td>
+<td>Fungus.iTween+LoopType</td>
+<td>The type of loop to apply once the animation has completed</td>
+</tr>
+<tr>
+<td>Stop Previous Tweens</td>
+<td>System.Boolean</td>
+<td>Stop any previously added iTweens on this object before adding this iTween</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the tween has finished before executing the next command</td>
+</tr>
+</tbody></table>
+<h1 id="punch-scale">Punch Scale</h1>
+<p>Applies a jolt of force to a GameObject&#39;s scale and wobbles it back to its initial scale.</p>
+<p>Defined in Fungus.PunchScale</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_amount</td>
+<td>Fungus.Vector3Data</td>
+<td>A scale offset in space the GameObject will animate to</td>
+</tr>
+<tr>
+<td>_target Object</td>
+<td>Fungus.GameObjectData</td>
+<td>Target game object to apply the Tween to</td>
+</tr>
+<tr>
+<td>_tween Name</td>
+<td>Fungus.StringData</td>
+<td>An individual name useful for stopping iTweens by name</td>
+</tr>
+<tr>
+<td>_duration</td>
+<td>Fungus.FloatData</td>
+<td>The time in seconds the animation will take to complete</td>
+</tr>
+<tr>
+<td>Ease Type</td>
+<td>Fungus.iTween+EaseType</td>
+<td>The shape of the easing curve applied to the animation</td>
+</tr>
+<tr>
+<td>Loop Type</td>
+<td>Fungus.iTween+LoopType</td>
+<td>The type of loop to apply once the animation has completed</td>
+</tr>
+<tr>
+<td>Stop Previous Tweens</td>
+<td>System.Boolean</td>
+<td>Stop any previously added iTweens on this object before adding this iTween</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the tween has finished before executing the next command</td>
+</tr>
+</tbody></table>
+<h1 id="rotate-add">Rotate Add</h1>
+<p>Rotates a game object by the specified angles over time.</p>
+<p>Defined in Fungus.RotateAdd</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_offset</td>
+<td>Fungus.Vector3Data</td>
+<td>A rotation offset in space the GameObject will animate to</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>UnityEngine.Space</td>
+<td>Apply the transformation in either the world coordinate or local cordinate system</td>
+</tr>
+<tr>
+<td>_target Object</td>
+<td>Fungus.GameObjectData</td>
+<td>Target game object to apply the Tween to</td>
+</tr>
+<tr>
+<td>_tween Name</td>
+<td>Fungus.StringData</td>
+<td>An individual name useful for stopping iTweens by name</td>
+</tr>
+<tr>
+<td>_duration</td>
+<td>Fungus.FloatData</td>
+<td>The time in seconds the animation will take to complete</td>
+</tr>
+<tr>
+<td>Ease Type</td>
+<td>Fungus.iTween+EaseType</td>
+<td>The shape of the easing curve applied to the animation</td>
+</tr>
+<tr>
+<td>Loop Type</td>
+<td>Fungus.iTween+LoopType</td>
+<td>The type of loop to apply once the animation has completed</td>
+</tr>
+<tr>
+<td>Stop Previous Tweens</td>
+<td>System.Boolean</td>
+<td>Stop any previously added iTweens on this object before adding this iTween</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the tween has finished before executing the next command</td>
+</tr>
+</tbody></table>
+<h1 id="rotate-from">Rotate From</h1>
+<p>Rotates a game object from the specified angles back to its starting orientation over time.</p>
+<p>Defined in Fungus.RotateFrom</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_from Transform</td>
+<td>Fungus.TransformData</td>
+<td>Target transform that the GameObject will rotate from</td>
+</tr>
+<tr>
+<td>_from Rotation</td>
+<td>Fungus.Vector3Data</td>
+<td>Target rotation that the GameObject will rotate from, if no From Transform is set</td>
+</tr>
+<tr>
+<td>Is Local</td>
+<td>System.Boolean</td>
+<td>Whether to animate in world space or relative to the parent. False by default.</td>
+</tr>
+<tr>
+<td>_target Object</td>
+<td>Fungus.GameObjectData</td>
+<td>Target game object to apply the Tween to</td>
+</tr>
+<tr>
+<td>_tween Name</td>
+<td>Fungus.StringData</td>
+<td>An individual name useful for stopping iTweens by name</td>
+</tr>
+<tr>
+<td>_duration</td>
+<td>Fungus.FloatData</td>
+<td>The time in seconds the animation will take to complete</td>
+</tr>
+<tr>
+<td>Ease Type</td>
+<td>Fungus.iTween+EaseType</td>
+<td>The shape of the easing curve applied to the animation</td>
+</tr>
+<tr>
+<td>Loop Type</td>
+<td>Fungus.iTween+LoopType</td>
+<td>The type of loop to apply once the animation has completed</td>
+</tr>
+<tr>
+<td>Stop Previous Tweens</td>
+<td>System.Boolean</td>
+<td>Stop any previously added iTweens on this object before adding this iTween</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the tween has finished before executing the next command</td>
+</tr>
+</tbody></table>
+<h1 id="rotate-to">Rotate To</h1>
+<p>Rotates a game object to the specified angles over time.</p>
+<p>Defined in Fungus.RotateTo</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_to Transform</td>
+<td>Fungus.TransformData</td>
+<td>Target transform that the GameObject will rotate to</td>
+</tr>
+<tr>
+<td>_to Rotation</td>
+<td>Fungus.Vector3Data</td>
+<td>Target rotation that the GameObject will rotate to, if no To Transform is set</td>
+</tr>
+<tr>
+<td>Is Local</td>
+<td>System.Boolean</td>
+<td>Whether to animate in world space or relative to the parent. False by default.</td>
+</tr>
+<tr>
+<td>_target Object</td>
+<td>Fungus.GameObjectData</td>
+<td>Target game object to apply the Tween to</td>
+</tr>
+<tr>
+<td>_tween Name</td>
+<td>Fungus.StringData</td>
+<td>An individual name useful for stopping iTweens by name</td>
+</tr>
+<tr>
+<td>_duration</td>
+<td>Fungus.FloatData</td>
+<td>The time in seconds the animation will take to complete</td>
+</tr>
+<tr>
+<td>Ease Type</td>
+<td>Fungus.iTween+EaseType</td>
+<td>The shape of the easing curve applied to the animation</td>
+</tr>
+<tr>
+<td>Loop Type</td>
+<td>Fungus.iTween+LoopType</td>
+<td>The type of loop to apply once the animation has completed</td>
+</tr>
+<tr>
+<td>Stop Previous Tweens</td>
+<td>System.Boolean</td>
+<td>Stop any previously added iTweens on this object before adding this iTween</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the tween has finished before executing the next command</td>
+</tr>
+</tbody></table>
+<h1 id="scale-add">Scale Add</h1>
+<p>Changes a game object&#39;s scale by a specified offset over time.</p>
+<p>Defined in Fungus.ScaleAdd</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_offset</td>
+<td>Fungus.Vector3Data</td>
+<td>A scale offset in space the GameObject will animate to</td>
+</tr>
+<tr>
+<td>_target Object</td>
+<td>Fungus.GameObjectData</td>
+<td>Target game object to apply the Tween to</td>
+</tr>
+<tr>
+<td>_tween Name</td>
+<td>Fungus.StringData</td>
+<td>An individual name useful for stopping iTweens by name</td>
+</tr>
+<tr>
+<td>_duration</td>
+<td>Fungus.FloatData</td>
+<td>The time in seconds the animation will take to complete</td>
+</tr>
+<tr>
+<td>Ease Type</td>
+<td>Fungus.iTween+EaseType</td>
+<td>The shape of the easing curve applied to the animation</td>
+</tr>
+<tr>
+<td>Loop Type</td>
+<td>Fungus.iTween+LoopType</td>
+<td>The type of loop to apply once the animation has completed</td>
+</tr>
+<tr>
+<td>Stop Previous Tweens</td>
+<td>System.Boolean</td>
+<td>Stop any previously added iTweens on this object before adding this iTween</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the tween has finished before executing the next command</td>
+</tr>
+</tbody></table>
+<h1 id="scale-from">Scale From</h1>
+<p>Changes a game object&#39;s scale to the specified value and back to its original scale over time.</p>
+<p>Defined in Fungus.ScaleFrom</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_from Transform</td>
+<td>Fungus.TransformData</td>
+<td>Target transform that the GameObject will scale from</td>
+</tr>
+<tr>
+<td>_from Scale</td>
+<td>Fungus.Vector3Data</td>
+<td>Target scale that the GameObject will scale from, if no From Transform is set</td>
+</tr>
+<tr>
+<td>_target Object</td>
+<td>Fungus.GameObjectData</td>
+<td>Target game object to apply the Tween to</td>
+</tr>
+<tr>
+<td>_tween Name</td>
+<td>Fungus.StringData</td>
+<td>An individual name useful for stopping iTweens by name</td>
+</tr>
+<tr>
+<td>_duration</td>
+<td>Fungus.FloatData</td>
+<td>The time in seconds the animation will take to complete</td>
+</tr>
+<tr>
+<td>Ease Type</td>
+<td>Fungus.iTween+EaseType</td>
+<td>The shape of the easing curve applied to the animation</td>
+</tr>
+<tr>
+<td>Loop Type</td>
+<td>Fungus.iTween+LoopType</td>
+<td>The type of loop to apply once the animation has completed</td>
+</tr>
+<tr>
+<td>Stop Previous Tweens</td>
+<td>System.Boolean</td>
+<td>Stop any previously added iTweens on this object before adding this iTween</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the tween has finished before executing the next command</td>
+</tr>
+</tbody></table>
+<h1 id="scale-to">Scale To</h1>
+<p>Changes a game object&#39;s scale to a specified value over time.</p>
+<p>Defined in Fungus.ScaleTo</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_to Transform</td>
+<td>Fungus.TransformData</td>
+<td>Target transform that the GameObject will scale to</td>
+</tr>
+<tr>
+<td>_to Scale</td>
+<td>Fungus.Vector3Data</td>
+<td>Target scale that the GameObject will scale to, if no To Transform is set</td>
+</tr>
+<tr>
+<td>_target Object</td>
+<td>Fungus.GameObjectData</td>
+<td>Target game object to apply the Tween to</td>
+</tr>
+<tr>
+<td>_tween Name</td>
+<td>Fungus.StringData</td>
+<td>An individual name useful for stopping iTweens by name</td>
+</tr>
+<tr>
+<td>_duration</td>
+<td>Fungus.FloatData</td>
+<td>The time in seconds the animation will take to complete</td>
+</tr>
+<tr>
+<td>Ease Type</td>
+<td>Fungus.iTween+EaseType</td>
+<td>The shape of the easing curve applied to the animation</td>
+</tr>
+<tr>
+<td>Loop Type</td>
+<td>Fungus.iTween+LoopType</td>
+<td>The type of loop to apply once the animation has completed</td>
+</tr>
+<tr>
+<td>Stop Previous Tweens</td>
+<td>System.Boolean</td>
+<td>Stop any previously added iTweens on this object before adding this iTween</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the tween has finished before executing the next command</td>
+</tr>
+</tbody></table>
+<h1 id="shake-position">Shake Position</h1>
+<p>Randomly shakes a GameObject&#39;s position by a diminishing amount over time.</p>
+<p>Defined in Fungus.ShakePosition</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_amount</td>
+<td>Fungus.Vector3Data</td>
+<td>A translation offset in space the GameObject will animate to</td>
+</tr>
+<tr>
+<td>Is Local</td>
+<td>System.Boolean</td>
+<td>Whether to animate in world space or relative to the parent. False by default.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>Fungus.iTweenAxis</td>
+<td>Restricts rotation to the supplied axis only</td>
+</tr>
+<tr>
+<td>_target Object</td>
+<td>Fungus.GameObjectData</td>
+<td>Target game object to apply the Tween to</td>
+</tr>
+<tr>
+<td>_tween Name</td>
+<td>Fungus.StringData</td>
+<td>An individual name useful for stopping iTweens by name</td>
+</tr>
+<tr>
+<td>_duration</td>
+<td>Fungus.FloatData</td>
+<td>The time in seconds the animation will take to complete</td>
+</tr>
+<tr>
+<td>Ease Type</td>
+<td>Fungus.iTween+EaseType</td>
+<td>The shape of the easing curve applied to the animation</td>
+</tr>
+<tr>
+<td>Loop Type</td>
+<td>Fungus.iTween+LoopType</td>
+<td>The type of loop to apply once the animation has completed</td>
+</tr>
+<tr>
+<td>Stop Previous Tweens</td>
+<td>System.Boolean</td>
+<td>Stop any previously added iTweens on this object before adding this iTween</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the tween has finished before executing the next command</td>
+</tr>
+</tbody></table>
+<h1 id="shake-rotation">Shake Rotation</h1>
+<p>Randomly shakes a GameObject&#39;s rotation by a diminishing amount over time.</p>
+<p>Defined in Fungus.ShakeRotation</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_amount</td>
+<td>Fungus.Vector3Data</td>
+<td>A rotation offset in space the GameObject will animate to</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>UnityEngine.Space</td>
+<td>Apply the transformation in either the world coordinate or local cordinate system</td>
+</tr>
+<tr>
+<td>_target Object</td>
+<td>Fungus.GameObjectData</td>
+<td>Target game object to apply the Tween to</td>
+</tr>
+<tr>
+<td>_tween Name</td>
+<td>Fungus.StringData</td>
+<td>An individual name useful for stopping iTweens by name</td>
+</tr>
+<tr>
+<td>_duration</td>
+<td>Fungus.FloatData</td>
+<td>The time in seconds the animation will take to complete</td>
+</tr>
+<tr>
+<td>Ease Type</td>
+<td>Fungus.iTween+EaseType</td>
+<td>The shape of the easing curve applied to the animation</td>
+</tr>
+<tr>
+<td>Loop Type</td>
+<td>Fungus.iTween+LoopType</td>
+<td>The type of loop to apply once the animation has completed</td>
+</tr>
+<tr>
+<td>Stop Previous Tweens</td>
+<td>System.Boolean</td>
+<td>Stop any previously added iTweens on this object before adding this iTween</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the tween has finished before executing the next command</td>
+</tr>
+</tbody></table>
+<h1 id="shake-scale">Shake Scale</h1>
+<p>Randomly shakes a GameObject&#39;s rotation by a diminishing amount over time.</p>
+<p>Defined in Fungus.ShakeScale</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_amount</td>
+<td>Fungus.Vector3Data</td>
+<td>A scale offset in space the GameObject will animate to</td>
+</tr>
+<tr>
+<td>_target Object</td>
+<td>Fungus.GameObjectData</td>
+<td>Target game object to apply the Tween to</td>
+</tr>
+<tr>
+<td>_tween Name</td>
+<td>Fungus.StringData</td>
+<td>An individual name useful for stopping iTweens by name</td>
+</tr>
+<tr>
+<td>_duration</td>
+<td>Fungus.FloatData</td>
+<td>The time in seconds the animation will take to complete</td>
+</tr>
+<tr>
+<td>Ease Type</td>
+<td>Fungus.iTween+EaseType</td>
+<td>The shape of the easing curve applied to the animation</td>
+</tr>
+<tr>
+<td>Loop Type</td>
+<td>Fungus.iTween+LoopType</td>
+<td>The type of loop to apply once the animation has completed</td>
+</tr>
+<tr>
+<td>Stop Previous Tweens</td>
+<td>System.Boolean</td>
+<td>Stop any previously added iTweens on this object before adding this iTween</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the tween has finished before executing the next command</td>
+</tr>
+</tbody></table>
+<h1 id="stop-tween">Stop Tween</h1>
+<p>Stops an active iTween by name.</p>
+<p>Defined in Fungus.StopTween</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_tween Name</td>
+<td>Fungus.StringData</td>
+<td>Stop and destroy any Tweens in current scene with the supplied name</td>
+</tr>
+</tbody></table>
+<h1 id="stop-tweens">Stop Tweens</h1>
+<p>Stop all active iTweens in the current scene.</p>
+<p>Defined in Fungus.StopTweens
+Auto-Generated by Fungus.ExportReferenceDocs</p>

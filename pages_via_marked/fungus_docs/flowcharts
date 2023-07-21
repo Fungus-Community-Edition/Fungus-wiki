@@ -1,0 +1,55 @@
+<h1 id="flowcharts">Flowcharts</h1>
+<p>A fundamental concept of Fungus is the <strong>Flowchart</strong>. Scenes can contain a single Flowchart or multiple Flowcharts.</p>
+<!-- **************************************************** -->
+<h1 id="what-is-a-flowchart">What is a Flowchart?</h1>
+<p>A Fungus <strong>Flowchart</strong> contains the Blocks in which all your Fungus Commands are located. A Unity scene can contain multiple Flowcharts, and commands can be executing simultaneously in different Flowcharts. However, for many games it is sufficient for one Block in one Flowcart to be executing at any one time.</p>
+<p>Here is an example of a Fungus Flowchart:</p>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/flowcharts/001_what_is/1_example_flowchart.png" alt="flowchart example" title="flowchart example"></p>
+<!-- **************************************************** -->
+<h1 id="the-flowchart-window">The Flowchart window</h1>
+<p>You&#39;ll need the Fungus Flowchart window when working with Fungus. Open and dock this window somewhere handy by following these steps:</p>
+<ol>
+<li>Choose menu: <code>Tools | Fungus | Flowchart Window</code></li>
+</ol>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/flowcharts/002_docking/1_menu.png" alt="Menu open Fungus window" title="Menu open Fungus window"></p>
+<ol start="2">
+<li>Drag-and-drop the Flowchart window to the location you wish to dock it:</li>
+</ol>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/flowcharts/002_docking/2_window.png" alt="Drag Fungus window" title="Drag Fungus window"></p>
+<ol start="3">
+<li>The Flowchart window is now docked and part of your Unity window layout:</li>
+</ol>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/flowcharts/002_docking/3_docked.png" alt="Docked Fungus window" title="Docked Fungus window"></p>
+<!-- **************************************************** -->
+<h1 id="creating-a-flowchart">Creating a Flowchart</h1>
+<p>To create a Fungus Flowchart do the following:</p>
+<ol>
+<li>Choose menu: <code>Tools | Fungus | Create Flowchart</code></li>
+</ol>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/flowcharts/005_create_flowchart/1_tools_create.png" alt="menu create Flowchart" title="menu create Flowchart"></p>
+<ol start="2">
+<li>A new <strong>Flowchart</strong> gameObject should appear in the Hierarchy window.</li>
+</ol>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/flowcharts/005_create_flowchart/2_flowchart_gameobject.png" alt="new Flowchart gameobject" title="new Flowchart gameobject"></p>
+<ol start="3">
+<li>Select the <strong>Flowchart</strong> gameObject in the Hierarchy window, and you&#39;ll see the <strong>Flowchart&#39;s</strong> properties in the Inspector Window:</li>
+</ol>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/flowcharts/005_create_flowchart/3_flowchart_properties.png" alt="Flowchart properties" title="Flowchart properties"></p>
+<ol start="4">
+<li><p>If you have not already displayed the Flowchart Window, you can do so by clicking the Flowchart Window button in the Inspector.</p>
+</li>
+<li><p>As you can see, when a new Flowchat is created a single command Block named &quot;New Block&quot; is automatically created, with the Event handler &quot;Game Started&quot; (so it will start executing Fungus commands as soon as the scene goes into <strong>Play Mode</strong>).</p>
+</li>
+</ol>
+<!-- **************************************************** -->
+<h1 id="panning-the-flowchart">Panning the Flowchart</h1>
+<p>Panning means moving the contents of the Flowchart window as if they are on a piece of paper. Click and drag with the RIGHT mouse button to pan the contents of the Flowchart window.</p>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/flowcharts/003_panning/1_pan1.png" alt="pan flowchart 1" title="pan flowchart 1"></p>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/flowcharts/003_panning/2_pan2.png" alt="pan flowchart 2" title="pan flowchart 2"></p>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/flowcharts/003_panning/animated_drag_to_pan.gif" alt="pan flowchart animated" title="pan flowchart animated"></p>
+<!-- **************************************************** -->
+<h1 id="zooming-the-flowchart">Zooming the Flowchart</h1>
+<p>Zooming refers to making the contents larger or smaller. To zoom the Flowchart window contents either click and drag the UI slider, or use the mouse wheel (or trackpad).</p>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/flowcharts/004_zooming/1_zoom1.png" alt="zoom flowchart 1" title="zoom flowchart 1"></p>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/flowcharts/004_zooming/2_zoom2.png" alt="zoom flowchart 2" title="zoom flowchart 2"></p>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/flowcharts/004_zooming/2_zoom2.png" alt="zoom flowchart 2" title="zoom flowchart 2"></p>

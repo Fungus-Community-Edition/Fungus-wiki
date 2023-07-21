@@ -1,0 +1,220 @@
+<h1 id="sprite-commands">Sprite commands</h1>
+<h1 id="fade-sprite">Fade Sprite</h1>
+<p>Fades a sprite to a target color over a period of time.</p>
+<p>Defined in Fungus.FadeSprite</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Sprite Renderer</td>
+<td>UnityEngine.SpriteRenderer</td>
+<td>Sprite object to be faded</td>
+</tr>
+<tr>
+<td>_duration</td>
+<td>Fungus.FloatData</td>
+<td>Length of time to perform the fade</td>
+</tr>
+<tr>
+<td>_target Color</td>
+<td>Fungus.ColorData</td>
+<td>Target color to fade to. To only fade transparency level, set the color to white and set the alpha to required transparency.</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the fade has finished before executing the next command</td>
+</tr>
+</tbody></table>
+<h1 id="set-clickable-2d">Set Clickable 2D</h1>
+<p>Sets a Clickable2D component to be clickable / non-clickable.</p>
+<p>Defined in Fungus.SetClickable2D</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Target Clickable2 D</td>
+<td>Fungus.Clickable2D</td>
+<td>Reference to Clickable2D component on a gameobject</td>
+</tr>
+<tr>
+<td>Active State</td>
+<td>Fungus.BooleanData</td>
+<td>Set to true to enable the component</td>
+</tr>
+</tbody></table>
+<h1 id="set-collider">Set Collider</h1>
+<p>Sets all collider (2d or 3d) components on the target objects to be active / inactive</p>
+<p>Defined in Fungus.SetCollider</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Target Objects</td>
+<td>System.Collections.Generic.List`1[UnityEngine.GameObject]</td>
+<td>A list of gameobjects containing collider components to be set active / inactive</td>
+</tr>
+<tr>
+<td>Target Tag</td>
+<td>System.String</td>
+<td>All objects with this tag will have their collider set active / inactive</td>
+</tr>
+<tr>
+<td>Active State</td>
+<td>Fungus.BooleanData</td>
+<td>Set to true to enable the collider components</td>
+</tr>
+</tbody></table>
+<h1 id="set-draggable-2d">Set Draggable 2D</h1>
+<p>Sets a Draggable2D component to be draggable / non-draggable.</p>
+<p>Defined in Fungus.SetDraggable2D</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Target Draggable2 D</td>
+<td>Fungus.Draggable2D</td>
+<td>Reference to Draggable2D component on a gameobject</td>
+</tr>
+<tr>
+<td>Active State</td>
+<td>Fungus.BooleanData</td>
+<td>Set to true to enable the component</td>
+</tr>
+</tbody></table>
+<h1 id="set-mouse-cursor">Set Mouse Cursor</h1>
+<p>Sets the mouse cursor sprite.</p>
+<p>Defined in Fungus.SetMouseCursor</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Cursor Texture</td>
+<td>UnityEngine.Texture2D</td>
+<td>Texture to use for cursor. Will use default mouse cursor if no sprite is specified</td>
+</tr>
+<tr>
+<td>Hot Spot</td>
+<td>UnityEngine.Vector2</td>
+<td>The offset from the top left of the texture to use as the target point</td>
+</tr>
+</tbody></table>
+<h1 id="set-sorting-layer">Set Sorting Layer</h1>
+<p>Sets the Renderer sorting layer of every child of a game object. Applies to all Renderers (including mesh, skinned mesh, and sprite).</p>
+<p>Defined in Fungus.SetSortingLayer</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Target Object</td>
+<td>UnityEngine.GameObject</td>
+<td>Root Object that will have the Sorting Layer set. Any children will also be affected</td>
+</tr>
+<tr>
+<td>Sorting Layer</td>
+<td>System.String</td>
+<td>The New Layer Name to apply</td>
+</tr>
+</tbody></table>
+<h1 id="set-sprite">Set Sprite</h1>
+<p>Changes the sprite property of a list of Sprite Renderers.</p>
+<p>Defined in Fungus.SetSprite</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Sprite Renderers</td>
+<td>System.Collections.Generic.List`1[UnityEngine.SpriteRenderer]</td>
+<td>List of sprites to set the sprite property on</td>
+</tr>
+<tr>
+<td>Sprite</td>
+<td>UnityEngine.Sprite</td>
+<td>The sprite set on the target sprite renderers</td>
+</tr>
+</tbody></table>
+<h1 id="set-sprite-order">Set Sprite Order</h1>
+<p>Controls the render order of sprites by setting the Order In Layer property of a list of sprites.</p>
+<p>Defined in Fungus.SetSpriteOrder</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Target Sprites</td>
+<td>System.Collections.Generic.List`1[UnityEngine.SpriteRenderer]</td>
+<td>List of sprites to set the order in layer property on</td>
+</tr>
+<tr>
+<td>Order In Layer</td>
+<td>Fungus.IntegerData</td>
+<td>The order in layer value to set on the target sprites</td>
+</tr>
+</tbody></table>
+<h1 id="show-sprite">Show Sprite</h1>
+<p>Makes a sprite visible / invisible by setting the color alpha.</p>
+<p>Defined in Fungus.ShowSprite</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Sprite Renderer</td>
+<td>UnityEngine.SpriteRenderer</td>
+<td>Sprite object to be made visible / invisible</td>
+</tr>
+<tr>
+<td>_visible</td>
+<td>Fungus.BooleanData</td>
+<td>Make the sprite visible or invisible</td>
+</tr>
+<tr>
+<td>Affect Children</td>
+<td>System.Boolean</td>
+<td>Affect the visibility of child sprites</td>
+</tr>
+</tbody></table>
+<p>Auto-Generated by Fungus.ExportReferenceDocs</p>

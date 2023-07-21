@@ -1,0 +1,31 @@
+<h1 id="unity-test-tools">Unity Test Tools</h1>
+<p>If you are using the <a href="http://u3d.as/65h">Unity Test Tools</a>, FungusLua is a powerful and fast way to create integration tests using Lua scripting.</p>
+<h1 id="example">Example</h1>
+<ol>
+<li>Create a new test in the scene.</li>
+<li>Add a Lua object (Tools &gt; Fungus &gt; Create &gt; Lua) as a child of the test object.</li>
+<li>In the LuaScript component, use the check() function to assert whatever conditions you need for the test. At the end, call pass().</li>
+</ol>
+<p>Example test script:</p>
+<pre><code class="language-lua">-- Check a condition, and output a reason if it fails
+check( myvar &lt; 40, &quot;My var is too big&quot;)
+
+-- Just check a condition
+check( myvar &gt; 20 )
+
+-- Test will exit successfully
+pass()
+</code></pre>
+<p>If any of the checks fail, then the test fails immediately.</p>
+<h1 id="lua-functions">Lua Functions</h1>
+<pre><code class="language-lua">-- Checks if a condition is true
+-- Lua has a built in assert function, so we called this check to avoid conflicting.
+check(c, reason)
+
+-- Pass an integration test
+pass()
+
+-- Fail an integration test
+-- reason: Optional string explaining why the test failed.
+fail(reason)
+</code></pre>

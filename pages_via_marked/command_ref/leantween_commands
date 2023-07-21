@@ -1,0 +1,235 @@
+<h1 id="leantween-commands">LeanTween commands</h1>
+<h1 id="move">Move</h1>
+<p>Moves a game object to a specified position over time. The position can be defined by a transform in another object (using To Transform) or by setting an absolute position (using To Position, if To Transform is set to None).</p>
+<p>Defined in Fungus.MoveLean</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_to Transform</td>
+<td>Fungus.TransformData</td>
+<td>Target transform that the GameObject will move to</td>
+</tr>
+<tr>
+<td>_to Position</td>
+<td>Fungus.Vector3Data</td>
+<td>Target world position that the GameObject will move to, if no From Transform is set</td>
+</tr>
+<tr>
+<td>Is Local</td>
+<td>System.Boolean</td>
+<td>Whether to animate in world space or relative to the parent. False by default.</td>
+</tr>
+<tr>
+<td>_target Object</td>
+<td>Fungus.GameObjectData</td>
+<td>Target game object to apply the Tween to</td>
+</tr>
+<tr>
+<td>_duration</td>
+<td>Fungus.FloatData</td>
+<td>The time in seconds the animation will take to complete</td>
+</tr>
+<tr>
+<td>_to From</td>
+<td>Fungus.BaseLeanTweenCommand+ToFrom</td>
+<td>Does the tween act from current TO destination or is it reversed and act FROM destination to its current</td>
+</tr>
+<tr>
+<td>_abs Add</td>
+<td>Fungus.BaseLeanTweenCommand+AbsAdd</td>
+<td>Does the tween use the value as a target or as a delta to be added to current.</td>
+</tr>
+<tr>
+<td>Ease Type</td>
+<td>LeanTweenType</td>
+<td>The shape of the easing curve applied to the animation</td>
+</tr>
+<tr>
+<td>Loop Type</td>
+<td>LeanTweenType</td>
+<td>The type of loop to apply once the animation has completed</td>
+</tr>
+<tr>
+<td>Repeats</td>
+<td>System.Int32</td>
+<td>Number of times to repeat the tween, -1 is infinite.</td>
+</tr>
+<tr>
+<td>Stop Previous Tweens</td>
+<td>System.Boolean</td>
+<td>Stop any previously LeanTweens on this object before adding this one. Warning; expensive.</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the tween has finished before executing the next command</td>
+</tr>
+</tbody></table>
+<h1 id="rotate">Rotate</h1>
+<p>Rotates a game object to the specified angles over time.</p>
+<p>Defined in Fungus.RotateLean</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_to Transform</td>
+<td>Fungus.TransformData</td>
+<td>Target transform that the GameObject will rotate to</td>
+</tr>
+<tr>
+<td>_to Rotation</td>
+<td>Fungus.Vector3Data</td>
+<td>Target rotation that the GameObject will rotate to, if no To Transform is set</td>
+</tr>
+<tr>
+<td>Is Local</td>
+<td>System.Boolean</td>
+<td>Whether to animate in world space or relative to the parent. False by default.</td>
+</tr>
+<tr>
+<td>Rotate Mode</td>
+<td>Fungus.RotateLean+RotateMode</td>
+<td>Whether to use the provided Transform or Vector as a target to look at rather than a euler to match.</td>
+</tr>
+<tr>
+<td>_target Object</td>
+<td>Fungus.GameObjectData</td>
+<td>Target game object to apply the Tween to</td>
+</tr>
+<tr>
+<td>_duration</td>
+<td>Fungus.FloatData</td>
+<td>The time in seconds the animation will take to complete</td>
+</tr>
+<tr>
+<td>_to From</td>
+<td>Fungus.BaseLeanTweenCommand+ToFrom</td>
+<td>Does the tween act from current TO destination or is it reversed and act FROM destination to its current</td>
+</tr>
+<tr>
+<td>_abs Add</td>
+<td>Fungus.BaseLeanTweenCommand+AbsAdd</td>
+<td>Does the tween use the value as a target or as a delta to be added to current.</td>
+</tr>
+<tr>
+<td>Ease Type</td>
+<td>LeanTweenType</td>
+<td>The shape of the easing curve applied to the animation</td>
+</tr>
+<tr>
+<td>Loop Type</td>
+<td>LeanTweenType</td>
+<td>The type of loop to apply once the animation has completed</td>
+</tr>
+<tr>
+<td>Repeats</td>
+<td>System.Int32</td>
+<td>Number of times to repeat the tween, -1 is infinite.</td>
+</tr>
+<tr>
+<td>Stop Previous Tweens</td>
+<td>System.Boolean</td>
+<td>Stop any previously LeanTweens on this object before adding this one. Warning; expensive.</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the tween has finished before executing the next command</td>
+</tr>
+</tbody></table>
+<h1 id="scale">Scale</h1>
+<p>Changes a game object&#39;s scale to a specified value over time.</p>
+<p>Defined in Fungus.ScaleLean</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_to Transform</td>
+<td>Fungus.TransformData</td>
+<td>Target transform that the GameObject will scale to</td>
+</tr>
+<tr>
+<td>_to Scale</td>
+<td>Fungus.Vector3Data</td>
+<td>Target scale that the GameObject will scale to, if no To Transform is set</td>
+</tr>
+<tr>
+<td>_target Object</td>
+<td>Fungus.GameObjectData</td>
+<td>Target game object to apply the Tween to</td>
+</tr>
+<tr>
+<td>_duration</td>
+<td>Fungus.FloatData</td>
+<td>The time in seconds the animation will take to complete</td>
+</tr>
+<tr>
+<td>_to From</td>
+<td>Fungus.BaseLeanTweenCommand+ToFrom</td>
+<td>Does the tween act from current TO destination or is it reversed and act FROM destination to its current</td>
+</tr>
+<tr>
+<td>_abs Add</td>
+<td>Fungus.BaseLeanTweenCommand+AbsAdd</td>
+<td>Does the tween use the value as a target or as a delta to be added to current.</td>
+</tr>
+<tr>
+<td>Ease Type</td>
+<td>LeanTweenType</td>
+<td>The shape of the easing curve applied to the animation</td>
+</tr>
+<tr>
+<td>Loop Type</td>
+<td>LeanTweenType</td>
+<td>The type of loop to apply once the animation has completed</td>
+</tr>
+<tr>
+<td>Repeats</td>
+<td>System.Int32</td>
+<td>Number of times to repeat the tween, -1 is infinite.</td>
+</tr>
+<tr>
+<td>Stop Previous Tweens</td>
+<td>System.Boolean</td>
+<td>Stop any previously LeanTweens on this object before adding this one. Warning; expensive.</td>
+</tr>
+<tr>
+<td>Wait Until Finished</td>
+<td>System.Boolean</td>
+<td>Wait until the tween has finished before executing the next command</td>
+</tr>
+</tbody></table>
+<h1 id="stoptweens">StopTweens</h1>
+<p>Stops the LeanTweens on a target GameObject</p>
+<p>Defined in Fungus.StopTweensLean</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_target Object</td>
+<td>Fungus.GameObjectData</td>
+<td>Target game object stop LeanTweens on</td>
+</tr>
+</tbody></table>
+<p>Auto-Generated by Fungus.ExportReferenceDocs</p>

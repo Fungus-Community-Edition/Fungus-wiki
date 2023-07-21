@@ -1,0 +1,338 @@
+<h1 id="math-commands">Math commands</h1>
+<h1 id="abs">Abs</h1>
+<p>Command to execute and store the result of a Abs</p>
+<p>Defined in Fungus.Abs</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>In Value</td>
+<td>Fungus.FloatData</td>
+<td>Value to be passed in to the function.</td>
+</tr>
+<tr>
+<td>Out Value</td>
+<td>Fungus.FloatData</td>
+<td>Where the result of the function is stored.</td>
+</tr>
+</tbody></table>
+<h1 id="clamp">Clamp</h1>
+<p>Command to contain a value between a lower and upper bound, with optional wrapping modes</p>
+<p>Defined in Fungus.Clamp</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Out Value</td>
+<td>Fungus.FloatData</td>
+<td>Result put here, if using pingpong don&#39;t use the same var for value as outValue.</td>
+</tr>
+</tbody></table>
+<h1 id="curve">Curve</h1>
+<p>Pass a value through an AnimationCurve</p>
+<p>Defined in Fungus.Curve</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>In Value</td>
+<td>Fungus.FloatData</td>
+<td>Value to be passed in to the function.</td>
+</tr>
+<tr>
+<td>Out Value</td>
+<td>Fungus.FloatData</td>
+<td>Where the result of the function is stored.</td>
+</tr>
+</tbody></table>
+<h1 id="exp">Exp</h1>
+<p>Command to execute and store the result of a Exp</p>
+<p>Defined in Fungus.Exp</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>In Value</td>
+<td>Fungus.FloatData</td>
+<td>Value to be passed in to the function.</td>
+</tr>
+<tr>
+<td>Out Value</td>
+<td>Fungus.FloatData</td>
+<td>Where the result of the function is stored.</td>
+</tr>
+</tbody></table>
+<h1 id="inverse">Inverse</h1>
+<p>Multiplicative Inverse of a float (1/f)</p>
+<p>Defined in Fungus.Inv</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>In Value</td>
+<td>Fungus.FloatData</td>
+<td>Value to be passed in to the function.</td>
+</tr>
+<tr>
+<td>Out Value</td>
+<td>Fungus.FloatData</td>
+<td>Where the result of the function is stored.</td>
+</tr>
+</tbody></table>
+<h1 id="invlerp">InvLerp</h1>
+<p>Calculates the inverse lerp, the percentage a value is between two others.</p>
+<p>Defined in Fungus.InvLerp</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Clamp Result</td>
+<td>System.Boolean</td>
+<td>Clamp percentage to 0-1?</td>
+</tr>
+</tbody></table>
+<h1 id="lerp">Lerp</h1>
+<p>Linearly Interpolate from A to B</p>
+<p>Defined in Fungus.Lerp</p>
+<h1 id="log">Log</h1>
+<p>Command to execute and store the result of a Log</p>
+<p>Defined in Fungus.Log</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Mode</td>
+<td>Fungus.Log+Mode</td>
+<td>Which log to use, natural or base 10</td>
+</tr>
+<tr>
+<td>In Value</td>
+<td>Fungus.FloatData</td>
+<td>Value to be passed in to the function.</td>
+</tr>
+<tr>
+<td>Out Value</td>
+<td>Fungus.FloatData</td>
+<td>Where the result of the function is stored.</td>
+</tr>
+</tbody></table>
+<h1 id="map">Map</h1>
+<p>Map a value that exists in 1 range of numbers to another.</p>
+<p>Defined in Fungus.Map</p>
+<h1 id="minmax">MinMax</h1>
+<p>Command to store the min or max of 2 values</p>
+<p>Defined in Fungus.MinMax</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Function</td>
+<td>Fungus.MinMax+Function</td>
+<td>Min Or Max</td>
+</tr>
+</tbody></table>
+<h1 id="negate">Negate</h1>
+<p>Negate a float</p>
+<p>Defined in Fungus.Neg</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>In Value</td>
+<td>Fungus.FloatData</td>
+<td>Value to be passed in to the function.</td>
+</tr>
+<tr>
+<td>Out Value</td>
+<td>Fungus.FloatData</td>
+<td>Where the result of the function is stored.</td>
+</tr>
+</tbody></table>
+<h1 id="pow">Pow</h1>
+<p>Raise a value to the power of another.</p>
+<p>Defined in Fungus.Pow</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Out Value</td>
+<td>Fungus.FloatData</td>
+<td>Where the result of the function is stored.</td>
+</tr>
+</tbody></table>
+<h1 id="round">Round</h1>
+<p>Command to execute and store the result of a Round</p>
+<p>Defined in Fungus.Round</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Function</td>
+<td>Fungus.Round+Mode</td>
+<td>Mode; Round (closest), floor(smaller) or ceil(bigger).</td>
+</tr>
+<tr>
+<td>In Value</td>
+<td>Fungus.FloatData</td>
+<td>Value to be passed in to the function.</td>
+</tr>
+<tr>
+<td>Out Value</td>
+<td>Fungus.FloatData</td>
+<td>Where the result of the function is stored.</td>
+</tr>
+</tbody></table>
+<h1 id="sign">Sign</h1>
+<p>Command to execute and store the result of a Sign</p>
+<p>Defined in Fungus.Sign</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>In Value</td>
+<td>Fungus.FloatData</td>
+<td>Value to be passed in to the function.</td>
+</tr>
+<tr>
+<td>Out Value</td>
+<td>Fungus.FloatData</td>
+<td>Where the result of the function is stored.</td>
+</tr>
+</tbody></table>
+<h1 id="sqrt">Sqrt</h1>
+<p>Command to execute and store the result of a Sqrt</p>
+<p>Defined in Fungus.Sqrt</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>In Value</td>
+<td>Fungus.FloatData</td>
+<td>Value to be passed in to the function.</td>
+</tr>
+<tr>
+<td>Out Value</td>
+<td>Fungus.FloatData</td>
+<td>Where the result of the function is stored.</td>
+</tr>
+</tbody></table>
+<h1 id="toint">ToInt</h1>
+<p>Command to execute and store the result of a float to int conversion</p>
+<p>Defined in Fungus.ToInt</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Function</td>
+<td>Fungus.ToInt+Mode</td>
+<td>To integer mode; round, floor or ceil.</td>
+</tr>
+<tr>
+<td>In Value</td>
+<td>Fungus.FloatData</td>
+<td>Value to be passed in to the function.</td>
+</tr>
+<tr>
+<td>Out Value</td>
+<td>Fungus.IntegerData</td>
+<td>Where the result of the function is stored.</td>
+</tr>
+</tbody></table>
+<h1 id="trig">Trig</h1>
+<p>Command to execute and store the result of basic trigonometry</p>
+<p>Defined in Fungus.Trig</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Function</td>
+<td>Fungus.Trig+Function</td>
+<td>Trigonometric function to run.</td>
+</tr>
+<tr>
+<td>In Value</td>
+<td>Fungus.FloatData</td>
+<td>Value to be passed in to the function.</td>
+</tr>
+<tr>
+<td>Out Value</td>
+<td>Fungus.FloatData</td>
+<td>Where the result of the function is stored.</td>
+</tr>
+</tbody></table>
+<p>Auto-Generated by Fungus.ExportReferenceDocs</p>

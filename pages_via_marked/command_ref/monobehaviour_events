@@ -1,0 +1,326 @@
+<h1 id="monobehaviour-event-handlers">MonoBehaviour event handlers</h1>
+<h1 id="animator">Animator</h1>
+<p>The block will execute when the desired OnAnimator* message for the monobehaviour is received.</p>
+<p>Defined in Fungus.AnimatorState</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Fire On</td>
+<td>Fungus.AnimatorState+AnimatorMessageFlags</td>
+<td>Which of the OnAnimator messages to trigger on.</td>
+</tr>
+<tr>
+<td>I K Layer</td>
+<td>System.Int32</td>
+<td>IK layer to trigger on. Negative is all.</td>
+</tr>
+<tr>
+<td>Suppress Block Auto Select</td>
+<td>System.Boolean</td>
+<td>If true, the flowchart window will not auto select the Block when the Event Handler fires. Affects Editor only.</td>
+</tr>
+</tbody></table>
+<h1 id="application">Application</h1>
+<p>The block will execute when the desired OnApplication message for the monobehaviour is received.</p>
+<p>Defined in Fungus.ApplicationState</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Fire On</td>
+<td>Fungus.ApplicationState+ApplicationMessageFlags</td>
+<td>Which of the Application messages to trigger on.</td>
+</tr>
+<tr>
+<td>Suppress Block Auto Select</td>
+<td>System.Boolean</td>
+<td>If true, the flowchart window will not auto select the Block when the Event Handler fires. Affects Editor only.</td>
+</tr>
+</tbody></table>
+<h1 id="charactercollider">CharacterCollider</h1>
+<p>The block will execute when tag filtered OnCharacterColliderHit is received</p>
+<p>Defined in Fungus.CharacterControllerCollide</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Col Hit Var</td>
+<td>Fungus.ControllerColliderHitVariable</td>
+<td>Optional variable to store the ControllerColliderHit</td>
+</tr>
+<tr>
+<td>Tag Filter</td>
+<td>System.String[]</td>
+<td>Only fire the event if one of the tags match. Empty means any will fire.</td>
+</tr>
+<tr>
+<td>Suppress Block Auto Select</td>
+<td>System.Boolean</td>
+<td>If true, the flowchart window will not auto select the Block when the Event Handler fires. Affects Editor only.</td>
+</tr>
+</tbody></table>
+<h1 id="collision">Collision</h1>
+<p>The block will execute when a 3d physics collision matching some basic conditions is met.</p>
+<p>Defined in Fungus.Collision</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Collision Var</td>
+<td>Fungus.CollisionVariable</td>
+<td>Optional variable to store the collision object that is provided by Unity.</td>
+</tr>
+<tr>
+<td>Fire On</td>
+<td>Fungus.BasePhysicsEventHandler+PhysicsMessageType</td>
+<td>Which of the physics messages do we trigger on.</td>
+</tr>
+<tr>
+<td>Tag Filter</td>
+<td>System.String[]</td>
+<td>Only fire the event if one of the tags match. Empty means any will fire.</td>
+</tr>
+<tr>
+<td>Suppress Block Auto Select</td>
+<td>System.Boolean</td>
+<td>If true, the flowchart window will not auto select the Block when the Event Handler fires. Affects Editor only.</td>
+</tr>
+</tbody></table>
+<h1 id="collision2d">Collision2D</h1>
+<p>The block will execute when a 2d physics collision matching some basic conditions is met.</p>
+<p>Defined in Fungus.Collision2D</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Collision Var</td>
+<td>Fungus.Collision2DVariable</td>
+<td>Optional variable to store the collision object that is provided by Unity.</td>
+</tr>
+<tr>
+<td>Fire On</td>
+<td>Fungus.BasePhysicsEventHandler+PhysicsMessageType</td>
+<td>Which of the physics messages do we trigger on.</td>
+</tr>
+<tr>
+<td>Tag Filter</td>
+<td>System.String[]</td>
+<td>Only fire the event if one of the tags match. Empty means any will fire.</td>
+</tr>
+<tr>
+<td>Suppress Block Auto Select</td>
+<td>System.Boolean</td>
+<td>If true, the flowchart window will not auto select the Block when the Event Handler fires. Affects Editor only.</td>
+</tr>
+</tbody></table>
+<h1 id="mouse">Mouse</h1>
+<p>The block will execute when the desired OnMouse* message for the monobehaviour is received</p>
+<p>Defined in Fungus.Mouse</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Fire On</td>
+<td>Fungus.Mouse+MouseMessageFlags</td>
+<td>Which of the Mouse messages to trigger on.</td>
+</tr>
+<tr>
+<td>Suppress Block Auto Select</td>
+<td>System.Boolean</td>
+<td>If true, the flowchart window will not auto select the Block when the Event Handler fires. Affects Editor only.</td>
+</tr>
+</tbody></table>
+<h1 id="particle">Particle</h1>
+<p>The block will execute when the desired OnParticle message for the monobehaviour is received.</p>
+<p>Defined in Fungus.Particle</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Fire On</td>
+<td>Fungus.Particle+ParticleMessageFlags</td>
+<td>Which of the Rendering messages to trigger on.</td>
+</tr>
+<tr>
+<td>G Ocollider Var</td>
+<td>Fungus.GameObjectVariable</td>
+<td>Optional variable to store the gameobject that particle collided with.</td>
+</tr>
+<tr>
+<td>Tag Filter</td>
+<td>System.String[]</td>
+<td>Only fire the event if one of the tags match. Empty means any will fire.</td>
+</tr>
+<tr>
+<td>Suppress Block Auto Select</td>
+<td>System.Boolean</td>
+<td>If true, the flowchart window will not auto select the Block when the Event Handler fires. Affects Editor only.</td>
+</tr>
+</tbody></table>
+<h1 id="render">Render</h1>
+<p>The block will execute when the desired Rendering related message for the monobehaviour is received.</p>
+<p>Defined in Fungus.Render</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Fire On</td>
+<td>Fungus.Render+RenderMessageFlags</td>
+<td>Which of the Rendering messages to trigger on.</td>
+</tr>
+<tr>
+<td>Suppress Block Auto Select</td>
+<td>System.Boolean</td>
+<td>If true, the flowchart window will not auto select the Block when the Event Handler fires. Affects Editor only.</td>
+</tr>
+</tbody></table>
+<h1 id="transform">Transform</h1>
+<p>The block will execute when the desired OnTransform related message for the monobehaviour is received.</p>
+<p>Defined in Fungus.TransformChanged</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Fire On</td>
+<td>Fungus.TransformChanged+TransformMessageFlags</td>
+<td>Which of the OnTransformChanged messages to trigger on.</td>
+</tr>
+<tr>
+<td>Suppress Block Auto Select</td>
+<td>System.Boolean</td>
+<td>If true, the flowchart window will not auto select the Block when the Event Handler fires. Affects Editor only.</td>
+</tr>
+</tbody></table>
+<h1 id="trigger">Trigger</h1>
+<p>The block will execute when a 3d physics trigger matching some basic conditions is met.</p>
+<p>Defined in Fungus.Trigger</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Collider Var</td>
+<td>Fungus.ColliderVariable</td>
+<td>Optional variable to store the collider that caused the trigger to occur.</td>
+</tr>
+<tr>
+<td>Fire On</td>
+<td>Fungus.BasePhysicsEventHandler+PhysicsMessageType</td>
+<td>Which of the physics messages do we trigger on.</td>
+</tr>
+<tr>
+<td>Tag Filter</td>
+<td>System.String[]</td>
+<td>Only fire the event if one of the tags match. Empty means any will fire.</td>
+</tr>
+<tr>
+<td>Suppress Block Auto Select</td>
+<td>System.Boolean</td>
+<td>If true, the flowchart window will not auto select the Block when the Event Handler fires. Affects Editor only.</td>
+</tr>
+</tbody></table>
+<h1 id="trigger2d">Trigger2D</h1>
+<p>The block will execute when a 2d physics trigger matching some basic conditions is met.</p>
+<p>Defined in Fungus.Trigger2D</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Collider Var</td>
+<td>Fungus.Collider2DVariable</td>
+<td>Optional variable to store the collider that caused the trigger to occur.</td>
+</tr>
+<tr>
+<td>Fire On</td>
+<td>Fungus.BasePhysicsEventHandler+PhysicsMessageType</td>
+<td>Which of the physics messages do we trigger on.</td>
+</tr>
+<tr>
+<td>Tag Filter</td>
+<td>System.String[]</td>
+<td>Only fire the event if one of the tags match. Empty means any will fire.</td>
+</tr>
+<tr>
+<td>Suppress Block Auto Select</td>
+<td>System.Boolean</td>
+<td>If true, the flowchart window will not auto select the Block when the Event Handler fires. Affects Editor only.</td>
+</tr>
+</tbody></table>
+<h1 id="update">Update</h1>
+<p>The block will execute every chosen Update, or FixedUpdate or LateUpdate.</p>
+<p>Defined in Fungus.UpdateTick</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Fire On</td>
+<td>Fungus.UpdateTick+UpdateMessageFlags</td>
+<td>Which of the Update messages to trigger on.</td>
+</tr>
+<tr>
+<td>Suppress Block Auto Select</td>
+<td>System.Boolean</td>
+<td>If true, the flowchart window will not auto select the Block when the Event Handler fires. Affects Editor only.</td>
+</tr>
+</tbody></table>
+<p>Auto-Generated by Fungus.ExportReferenceDocs</p>

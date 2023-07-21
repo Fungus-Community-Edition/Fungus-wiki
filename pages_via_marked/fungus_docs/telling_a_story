@@ -1,0 +1,211 @@
+<h1 id="telling-a-story">Telling a story</h1>
+<p>Having got up and running, here are some next steps to get you familiar with the storytelling features in Fungus.</p>
+<!-- **************************************** -->
+<h1 id="adding-characters">Adding Characters</h1>
+<p>We can associated words spoken by the Say Command with a particular Character. Consider the following Tom and Jerry scene:</p>
+<pre><code>[Tom] Where is that mouse?
+[Jerry] Where is that cat?
+[Tom] Aha...
+[Jerry] Arrrrggggggg!!!!!!!
+</code></pre>
+<p>To implement the above in Fungus we need to create and name two Characters. Do the following:</p>
+<ol>
+<li>(setup) Create a new scene, add a Fungus Flowchart to the scene, and select the Block in the Flowchart.</li>
+<li>Rename the Flowchart Block &quot;cat and mouse&quot;.</li>
+<li>Choose menu:
+<code>Tools | Fungus | Create | Character</code>:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/001_characters/1_menu_character.png" alt="Menu create character" title="Menu create character"></li>
+<li>You should now see a new gameObject &quot;Character&quot; in the Hierarchy window, named Character.
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/001_characters/2_new_character.png" alt="new character" title="new character"></li>
+<li>Ensure gameObject &quot;Character&quot; is selected, and edit its properties in the Inspector. Rename the gameObject to &quot;Character1 - Tom&quot;, then in its Character (Script) component set the Name Text to &quot;Tom&quot; and the Name Color to red:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/001_characters/3_tom.png" alt="character tom red" title="character tom red"></li>
+<li>Repeat the previous two steps to create a second character &quot;Character2 - Jerry&quot;, then in its Character (Script) component set the Name Text to &quot;Jerry&quot; and the Name Color to blue:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/001_characters/4_jerry.png" alt="character jerry blue" title="character jerry blue"></li>
+<li>Now we have our two character gameObjects, we can assign them to any Say commands as appropriate.</li>
+<li>Create a Say Command for Tom, with text &quot;Where is that mouse?&quot;, setting the Character of this Say command to &quot;Character1 - Tom&quot;:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/001_characters/5_tom_say1.png" alt="tom say where cat" title="tom say where cat"></li>
+<li>Repeat the above step for the 3 remaining statements, for:<ul>
+<li>Jerry &quot;Where is that cat?&quot;</li>
+<li>Tom &quot;Aha...&quot;</li>
+<li>Jerry &quot;Arrrrggggggg!!!!!!!&quot;
+Assigning the appropriate Character for each Say Command from the menu of Character gameObjects in the Hiearchy.</li>
+</ul>
+</li>
+<li>You should now have a sequence of 4 Say commands in your Block:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/001_characters/6_four_says.png" alt="tom jerry conversation" title="tom jerry conversation"></li>
+<li>When you run the scene you should see a sequence of statements, clearly showing who is saying what - both the character name is given, and also that name is coloured according to the properties we set for the character gameObjects (red for Tom, and blue for Jerry):
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/001_characters/7_tom_jerry_chat.png" alt="tom jerry conversation output" title="tom jerry conversation output"></li>
+</ol>
+<!-- **************************************** -->
+<h1 id="character-portrait-images">Character portrait images</h1>
+<p>If you add one or more portrait images to a character, then each Say command for that character can define which of those portrait images should be displayed, alongside the (colored) name of the Character.</p>
+<p>To add portrait images to a character do the following:</p>
+<ol>
+<li>(setup) Create a new scene, add a Fungus Flowchart to the scene, and select the Block in the Flowchart.</li>
+<li>Rename the Flowchart Block &quot;The case of the missing violin&quot;.</li>
+<li>Create a character, and in the Inspector give your character Name Text (we chose &quot;Sherlock&quot;) and a name color.</li>
+<li>Now in the Inspector click the Add Portrait button (the plus-sign &quot;+&quot;), to get a &#39;slot&#39; into which to add a portrait image:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/002_portrait/2_add_portrait.png" alt="add portrait" title="add portrait"></li>
+<li>Drag the appropriate image into your new portrait image slot (in this screenshot we used the &#39;condident&#39; image from the Sherlock example project). Also set the direction that the image is facing (left / front / right):
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/002_portrait/1_sherlock.png" alt="sherlock image" title="sherlock image"></li>
+<li>Create a second character (e.g. John, using Name Color blue, and portrait image &#39;annoyed&#39;).</li>
+<li>Now select your Block in the Fungus Flowchart, so you can add some Commands to be executed...</li>
+<li>Create a Say command, for your Sherlock Character, saying &quot;Watson, have you seen my violin?&quot; and choosing portrait &#39;confident&#39; (since this is the only we added to the Character):
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/002_portrait/6_say_sherlock.png" alt="sherlock Say command" title="sherlock Say command"></li>
+<li>Add a second Say command, this time for Character John, saying &quot;No, why don&#39;t you find it yourself using your amazing powers of deduction...&quot; and choosing the &#39;annoyed&#39; portrait for John.
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/002_portrait/8_two_say_commands.png" alt="2 say commands" title="2 say commands"></li>
+<li>When you run the scene you should see a sequence of statements, clearly showing who is saying both with (colored) name text AND also the portrait image you selected for each Say command:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/002_portrait/4_sherlock_output.png" alt="sherlock output" title="sherlock output">
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/002_portrait/5_john_output.png" alt="john output" title="john output">
+As you can see in some of the Fungus Example projects, many games will have a wide range of different portrait images for each character, to allow a full range of visual expression of emotion to support the text of Say commands:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/002_portrait/7_many_portait_images.png" alt="sherlock image list" title="sherlock image list"></li>
+</ol>
+<!-- **************************************** -->
+<h1 id="character-stage">Character Stage</h1>
+<p>Portrait images can be used in two ways in Fungus.</p>
+<ul>
+<li>They can be shown as part of the <strong>Say</strong> commands in the Say Dialog.</li>
+<li>Alternatively Portraits can be displayed and moved around the screen inside Fungus <strong>Stages</strong>, using the Portrait Command.</li>
+</ul>
+<p>Create a simple stage that covers the whole game Window as follows:</p>
+<ol>
+<li>(setup) Create a new scene, add a Fungus Flowchart to the scene, and select the Block in the Flowchart.</li>
+<li>Rename the Flowchart Block &quot;stage demo&quot;.</li>
+<li>Create a Fungus Stage gameObject in the scene by choosing menu:
+<code>Tools | Fungus | Create | Stage</code>:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/003_stage/1_menu_stage.png" alt="menu add stage" title="menu add stage"></li>
+<li>You should now see a new gameObject &quot;Stage&quot; added to the scene Hierarchy.</li>
+<li>If you select it you will see its properties in the Inspector. We can leave the default settings, since these are for the stage to cover the whole Game window. There are some child gameObjects inside the Stage, but you don&#39;t need to worry about these unless you are doing some advanced customisation of stages for a particular game effect.</li>
+</ol>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/003_stage/2_stage_gameobject.png" alt="stage gameObject" title="stage gameObject"></p>
+<p>Now you have added a Fungus Stage to your scene, you will be able to make large Portrait images appear / move in-out of the screen using the <strong>Portrait</strong> Command in Fungus Flowchart Blocks...</p>
+<!-- **************************************** -->
+<h1 id="portrait-command">Portrait command</h1>
+<p>Once you have a Fungus Stage, and a character then you can instruct Fungus to display / move onscreen the Character Portrait images. To make character images appear as part of a scene do the following:</p>
+<ol>
+<li>(setup) Create a new scene, add a Fungus Flowchart to the scene, and select the Block in the Flowchart.</li>
+<li>Rename the Flowchart Block &quot;sherlock enters dramatically&quot;.</li>
+<li>Create a Fungus Stage gameObject in the scene by choosing menu:
+<code>Tools | Fungus | Create | Stage</code>.</li>
+<li>Create a new character, name the gameObject &quot;Character1 - Sherlock&quot;, set the Name Text to &quot;sherlock&quot; and the Name Color to green. Add to this character a portrait (we used the sherlock-confident image from the Fungus Example project &quot;Sherlock&quot;). And set the image facing to the appropriate side (in our case: left):
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/002_portrait/1_sherlock.png" alt="sherlock image" title="sherlock image"></li>
+<li>Add a Portrait Command by clicking the Add Command button (the plus-sign &quot;+&quot;), then choosing menu:
+<code>Narrative | Portrait</code>:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/005_portrait_command/1_menu_command_portrait.png" alt="add command portrait" title="add command portrait"></li>
+<li>You will now see your new Portrait command in the top half of the Inspector, and its Command properties in the bottom half of the Inspector. Note the red exclamation mark at the right of the highlighted (green) Command row - this indicated when a command has one or more required properties that have not been set. We see the error message <em>&quot;No character selected&quot;</em>:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/005_portrait_command/4_new_command_portrait.png" alt="new command portrait" title="new command portrait"></li>
+<li>Set the portrait&#39;s character to &quot;Character1 - sherlock&quot;, and set the following properties:<ul>
+<li>Portrait: confident</li>
+<li>Facing: &lt;-- (left)</li>
+<li>Move: Yes (check the checkbox)</li>
+<li>From Position: Offscreen Right</li>
+<li>To Position: Right
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/005_portrait_command/2_portrait_command.png" alt="command portrait for sherlock" title="command portrait for sherlock"></li>
+</ul>
+</li>
+<li>When you run the scene, the Sherlock portrait image should move into view having started from Offscreen - Right. The image stops when it gets to about a third the way onto the screen:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/005_portrait_command/3_portrait_output.png" alt="sherlock portrait output" title="sherlock portrait output"></li>
+</ol>
+<p>Note, a common Command flow sequence is:</p>
+<ul>
+<li>to have a character enter on screen (Portrait command),</li>
+<li>then have that character say something (Say command),</li>
+<li>then have another character enter the screen (Portrait command),</li>
+<li>and then that second character says something (Say command).</li>
+</ul>
+<p>Here is just such a sequence for the &quot;Case of the missing violin&quot; two-sentence scenario explored in the recipe to learning how to create Fungus Characters (recipe: Listing portrait image(s) for use by Characters):
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/005_portrait_command/3_portrait_output.png" alt="sherlock portrait output" title="sherlock portrait output"></p>
+<p>Here we see the Play Mode user experience of the output of running such a workflow:</p>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/005_portrait_command/5_sherlock_say.png" alt="sherlock portrait then say" title="sherlock portrait then say"></p>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/005_portrait_command/6_john_say.png" alt="john portrait then say" title="john portrait then say"></p>
+<!-- **************************************** -->
+<h1 id="playing-music">Playing music</h1>
+<p>Music sound clips loop, so they are restarted once they have finished playing. Often the first Command in a Block is a <strong>Play Music</strong> Command. Add music to a Block as follows:</p>
+<ol>
+<li>(setup) Create a new scene, add a Fungus Flowchart to the scene, and select the Block in the Flowchart.</li>
+<li>Add a Play Music Command to the current Block by clicking the Add Command (plus-sign &quot;+&quot; button) in the Inspector, and then choosing menu: <code>Audio | Play Music</code>.</li>
+<li>Ensure the Play Music command is selected (green highlight) in the top of the Inspector, and then drag the desired music clip file into the &quot;Music Clip&quot; property in the bottom half of the Inspector:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/004_play_music/1_add_playmusic_command.png" alt="Add Play Music command" title="Add Play Music command"></li>
+<li>Change the volume as desired
+(the default is 1, values are between 0.0 and 1.0, representing percentages of volume from 0% - 100%).</li>
+<li>Play your scene - the music clip should play, and keep looping.</li>
+</ol>
+<p>NOTE: If you wish to start playing the music clip from a known time-point (rather than from the beginning), then enter the desired time-point in the Inspector property &quot;At Time&quot; for your Play Music command.</p>
+<!-- **************************************** -->
+<h1 id="branching-narrative">Branching narrative</h1>
+<p>Let&#39;s use a Say command above to ask a tricky mathematical question, and demonstrate the Menu command by offering the user a choice been &quot;correct&#39; and &quot;incorrect&quot; answers.  Menu commands transfer control to another block - so we&#39;ll need to add 2 new blocks to correspond to the 2 answers.
+Do the following:</p>
+<ol>
+<li>(setup) Create a new scene, add a Fungus Flowchart to the scene, and select the Block in the Flowchart.</li>
+<li>Rename the Block in the Flowchart to &quot;Question&quot;.</li>
+<li>Create a Say command, with <strong>Story Text</strong> to ask the question: &quot;Is 2 + 2?&quot;.</li>
+<li>Uncheck the &quot;Wait For Click&quot; checkbox (this is so we see the menu options immediately after the Say command has displayed the question):
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/011_menu_maths/2_edited_say.png" alt="maths say command" title="maths say command"></li>
+<li>Create a new Block, named &quot;Correct&quot; which contains a <strong>Say</strong> command with the text &quot;Well done, you are very mathematical!&quot;. Click the plus-sign button in the Flowchart window to add a new Block to the Flowchart, rename it &quot;Correct&quot; and then add that Say command:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/011_menu_maths/1_correct_block.png" alt="correct block" title="correct block"></li>
+<li>Select the &quot;Question&quot; block, and add a Menu command by clicking the plus-sign add Command button in the Inspector and then choosing menu: <code>Narrative | Menu</code>.
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/011_menu_maths/6_add_menu.png" alt="add menu command" title="add menu command"></li>
+<li>With this new Menu command selected (green) in the top half of the Inspector window, set the <strong>Text</strong> to &quot;Yes&quot; and the <strong>Target Block</strong> to your new &quot;Correct&quot; block:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/011_menu_maths/4_menu_correct.png" alt="menu command" title="menu command"></li>
+<li>You should now see how the &#39;flow&#39; of commands can change from Block &quot;hello&quot; to Block &quot;Correct&quot; in the Flowchart window:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/011_menu_maths/5_connected_blocks.png" alt="flow between blocks in Flowchart" title="flow between blocks in Flowchart"></li>
+<li>Add a second new Block named &quot;Wrong&quot;, containing a Say command with text &quot;Bad luck, perhaps consider a non-mathematical career path...&quot;
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/011_menu_maths/7_wrong_block.png" alt="block for wrong answer" title="block for wrong answer"></li>
+<li>Now we need to add another Menu command to our &quot;hello&quot; block, offering the user the &quot;No&quot; answer to our maths question, and passing control to Block &quot;Wrong&quot; if they disagree that 2 + 2 = 4. Select the &quot;hello&quot; block, and add a Menu command. With this new Menu command selected (green) in the top half of the Inspector window, set the <strong>Text</strong> to &quot;No&quot; and the <strong>Target Block</strong> to your new &quot;Wrong&quot; block.</li>
+<li>You should now see in the Flowchart window how block &quot;hello&quot; can pass control to either block &quot;Correct&quot; or Block &quot;Wrong&quot; - depending on which menu answer the user selects.
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/011_menu_maths/8_three_block_menu.png" alt="block connected to 2 others" title="block connected to 2 others"></li>
+<li>Run the scene, and you should see the Say question appear at the bottom of the screen, and also the two Menu buttons &quot;Yes&quot; and &quot;No&quot; in the middle of the screen. Clicking &quot;Yes&quot; then runs the &quot;Correct&quot; Block&#39;s commands, and clicking &quot;No&quot; runs the &quot;Wrong&quot; block&#39;s commands:</li>
+</ol>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/011_menu_maths/9_menu_running.png" alt="menu running" title="menu running"></p>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/011_menu_maths/10_correct.png" alt="correct screen" title="correct screen"></p>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/011_menu_maths/11_wrong.png" alt="wrong screen" title="wrong screen"></p>
+<!-- **************************************** -->
+<h1 id="change-background-colour">Change background colour</h1>
+<p>Unity cameras determine what the user sees when a scene is running. When nothing is present in all or part of the camera&#39;s rectangle a solid &quot;Background&quot; colour is displayed. Unity cameras have a default Background of a medium dark blue colour. You can change this as follows:</p>
+<ol>
+<li>(setup) Create a new 2D scene, unless you already have a scene with which to work.</li>
+<li>Select the Main Camera in the Hierarchy.</li>
+<li>In the Inspector for the Camera component, click and choose a different value for the Background property - often black works well.
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/06_camera_background/1_background_black.png" alt="camera background colour" title="camera background colour"></li>
+<li>Now when any part of the camera rectangle (frustrum) shows no gameOjects then your custom Background colour will be what the user sees.</li>
+</ol>
+<!-- **************************************** -->
+<h1 id="background-sprite">Background sprite</h1>
+<p>To add any sprite image file from your Unity Project folder into the current scene, simply drag a reference to the sprite image file from the Project window onto the Scene window, and rotate / resize desired. The sprite will appear as a new gameObject (with same name as Sprite Project image file) in the Hierarchy window:</p>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/07_background_sprite/1_sprite.png" alt="sprite into scene" title="sprite into scene"></p>
+<p>NOTE: You may not be able to see the sprite, because what we see depends on the current settings for the camera. What the camera shows, how it moves etc. can be controlled by Fungus Views and Commmands relating to Views.</p>
+<!-- **************************************** -->
+<h1 id="using-views">Using Views</h1>
+<p>What the main camera of a scene displays to the user, and how it moves etc. can be controlled by Fungus Views and Fungus Commmands relating to Views. A Fungus View is a special gameObject in the Hierarchy, it appears as a green outlined inner rectangle, with two filled green rectangles on the left and the right. The ratio of the outlined inner rectangle is 4:3. The ratio of the outer rectangle (which includes the two filled green left and right rectangles) is 16:9. These two ratios cover almost every common phone, tablet and computer screen width-to-height ratio. So arranging the view so that a background Sprite image looks good for both inner- and outer- rectangles of a view, pretty much ensures your game will look good on any device. Setting the background color of the camera to something like black also means on the rare device that has an odd ratio showing content outside of the view outer rectangle, the game should still look perfectly acceptable.</p>
+<p>To add a view to the current scene do the following:</p>
+<ol>
+<li>(setup) Create / Edit a scene that has a Sprite background image gameObject</li>
+<li>Choose menu: <code>Tools | Fungus | Create | View</code>:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/08_add_view/1_menu_view.png" alt="menu new view" title="menu new view"></li>
+<li>Rename this View as &quot;View1&quot;.</li>
+<li>Use the two white squares to resize the view (it maintains its proportions). Use the center square outline, or vertical and horizontal arrows to move the View around the Scene window.
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/08_add_view/4_move_resize_handles.png" alt="move and resize handles" title="move and resize handles">
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/08_add_view/2_gameobjects.png" alt="new view" title="new view"></li>
+<li>Ensure the View is selected in the Hierarchy, then position the view so that it is approximately centered on your background sprite image</li>
+<li>Resize (and if necessary reposition) the View to be as big as possible, but ensuring that its outer rectangle stays within the bounds of the background sprite. (Note we&#39;ve tinted the Sprite red so the green View rectangles can be more easily seen in this screenshot):
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/08_add_view/3_resize_view.png" alt="resize view" title="resize view"></li>
+<li>Note: You can also rotate the view with the Unity Rotate tool</li>
+</ol>
+<p>NOTE: Until you add a &quot;Fade To View&quot; Fungus command, you still may not see the Sprite in the Game window when the scene plays, since the Main Camera has not been oriented to resize and align with the view.</p>
+<!-- **************************************** -->
+<h1 id="fade-to-view-command">Fade To View command</h1>
+<p>Once you have a Scene that contains some background Sprites and Fungus Views, you are ready to use the Fungus camera related Commands to control what the user sees. The simplest camera control is to make the Game window fade from a solid colour to the Main Camera being sized, positioned (and if necessary rotated) to show a specified Fungus View. Do the following:</p>
+<ol>
+<li>(setup) Create / being editing a Scene containing a background Sprite image, and a Fungus View that has been positioned to show all / some of the Sprite.</li>
+<li>In the Fungus Flowchart rename the Block &quot;Camera Control&quot;.</li>
+<li>Add a new &quot;Fade to View&quot; Command to the Block. First click the Plus button in the bottom half of the Inspector window, to add a new Command, then choose menu: <code>Camera | Fade To View</code>:
+<img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/08_add_view/5_menu_fade_to_view.png" alt="menu Fade to View" title="menu Fade to View"></li>
+<li>Now Drag &quot;View1&quot; from the Hierarchy window into the &quot;Target View&quot; property of the Fade to View Command  in the Inspector:
+<img src="./telling_a_story/08_add_view/6_drag_view.png" alt="assign Target View" title="assign Target View"></li>
+</ol>
+<ol start="5">
+<li>(We&#39;ll keep the defaults of 1 second and fade From Color of black).</li>
+<li>When you run the Scene the Game window should start off solid black, and then slowly the background Sprite image within the View rectangle should fade into view.</li>
+<li>Now Drag &quot;View1&quot; from the Hierarchy window into the</li>
+</ol>
+<p><img src="https://github.com/snozbot/fungus/raw/master/Docs/resources/telling_a_story/08_add_view/5_menu_fade_to_view.png" alt="menu Fade to View" title="menu Fade to View"></p>

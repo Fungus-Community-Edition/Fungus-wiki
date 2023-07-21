@@ -1,0 +1,18 @@
+<h1 id="tmpro-support">TMPro Support</h1>
+<p>Fungus has some specific support and uses of TextMeshPro. The Fungus Writer and Menu, and anything else that uses the TextAdapter can target a TextMeshPro component instead of a uGUI one. Meaning you can replace the text elements in the Menu items and in Say Dialogs.</p>
+<!-- **************************************************** -->
+<h1 id="animated-text">Animated Text</h1>
+<p>TextMeshPro has link support, meaning it can tell you which characters are contained within a link block and what that link refers to. Building on top of this is one of the recommended ways of creating animated text in TMPro. Fungus has some basic system for this and some built-in effects to use. See the the TMPro Link Default Effects scene. The default link types are detailed in the sample scene and the text below.</p>
+<pre><code>&lt;link=&quot;shake&quot;&gt;shake, shake, shake, sure&lt;/link&gt;
+&lt;link=&quot;wiggle&quot;&gt;wiggle, wiggle, wiggle, yeah&lt;/link&gt;
+&lt;link=&quot;wave&quot;&gt;wave, wave, wave, alright&lt;/link&gt;
+&lt;link=&quot;pivot&quot;&gt;pivot, pivot, pivot, OK&lt;/link&gt;
+&lt;link=&quot;rainbow&quot;&gt;rainbow!&lt;/link&gt;
+&lt;link=&quot;ascend&quot;&gt;going up&lt;/link&gt;
+&lt;link=&quot;pulse&quot;&gt;&lt;color=#bbee22&gt;Glowing&lt;/color&gt;&lt;/link&gt;
+</code></pre>
+<p>This will work correctly on non Fungus objects in your project too.</p>
+<p>To use links in the writer you will need to use the usual fungus tagging. </p>
+<!-- **************************************************** -->
+<h1 id="extending-animated-text">Extending Animated Text</h1>
+<p>The text animation system is intended to be extended with your own effects for your own links. For an example see the TMPro Link Effects Custom scene and the TMProLinkStylingDemo script. It removes the default effects and adds its own. These use the existing helpers for animating elements by character, word, line and so forth, and can use translate, rotate, scale, and colour tinting.</p>

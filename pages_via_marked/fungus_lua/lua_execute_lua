@@ -1,0 +1,25 @@
+<h1 id="executelua-command">ExecuteLua Command</h1>
+<p>This command allows you to embed a Lua script to be executed as part of a command sequence in a Block. The Lua script to be executed can be specified in the inspector or in a text file, in the same way as the @ref lua_script component.</p>
+<p>You can provide an optional LuaEnvironment to use for the execution. If none is provided then a LuaEnvironment will be selected / created automatically. If a LuaEnvironment has been set on the parent Flowchart then that environment will be used by default. </p>
+<p>The parent Flowchart will be bound to a global Lua variable prior to executing the Lua script. By default the binding name is &#39;flowchart&#39;, but you can change it to anything you want via the Lua Binding Name property of the parent Flowchart.</p>
+<p>You can also store the return value from the Lua script in a Flowchart variable.</p>
+<h1 id="evaluating-expressions">Evaluating expressions</h1>
+<p>The Fungus If command can only compare 2 variables at a time. For more complex expressions involving multiple variables or <a href="http://lua-users.org/wiki/MathLibraryTutorial">math functions</a>, you can use Lua to evaluate the expression and store the result in a Flowchart variable.</p>
+<ol>
+<li>Add a Flowchart object (Tools &gt; Fungus &gt; Create &gt; Flowchart). Add some variables to the Flowchart.</li>
+<li>Add a LuaBindings object (Tools &gt; Fungus &gt; Create &gt; LuaBindings)</li>
+<li>Add a binding to the Flowchart gameobject, and select the Flowchart component.</li>
+<li>In the Flowchart, add an ExecuteLua command in a block to evaluate the complex expression. Store the return value in a Boolean Flowchart variable.</li>
+<li>Add an If command which checks the value of the Boolean variable.</li>
+</ol>
+<p>In the Execute Lua command, you can use the getvar() function to get any Flowchart variables to be used in the expression. 
+Note: getvar() returns a reference to the Fungus variable object. To access the value of this variable use the .value property.</p>
+<h1 id="example-code">Example code</h1>
+<p>Here&#39;s an example Lua script which evaluates a complex expression involving 3 integer variables defined on a bound Flowchart.</p>
+<pre><code class="language-lua">local v1 = getvar(flowchart, &quot;Var1&quot;)
+local v2 = getvar(flowchart, &quot;Var2&quot;)
+local v3 = getvar(flowchart, &quot;Var3&quot;)
+
+return (v1.value == v2.value or v3.value == 5) 
+</code></pre>
+<p>Don&#39;t forget to use .value to access the value stored in the variable object, rather than the variable object itself!</p>
